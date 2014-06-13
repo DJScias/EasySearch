@@ -12,7 +12,6 @@
    "name": "Mobafire LoL Guides",
    "short_name": "MLG",
    "permissions": [ "tabs", "http://www.mobafire.com/*" ],
-   "update_url": "http://clients2.google.com/service/update2/crx",
    "version": "2.2.0",
    "manifest_version": 2
 }
