@@ -1,0 +1,34 @@
+body
+{
+	min-width: 350px;
+	min-height: 750px;
+	background-image:url("../image/lolbg.png");
+	border:24px;
+	-moz-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
+    -webkit-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
+	border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
+	margin: auto;
+}
+
+ul.menu
+{
+    position: relative;
+    
+    padding: 0px; 
+    margin: 0px;
+    
+	list-style-type: none;
+
+    float: left; 
+}
+
+ul.menu li 
+{
+	display: inline;
+	padding: 0px; 
+}
+
+.textBox
+{
+	margin-bottom: 10px;
+}
