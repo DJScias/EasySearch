@@ -12,6 +12,18 @@
    "name": "Mobafire LoL Guides",
    "short_name": "MLG",
    "permissions": [ "tabs", "http://www.mobafire.com/*" ],
-   "version": "2.2.0",
+   "version": "2.2.1",
    "manifest_version": 2,
+   "contributors": [
+    {
+      "name": "DJScias",
+      "email": "",
+      "url": "https://github.com/DJScias"
+    },
+    {
+      "name": "SrPatinhas",
+      "email": "migascc69@gmail.com",
+      "url": "https://github.com/SrPatinhas"
+    }
+  ]
 }
