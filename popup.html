@@ -1,145 +1,661 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="popup.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="jquery.min.js"></script>
- </head>
- <body>
- <div class = "textBox">
-   <input type="text" id="search" placeholder="The name of a Champion">
- </div>
-<ul class = "menu">
-  <li id="Aatrox"><a href="#" id="openAatrox" title="Aatrox"><img src="img/aatrox.png"></a></li>
-  <li id="Ahri"><a href="#" id="openAhri" title="Ahri"><img src="img/ahri.png"></a></li>
-  <li id="Akali"><a href="#" id="openAkali" title="Akali"><img src="img/akali.png"></a></li>
-  <li id="Alistar"><a href="#" id="openAlistar" title="Alistar"><img src="img/alistar.png"></a></li>
-  <li id="Amumu"><a href="#" id="openAmumu" title="Amumu"><img src="img/amumu.png"></a></li>
-  <li id="Anivia"><a href="#" id="openAnivia" title="Anivia"><img src="img/anivia.png"></a></li>
-  <li id="Annie"><a href="#" id="openAnnie" title="Annie"><img src="img/annie.png"></a></li>
-  <li id="Ashe"><a href="#" id="openAshe" title="Ashe"><img src="img/ashe.png"></a></li>
-  <li id="Blitzcrank"><a href="#" id="openBlitzcrank" title="Blitzcrank"><img src="img/blitzcrank.png"></a></li>
-  <li id="Brand"><a href="#" id="openBrand" title="Brand"><img src="img/brand.png"></a></li>
-  <li id="Braum"><a href="#" id="openBraum" title="Braum"><img src="img/braum.png"></a></li>
-  <li id="Caitlyn"><a href="#" id="openCaitlyn" title="Caitlyn"><img src="img/caitlyn.png"></a></li>
-  <li id="Cassiopeia"><a href="#" id="openCassiopeia" title="Cassiopeia"><img src="img/cassiopeia.png"></a></li>
-  <li id="Cho'Gath"><a href="#" id="openChogath" title="Cho'Gath"><img src="img/chogath.png"></a></li>
-  <li id="Corki"><a href="#" id="openCorki" title="Corki"><img src="img/corki.png"></a></li>
-  <li id="Darius"><a href="#" id="openDarius" title="Darius"><img src="img/darius.png"></a></li>
-  <li id="Diana"><a href="#" id="openDiana" title="Diana"><img src="img/diana.png"></a></li>
-  <li id="Dr. Mundo"><a href="#" id="openDrmundo" title="Dr. Mundo"><img src="img/drmundo.png"></a></li>
-  <li id="Draven"><a href="#" id="openDraven" title="Draven"><img src="img/draven.png"></a></li>
-  <li id="Elise"><a href="#" id="openElise" title="Elise"><img src="img/elise.png"></a></li>
-  <li id="Evelynn"><a href="#" id="openEvelynn" title="Evelynn"><img src="img/evelynn.png"></a></li>
-  <li id="Ezrael"><a href="#" id="openEzreal" title="Ezrael"><img src="img/ezreal.png"></a></li>
-  <li id="Fiddlesticks"><a href="#" id="openFiddlesticks" title="Fiddlesticks"><img src="img/fiddlesticks.png"></a></li>
-  <li id="Fiora"><a href="#" id="openFiora" title="Fiora"><img src="img/fiora.png"></a></li>
-  <li id="Fizz"><a href="#" id="openFizz" title="Fizz"><img src="img/fizz.png"></a></li>
-  <li id="Galio"><a href="#" id="openGalio" title="Galio"><img src="img/galio.png"></a></li>
-  <li id="Gangplank"><a href="#" id="openGangplank" title="Gangplank"><img src="img/gangplank.png"></a></li>
-  <li id="Garen"><a href="#" id="openGaren" title="Garen"><img src="img/garen.png"></a></li>
-  <li id="Gragas"><a href="#" id="openGragas" title="Gragas"><img src="img/gragas.png"></a></li>
-  <li id="Graves"><a href="#" id="openGraves" title="Graves"><img src="img/graves.png"></a></li>
-  <li id="Hecarim"><a href="#" id="openHecarim" title="Hecarim"><img src="img/hecarim.png"></a></li>
-  <li id="Heimerdinger"><a href="#" id="openHeimerdinger" title="Heimerdinger"><img src="img/heimerdinger.png"></a></li>
-  <li id="Irelia"><a href="#" id="openIrelia" title="Irelia"><img src="img/irelia.png"></a></li>
-  <li id="Janna"><a href="#" id="openJanna" title="Janna"><img src="img/janna.png"></a></li>
-  <li id="Jarvan"><a href="#" id="openJarvan" title="Jarvan"><img src="img/jarvaniv.png"></a></li>
-  <li id="Jax"><a href="#" id="openJax" title="Jax"><img src="img/jax.png"></a></li>
-  <li id="Jayce"><a href="#" id="openJayce" title="Jayce"><img src="img/jayce.png"></a></li>
-  <li id="Jinx"><a href="#" id="openJinx" title="Jinx"><img src="img/jinx.png"></a></li>
-  <li id="Karma"><a href="#" id="openKarma" title="Karma"><img src="img/karma.png"></a></li>
-  <li id="Karthus"><a href="#" id="openKarthus" title="Karthus"><img src="img/karthus.png"></a></li>
-  <li id="Kassadin"><a href="#" id="openKassadin" title="Kassadin"><img src="img/Kassadin.png"></a></li>
-  <li id="Katarina"><a href="#" id="openKatarina" title="Katarina"><img src="img/katarina.png"></a></li>
-  <li id="Kayle"><a href="#" id="openKayle" title="Kayle"><img src="img/kayle.png"></a></li>
-  <li id="Kennen"><a href="#" id="openKennen" title="Kennen"><img src="img/kennen.png"></a></li>
-  <li id="Kha'Zix"><a href="#" id="openKhazix" title="Kha'Zix"><img src="img/khazix.png"></a></li>
-  <li id="Kog'Maw"><a href="#" id="openKogmaw" title="Kog'Maw"><img src="img/kogmaw.png"></a></li>
-  <li id="LeBlanc"><a href="#" id="openLeblanc" title="LeBlanc"><img src="img/leblanc.png"></a></li>
-  <li id="Lee Sin"><a href="#" id="openLeesin" title="Lee Sin"><img src="img/leesin.png"></a></li>
-  <li id="Leona"><a href="#" id="openLeona" title="Leona"><img src="img/leona.png"></a></li>
-  <li id="Lissandra"><a href="#" id="openLissandra" title="Lissandra"><img src="img/lissandra.png"></a></li>
-  <li id="Lucian"><a href="#" id="openLucian" title="Lucian"><img src="img/lucian.png"></a></li>
-  <li id="Lulu"><a href="#" id="openLulu" title="Lulu"><img src="img/lulu.png"></a></li>
-  <li id="Lux"><a href="#" id="openLux" title="Lux"><img src="img/lux.png"></a></li>
-  <li id="Malphite"><a href="#" id="openMalphite" title="Malphite"><img src="img/malphite.png"></a></li>
-  <li id="Malzahar"><a href="#" id="openMalzahar" title="Malzahar"><img src="img/malzahar.png"></a></li>
-  <li id="Maokai"><a href="#" id="openMaokai" title="Maokai"><img src="img/maokai.png"></a></li>
-  <li id="Master Yi"><a href="#" id="openMasteryi" title="Master Yi"><img src="img/masteryi.png"></a></li>
-  <li id="Miss Fortune"><a href="#" id="openMissfortune" title="Miss Fortune"><img src="img/missfortune.png"></a></li>
-  <li id="Mordekaiser"><a href="#" id="openMordekaiser" title="Mordekaiser"><img src="img/mordekaiser.png"></a></li>
-  <li id="Morgana"><a href="#" id="openMorgana" title="Morgana"><img src="img/morgana.png"></a></li>
-  <li id="Nami"><a href="#" id="openNami" title="Nami"><img src="img/nami.png"></a></li>
-  <li id="Nasus"><a href="#" id="openNasus" title="Nasus"><img src="img/nasus.png"></a></li>
-  <li id="Nautilus"><a href="#" id="openNautilus" title="Nautilus"><img src="img/nautilus.png"></a></li>
-  <li id="Nidalee"><a href="#" id="openNidalee" title="Nidalee"><img src="img/nidalee.png"></a></li>
-  <li id="Nocturne"><a href="#" id="openNocturne" title="Nocturne"><img src="img/nocturne.png"></a></li>
-  <li id="Nunu"><a href="#" id="openNunu" title="Nunu"><img src="img/nunu.png"></a></li>
-  <li id="Olaf"><a href="#" id="openOlaf" title="Olaf"><img src="img/olaf.png"></a></li>
-  <li id="Orianna"><a href="#" id="openOrianna" title="Orianna"><img src="img/orianna.png"></a></li>
-  <li id="Pantheon"><a href="#" id="openPantheon" title="Pantheon"><img src="img/pantheon.png"></a></li>
-  <li id="Poppy"><a href="#" id="openPoppy" title="Poppy"><img src="img/poppy.png"></a></li>
-  <li id="Quinn"><a href="#" id="openQuinn" title="Quinn (and Valor)"><img src="img/quinn.png"></a></li>
-  <li id="Rammus"><a href="#" id="openRammus" title="Rammus"><img src="img/rammus.png"></a></li>
-  <li id="Renekton"><a href="#" id="openRenekton" title="Renekton"><img src="img/renekton.png"></a></li>
-  <li id="Rengar"><a href="#" id="openRengar" title="Rengar"><img src="img/rengar.png"></a></li>
-  <li id="Riven"><a href="#" id="openRiven" title="Riven"><img src="img/riven.png"></a></li>
-  <li id="Rumble"><a href="#" id="openRumble" title="Rumble"><img src="img/rumble.png"></a></li>
-  <li id="Ryze"><a href="#" id="openRyze" title="Ryze"><img src="img/ryze.png"></a></li>
-  <li id="Sejuani"><a href="#" id="openSejuani" title="Sejuani"><img src="img/sejuani.png"></a></li>
-  <li id="Shaco"><a href="#" id="openShaco" title="Shaco"><img src="img/shaco.png"></a></li>
-  <li id="Shen"><a href="#" id="openShen" title="Shen"><img src="img/shen.png"></a></li>
-  <li id="Shyvana"><a href="#" id="openShyvana" title="Shyvana"><img src="img/shyvana.png"></a></li>
-  <li id="Singed"><a href="#" id="openSinged" title="Singed"><img src="img/singed.png"></a></li>
-  <li id="Sion"><a href="#" id="openSion" title="Sion"><img src="img/sion.png"></a></li>
-  <li id="Sivir"><a href="#" id="openSivir" title="Sivir"><img src="img/sivir.png"></a></li>
-  <li id="Skarner"><a href="#" id="openSkarner" title="Skarner""><img src="img/skarner.png"></a></li>
-  <li id="Sona"><a href="#" id="openSona" title="Sona"><img src="img/sona.png"></a></li>
-  <li id="Soraka"><a href="#" id="openSoraka" title="Soraka"><img src="img/soraka.png"></a></li>
-  <li id="Swain"><a href="#" id="openSwain" title="Swain"><img src="img/swain.png"></a></li>
-  <li id="Syndra"><a href="#" id="openSyndra" title="Syndra"><img src="img/syndra.png"></a></li>
-  <li id="Talon"><a href="#" id="openTalon" title="Talon"><img src="img/talon.png"></a></li>
-  <li id="Taric"><a href="#" id="openTaric" title="Taric"><img src="img/taric.png"></a></li>
-  <li id="Teemo"><a href="#" id="openTeemo" title="Teemo"><img src="img/teemo.png"></a></li>
-  <li id="Thresh"><a href="#" id="openThresh" title="Thresh"><img src="img/thresh.png"></a></li>
-  <li id="Tristana"><a href="#" id="openTristana" title="Tristana"><img src="img/tristana.png"></a></li>
-  <li id="Trundle"><a href="#" id="openTrundle" title="Trundle"><img src="img/trundle.png"></a></li>
-  <li id="Tryndamere"><a href="#" id="openTryndamere" title="Tryndamere"><img src="img/tryndamere.png"></a></li>
-  <li id="Twisted Fate"><a href="#" id="openTwistedfate" title="Twisted Fate"><img src="img/twistedfate.png"></a></li>
-  <li id="Twitch"><a href="#" id="openTwitch" title="Twitch"><img src="img/twitch.png"></a></li>
-  <li id="Udyr"><a href="#" id="openUdyr" title="Udyr"><img src="img/udyr.png"></a></li>
-  <li id="Urgot"><a href="#" id="openUrgot" title="Urgot"><img src="img/urgot.png"></a></li>
-  <li id="Varus"><a href="#" id="openVarus" title="Varus"><img src="img/varus.png"></a></li>
-  <li id="Vayne"><a href="#" id="openVayne" title="Vayne"><img src="img/vayne.png"></a></li>
-  <li id="Veigar"><a href="#" id="openVeigar" title="Veigar"><img src="img/veigar.png"></a></li>
-  <li id="Vel'Koz"><a href="#" id="openVelkoz" title="Vel'Koz"><img src="img/velkoz.png"></a></li>
-  <li id="Vi"><a href="#" id="openVi" title="Vi"><img src="img/vi.png"></a></li>
-  <li id="Viktor"><a href="#" id="openViktor" title="Viktor"><img src="img/viktor.png"></a></li>
-  <li id="Vladimir"><a href="#" id="openVladimir" title="Vladimir"><img src="img/vladimir.png"></a></li>
-  <li id="Volibear"><a href="#" id="openVolibear" title="Volibear"><img src="img/volibear.png"></a></li>
-  <li id="Warwick"><a href="#" id="openWarwick" title="Warwick"><img src="img/warwick.png"></a></li>
-  <li id="Wukong"><a href="#" id="openWukong" title="Wukong"><img src="img/wukong.png"></a></li>
-  <li id="Xerath"><a href="#" id="openXerath" title="Xerath"><img src="img/xerath.png"></a></li>
-  <li id="Xin Zhao"><a href="#" id="openXinzhao" title="Xin Zhao"><img src="img/xinzhao.png"></a></li>
-  <li id="Yorick"><a href="#" id="openYorick" title="Yorick"><img src="img/yorick.png"></a></li>
-  <li id="Yasuo"><a href="#" id="openYasuo" title="Yasuo"><img src="img/yasuo.png"></a></li>
-  <li id="Zac"><a href="#" id="openZac" title="Zac"><img src="img/zac.png"></a></li>
-  <li id="Zed"><a href="#" id="openZed" title="Zed"><img src="img/zed.png"></a></li>
-  <li id="Ziggs"><a href="#" id="openZiggs" title="Ziggs"><img src="img/ziggs.png"></a></li>
-  <li id="Zilean"><a href="#" id="openZilean" title="Zilean"><img src="img/zilean.png"></a></li>
-  <li id="Zyra"><a href="#" id="openZyra" title="Zyra"><img src="img/zyra.png"></a></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id=""><img src="image/newwhite.png"></li>
-  <li id="League of Legends"><a href="#" id="openLoL" title="League of Legends - Official Website"><img src="img/other2.png"></a></li>
-  <li id="Mobafire"><a href="#" id="openMobafire" title="Mobafire - Official Website"><img src="img/mobafire.png"></a></li>
-</ul>
-<script type="text/javascript" src="popup.js"></script>
-
- </body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="popup.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div id='cssmenu'>
+			<ul>
+				<li class='has-sub last'><a href='#'><span>Fonte</span></a>
+					<ul>
+						<li><a href='#' data-font="mobafire"><span>Mobafire</span></a></li>
+						<li><a href='#' data-font="championselect"><span>ChampionSelect</span></a></li>
+						<li class='last'><a href='#' data-font="probuild"><span>Probuild</span></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="textBox">
+						<input type="text" id="search_summoners" placeholder="Summoners name">
+					</div>
+				</li>
+				<li>
+					<div class="textBox">
+						<input type="text" id="search_champion" placeholder="The name of a Champion">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="menu">
+			<li id="Aatrox">
+			    <a href="#" id="openAatrox" data-champion="aatrox" data-champion="aatrox" title="Aatrox">
+			        <img src="img/aatrox.png">
+			    </a>
+			</li>
+			<li id="Ahri">
+			    <a href="#" id="openAhri" data-champion="ahri" data-champion="ahri" title="Ahri">
+			        <img src="img/ahri.png">
+			    </a>
+			</li>
+			<li id="Akali">
+			    <a href="#" id="openAkali" data-champion="akali" data-champion="akali" title="Akali">
+			        <img src="img/akali.png">
+			    </a>
+			</li>
+			<li id="Alistar">
+			    <a href="#" id="openAlistar" data-champion="alistar" data-champion="alistar" title="Alistar">
+			        <img src="img/alistar.png">
+			    </a>
+			</li>
+			<li id="Amumu">
+			    <a href="#" id="openAmumu" data-champion="amumu" data-champion="amumu" title="Amumu">
+			        <img src="img/amumu.png">
+			    </a>
+			</li>
+			<li id="Anivia">
+			    <a href="#" id="openAnivia" data-champion="anivia" data-champion="anivia" title="Anivia">
+			        <img src="img/anivia.png">
+			    </a>
+			</li>
+			<li id="Annie">
+			    <a href="#" id="openAnnie" data-champion="annie" data-champion="annie" title="Annie">
+			        <img src="img/annie.png">
+			    </a>
+			</li>
+			<li id="Ashe">
+			    <a href="#" id="openAshe" data-champion="ashe" data-champion="ashe" title="Ashe">
+			        <img src="img/ashe.png">
+			    </a>
+			</li>
+			<li id="Blitzcrank">
+			    <a href="#" id="openBlitzcrank" data-champion="blitzcrank" data-champion="blitzcrank" title="Blitzcrank">
+			        <img src="img/blitzcrank.png">
+			    </a>
+			</li>
+			<li id="Brand">
+			    <a href="#" id="openBrand" data-champion="brand" data-champion="brand" title="Brand">
+			        <img src="img/brand.png">
+			    </a>
+			</li>
+			<li id="Braum">
+			    <a href="#" id="openBraum" data-champion="braum" data-champion="braum" title="Braum">
+			        <img src="img/braum.png">
+			    </a>
+			</li>
+			<li id="Caitlyn">
+			    <a href="#" id="openCaitlyn" data-champion="caitlyn" data-champion="caitlyn" title="Caitlyn">
+			        <img src="img/caitlyn.png">
+			    </a>
+			</li>
+			<li id="Cassiopeia">
+			    <a href="#" id="openCassiopeia" data-champion="cassiopeia" data-champion="cassiopeia" title="Cassiopeia">
+			        <img src="img/cassiopeia.png">
+			    </a>
+			</li>
+			<li id="Cho'Gath">
+			    <a href="#" id="openChogath" data-champion="chogath" data-champion="chogath" title="Cho'Gath">
+			        <img src="img/chogath.png">
+			    </a>
+			</li>
+			<li id="Corki">
+			    <a href="#" id="openCorki" data-champion="corki" data-champion="corki" title="Corki">
+			        <img src="img/corki.png">
+			    </a>
+			</li>
+			<li id="Darius">
+			    <a href="#" id="openDarius" data-champion="darius" data-champion="darius" title="Darius">
+			        <img src="img/darius.png">
+			    </a>
+			</li>
+			<li id="Diana">
+			    <a href="#" id="openDiana" data-champion="diana" data-champion="diana" title="Diana">
+			        <img src="img/diana.png">
+			    </a>
+			</li>
+			<li id="Dr. Mundo">
+			    <a href="#" id="openDrmundo" data-champion="drmundo" data-champion="drmundo" title="Dr. Mundo">
+			        <img src="img/drmundo.png">
+			    </a>
+			</li>
+			<li id="Draven">
+			    <a href="#" id="openDraven" data-champion="draven" data-champion="draven" title="Draven">
+			        <img src="img/draven.png">
+			    </a>
+			</li>
+			<li id="Elise">
+			    <a href="#" id="openElise" data-champion="elise" data-champion="elise" title="Elise">
+			        <img src="img/elise.png">
+			    </a>
+			</li>
+			<li id="Evelynn">
+			    <a href="#" id="openEvelynn" data-champion="evelynn" data-champion="evelynn" title="Evelynn">
+			        <img src="img/evelynn.png">
+			    </a>
+			</li>
+			<li id="Ezrael">
+			    <a href="#" id="openEzreal" data-champion="ezreal" data-champion="ezreal" title="Ezrael">
+			        <img src="img/ezreal.png">
+			    </a>
+			</li>
+			<li id="Fiddlesticks">
+			    <a href="#" id="openFiddlesticks" data-champion="fiddlesticks" data-champion="fiddlesticks" title="Fiddlesticks">
+			        <img src="img/fiddlesticks.png">
+			    </a>
+			</li>
+			<li id="Fiora">
+			    <a href="#" id="openFiora" data-champion="fiora" data-champion="fiora" title="Fiora">
+			        <img src="img/fiora.png">
+			    </a>
+			</li>
+			<li id="Fizz">
+			    <a href="#" id="openFizz" data-champion="fizz" data-champion="fizz" title="Fizz">
+			        <img src="img/fizz.png">
+			    </a>
+			</li>
+			<li id="Galio">
+			    <a href="#" id="openGalio" data-champion="galio" data-champion="galio" title="Galio">
+			        <img src="img/galio.png">
+			    </a>
+			</li>
+			<li id="Gangplank">
+			    <a href="#" id="openGangplank" data-champion="gangplank" data-champion="gangplank" title="Gangplank">
+			        <img src="img/gangplank.png">
+			    </a>
+			</li>
+			<li id="Garen">
+			    <a href="#" id="openGaren" data-champion="garen" data-champion="garen" title="Garen">
+			        <img src="img/garen.png">
+			    </a>
+			</li>
+			<li id="Gragas">
+			    <a href="#" id="openGragas" data-champion="gragas" data-champion="gragas" title="Gragas">
+			        <img src="img/gragas.png">
+			    </a>
+			</li>
+			<li id="Graves">
+			    <a href="#" id="openGraves" data-champion="graves" data-champion="graves" title="Graves">
+			        <img src="img/graves.png">
+			    </a>
+			</li>
+			<li id="Hecarim">
+			    <a href="#" id="openHecarim" data-champion="hecarim" data-champion="hecarim" title="Hecarim">
+			        <img src="img/hecarim.png">
+			    </a>
+			</li>
+			<li id="Heimerdinger">
+			    <a href="#" id="openHeimerdinger" data-champion="heimerdinger" data-champion="heimerdinger" title="Heimerdinger">
+			        <img src="img/heimerdinger.png">
+			    </a>
+			</li>
+			<li id="Irelia">
+			    <a href="#" id="openIrelia" data-champion="irelia" data-champion="irelia" title="Irelia">
+			        <img src="img/irelia.png">
+			    </a>
+			</li>
+			<li id="Janna">
+			    <a href="#" id="openJanna" data-champion="janna" data-champion="janna" title="Janna">
+			        <img src="img/janna.png">
+			    </a>
+			</li>
+			<li id="Jarvan">
+			    <a href="#" id="openJarvan" data-champion="jarvaniv" data-champion="jarvaniv" title="Jarvan">
+			        <img src="img/jarvaniv.png">
+			    </a>
+			</li>
+			<li id="Jax">
+			    <a href="#" id="openJax" data-champion="jax" data-champion="jax" title="Jax">
+			        <img src="img/jax.png">
+			    </a>
+			</li>
+			<li id="Jayce">
+			    <a href="#" id="openJayce" data-champion="jayce" data-champion="jayce" title="Jayce">
+			        <img src="img/jayce.png">
+			    </a>
+			</li>
+			<li id="Jinx">
+			    <a href="#" id="openJinx" data-champion="jinx" data-champion="jinx" title="Jinx">
+			        <img src="img/jinx.png">
+			    </a>
+			</li>
+			<li id="Karma">
+			    <a href="#" id="openKarma" data-champion="karma" data-champion="karma" title="Karma">
+			        <img src="img/karma.png">
+			    </a>
+			</li>
+			<li id="Karthus">
+			    <a href="#" id="openKarthus" data-champion="karthus" data-champion="karthus" title="Karthus">
+			        <img src="img/karthus.png">
+			    </a>
+			</li>
+			<li id="Kassadin">
+			    <a href="#" id="openKassadin" data-champion="Kassadin" data-champion="Kassadin" title="Kassadin">
+			        <img src="img/Kassadin.png">
+			    </a>
+			</li>
+			<li id="Katarina">
+			    <a href="#" id="openKatarina" data-champion="katarina" data-champion="katarina" title="Katarina">
+			        <img src="img/katarina.png">
+			    </a>
+			</li>
+			<li id="Kayle">
+			    <a href="#" id="openKayle" data-champion="kayle" data-champion="kayle" title="Kayle">
+			        <img src="img/kayle.png">
+			    </a>
+			</li>
+			<li id="Kennen">
+			    <a href="#" id="openKennen" data-champion="kennen" data-champion="kennen" title="Kennen">
+			        <img src="img/kennen.png">
+			    </a>
+			</li>
+			<li id="Kha'Zix">
+			    <a href="#" id="openKhazix" data-champion="khazix" data-champion="khazix" title="Kha'Zix">
+			        <img src="img/khazix.png">
+			    </a>
+			</li>
+			<li id="Kog'Maw">
+			    <a href="#" id="openKogmaw" data-champion="kogmaw" data-champion="kogmaw" title="Kog'Maw">
+			        <img src="img/kogmaw.png">
+			    </a>
+			</li>
+			<li id="LeBlanc">
+			    <a href="#" id="openLeblanc" data-champion="leblanc" data-champion="leblanc" title="LeBlanc">
+			        <img src="img/leblanc.png">
+			    </a>
+			</li>
+			<li id="Lee Sin">
+			    <a href="#" id="openLeesin" data-champion="leesin" data-champion="leesin" title="Lee Sin">
+			        <img src="img/leesin.png">
+			    </a>
+			</li>
+			<li id="Leona">
+			    <a href="#" id="openLeona" data-champion="leona" data-champion="leona" title="Leona">
+			        <img src="img/leona.png">
+			    </a>
+			</li>
+			<li id="Lissandra">
+			    <a href="#" id="openLissandra" data-champion="lissandra" data-champion="lissandra" title="Lissandra">
+			        <img src="img/lissandra.png">
+			    </a>
+			</li>
+			<li id="Lucian">
+			    <a href="#" id="openLucian" data-champion="lucian" data-champion="lucian" title="Lucian">
+			        <img src="img/lucian.png">
+			    </a>
+			</li>
+			<li id="Lulu">
+			    <a href="#" id="openLulu" data-champion="lulu" data-champion="lulu" title="Lulu">
+			        <img src="img/lulu.png">
+			    </a>
+			</li>
+			<li id="Lux">
+			    <a href="#" id="openLux" data-champion="lux" data-champion="lux" title="Lux">
+			        <img src="img/lux.png">
+			    </a>
+			</li>
+			<li id="Malphite">
+			    <a href="#" id="openMalphite" data-champion="malphite" data-champion="malphite" title="Malphite">
+			        <img src="img/malphite.png">
+			    </a>
+			</li>
+			<li id="Malzahar">
+			    <a href="#" id="openMalzahar" data-champion="malzahar" data-champion="malzahar" title="Malzahar">
+			        <img src="img/malzahar.png">
+			    </a>
+			</li>
+			<li id="Maokai">
+			    <a href="#" id="openMaokai" data-champion="maokai" data-champion="maokai" title="Maokai">
+			        <img src="img/maokai.png">
+			    </a>
+			</li>
+			<li id="Master Yi">
+			    <a href="#" id="openMasteryi" data-champion="masteryi" data-champion="masteryi" title="Master Yi">
+			        <img src="img/masteryi.png">
+			    </a>
+			</li>
+			<li id="Miss Fortune">
+			    <a href="#" id="openMissfortune" data-champion="missfortune" data-champion="missfortune" title="Miss Fortune">
+			        <img src="img/missfortune.png">
+			    </a>
+			</li>
+			<li id="Mordekaiser">
+			    <a href="#" id="openMordekaiser" data-champion="mordekaiser" data-champion="mordekaiser" title="Mordekaiser">
+			        <img src="img/mordekaiser.png">
+			    </a>
+			</li>
+			<li id="Morgana">
+			    <a href="#" id="openMorgana" data-champion="morgana" data-champion="morgana" title="Morgana">
+			        <img src="img/morgana.png">
+			    </a>
+			</li>
+			<li id="Nami">
+			    <a href="#" id="openNami" data-champion="nami" data-champion="nami" title="Nami">
+			        <img src="img/nami.png">
+			    </a>
+			</li>
+			<li id="Nasus">
+			    <a href="#" id="openNasus" data-champion="nasus" data-champion="nasus" title="Nasus">
+			        <img src="img/nasus.png">
+			    </a>
+			</li>
+			<li id="Nautilus">
+			    <a href="#" id="openNautilus" data-champion="nautilus" data-champion="nautilus" title="Nautilus">
+			        <img src="img/nautilus.png">
+			    </a>
+			</li>
+			<li id="Nidalee">
+			    <a href="#" id="openNidalee" data-champion="nidalee" data-champion="nidalee" title="Nidalee">
+			        <img src="img/nidalee.png">
+			    </a>
+			</li>
+			<li id="Nocturne">
+			    <a href="#" id="openNocturne" data-champion="nocturne" data-champion="nocturne" title="Nocturne">
+			        <img src="img/nocturne.png">
+			    </a>
+			</li>
+			<li id="Nunu">
+			    <a href="#" id="openNunu" data-champion="nunu" data-champion="nunu" title="Nunu">
+			        <img src="img/nunu.png">
+			    </a>
+			</li>
+			<li id="Olaf">
+			    <a href="#" id="openOlaf" data-champion="olaf" data-champion="olaf" title="Olaf">
+			        <img src="img/olaf.png">
+			    </a>
+			</li>
+			<li id="Orianna">
+			    <a href="#" id="openOrianna" data-champion="orianna" data-champion="orianna" title="Orianna">
+			        <img src="img/orianna.png">
+			    </a>
+			</li>
+			<li id="Pantheon">
+			    <a href="#" id="openPantheon" data-champion="pantheon" data-champion="pantheon" title="Pantheon">
+			        <img src="img/pantheon.png">
+			    </a>
+			</li>
+			<li id="Poppy">
+			    <a href="#" id="openPoppy" data-champion="poppy" data-champion="poppy" title="Poppy">
+			        <img src="img/poppy.png">
+			    </a>
+			</li>
+			<li id="Quinn">
+			    <a href="#" id="openQuinn" data-champion="quinn" data-champion="quinn" title="Quinn (and Valor)">
+			        <img src="img/quinn.png">
+			    </a>
+			</li>
+			<li id="Rammus">
+			    <a href="#" id="openRammus" data-champion="rammus" data-champion="rammus" title="Rammus">
+			        <img src="img/rammus.png">
+			    </a>
+			</li>
+			<li id="Renekton">
+			    <a href="#" id="openRenekton" data-champion="renekton" data-champion="renekton" title="Renekton">
+			        <img src="img/renekton.png">
+			    </a>
+			</li>
+			<li id="Rengar">
+			    <a href="#" id="openRengar" data-champion="rengar" data-champion="rengar" title="Rengar">
+			        <img src="img/rengar.png">
+			    </a>
+			</li>
+			<li id="Riven">
+			    <a href="#" id="openRiven" data-champion="riven" data-champion="riven" title="Riven">
+			        <img src="img/riven.png">
+			    </a>
+			</li>
+			<li id="Rumble">
+			    <a href="#" id="openRumble" data-champion="rumble" data-champion="rumble" title="Rumble">
+			        <img src="img/rumble.png">
+			    </a>
+			</li>
+			<li id="Ryze">
+			    <a href="#" id="openRyze" data-champion="ryze" data-champion="ryze" title="Ryze">
+			        <img src="img/ryze.png">
+			    </a>
+			</li>
+			<li id="Sejuani">
+			    <a href="#" id="openSejuani" data-champion="sejuani" data-champion="sejuani" title="Sejuani">
+			        <img src="img/sejuani.png">
+			    </a>
+			</li>
+			<li id="Shaco">
+			    <a href="#" id="openShaco" data-champion="shaco" data-champion="shaco" title="Shaco">
+			        <img src="img/shaco.png">
+			    </a>
+			</li>
+			<li id="Shen">
+			    <a href="#" id="openShen" data-champion="shen" data-champion="shen" title="Shen">
+			        <img src="img/shen.png">
+			    </a>
+			</li>
+			<li id="Shyvana">
+			    <a href="#" id="openShyvana" data-champion="shyvana" data-champion="shyvana" title="Shyvana">
+			        <img src="img/shyvana.png">
+			    </a>
+			</li>
+			<li id="Singed">
+			    <a href="#" id="openSinged" data-champion="singed" data-champion="singed" title="Singed">
+			        <img src="img/singed.png">
+			    </a>
+			</li>
+			<li id="Sion">
+			    <a href="#" id="openSion" data-champion="sion" data-champion="sion" title="Sion">
+			        <img src="img/sion.png">
+			    </a>
+			</li>
+			<li id="Sivir">
+			    <a href="#" id="openSivir" data-champion="sivir" data-champion="sivir" title="Sivir">
+			        <img src="img/sivir.png">
+			    </a>
+			</li>
+			<li id="Skarner">
+			    <a href="#" id="openSkarner" data-champion="skarner" data-champion="skarner" title="Skarner">
+			        <img src="img/skarner.png">
+			    </a>
+			</li>
+			<li id="Sona">
+			    <a href="#" id="openSona" data-champion="sona" data-champion="sona" title="Sona">
+			        <img src="img/sona.png">
+			    </a>
+			</li>
+			<li id="Soraka">
+			    <a href="#" id="openSoraka" data-champion="soraka" data-champion="soraka" title="Soraka">
+			        <img src="img/soraka.png">
+			    </a>
+			</li>
+			<li id="Swain">
+			    <a href="#" id="openSwain" data-champion="swain" data-champion="swain" title="Swain">
+			        <img src="img/swain.png">
+			    </a>
+			</li>
+			<li id="Syndra">
+			    <a href="#" id="openSyndra" data-champion="syndra" data-champion="syndra" title="Syndra">
+			        <img src="img/syndra.png">
+			    </a>
+			</li>
+			<li id="Talon">
+			    <a href="#" id="openTalon" data-champion="talon" data-champion="talon" title="Talon">
+			        <img src="img/talon.png">
+			    </a>
+			</li>
+			<li id="Taric">
+			    <a href="#" id="openTaric" data-champion="taric" data-champion="taric" title="Taric">
+			        <img src="img/taric.png">
+			    </a>
+			</li>
+			<li id="Teemo">
+			    <a href="#" id="openTeemo" data-champion="teemo" data-champion="teemo" title="Teemo">
+			        <img src="img/teemo.png">
+			    </a>
+			</li>
+			<li id="Thresh">
+			    <a href="#" id="openThresh" data-champion="thresh" data-champion="thresh" title="Thresh">
+			        <img src="img/thresh.png">
+			    </a>
+			</li>
+			<li id="Tristana">
+			    <a href="#" id="openTristana" data-champion="tristana" data-champion="tristana" title="Tristana">
+			        <img src="img/tristana.png">
+			    </a>
+			</li>
+			<li id="Trundle">
+			    <a href="#" id="openTrundle" data-champion="trundle" data-champion="trundle" title="Trundle">
+			        <img src="img/trundle.png">
+			    </a>
+			</li>
+			<li id="Tryndamere">
+			    <a href="#" id="openTryndamere" data-champion="tryndamere" data-champion="tryndamere" title="Tryndamere">
+			        <img src="img/tryndamere.png">
+			    </a>
+			</li>
+			<li id="Twisted Fate">
+			    <a href="#" id="openTwistedfate" data-champion="twistedfate" data-champion="twistedfate" title="Twisted Fate">
+			        <img src="img/twistedfate.png">
+			    </a>
+			</li>
+			<li id="Twitch">
+			    <a href="#" id="openTwitch" data-champion="twitch" data-champion="twitch" title="Twitch">
+			        <img src="img/twitch.png">
+			    </a>
+			</li>
+			<li id="Udyr">
+			    <a href="#" id="openUdyr" data-champion="udyr" data-champion="udyr" title="Udyr">
+			        <img src="img/udyr.png">
+			    </a>
+			</li>
+			<li id="Urgot">
+			    <a href="#" id="openUrgot" data-champion="urgot" data-champion="urgot" title="Urgot">
+			        <img src="img/urgot.png">
+			    </a>
+			</li>
+			<li id="Varus">
+			    <a href="#" id="openVarus" data-champion="varus" data-champion="varus" title="Varus">
+			        <img src="img/varus.png">
+			    </a>
+			</li>
+			<li id="Vayne">
+			    <a href="#" id="openVayne" data-champion="vayne" data-champion="vayne" title="Vayne">
+			        <img src="img/vayne.png">
+			    </a>
+			</li>
+			<li id="Veigar">
+			    <a href="#" id="openVeigar" data-champion="veigar" data-champion="veigar" title="Veigar">
+			        <img src="img/veigar.png">
+			    </a>
+			</li>
+			<li id="Vel'Koz">
+			    <a href="#" id="openVelkoz" data-champion="velkoz" data-champion="velkoz" title="Vel'Koz">
+			        <img src="img/velkoz.png">
+			    </a>
+			</li>
+			<li id="Vi">
+			    <a href="#" id="openVi" data-champion="vi" data-champion="vi" title="Vi">
+			        <img src="img/vi.png">
+			    </a>
+			</li>
+			<li id="Viktor">
+			    <a href="#" id="openViktor" data-champion="viktor" data-champion="viktor" title="Viktor">
+			        <img src="img/viktor.png">
+			    </a>
+			</li>
+			<li id="Vladimir">
+			    <a href="#" id="openVladimir" data-champion="vladimir" data-champion="vladimir" title="Vladimir">
+			        <img src="img/vladimir.png">
+			    </a>
+			</li>
+			<li id="Volibear">
+			    <a href="#" id="openVolibear" data-champion="volibear" data-champion="volibear" title="Volibear">
+			        <img src="img/volibear.png">
+			    </a>
+			</li>
+			<li id="Warwick">
+			    <a href="#" id="openWarwick" data-champion="warwick" data-champion="warwick" title="Warwick">
+			        <img src="img/warwick.png">
+			    </a>
+			</li>
+			<li id="Wukong">
+			    <a href="#" id="openWukong" data-champion="wukong" data-champion="wukong" title="Wukong">
+			        <img src="img/wukong.png">
+			    </a>
+			</li>
+			<li id="Xerath">
+			    <a href="#" id="openXerath" data-champion="xerath" data-champion="xerath" title="Xerath">
+			        <img src="img/xerath.png">
+			    </a>
+			</li>
+			<li id="Xin Zhao">
+			    <a href="#" id="openXinzhao" data-champion="xinzhao" data-champion="xinzhao" title="Xin Zhao">
+			        <img src="img/xinzhao.png">
+			    </a>
+			</li>
+			<li id="Yorick">
+			    <a href="#" id="openYorick" data-champion="yorick" data-champion="yorick" title="Yorick">
+			        <img src="img/yorick.png">
+			    </a>
+			</li>
+			<li id="Yasuo">
+			    <a href="#" id="openYasuo" data-champion="yasuo" data-champion="yasuo" title="Yasuo">
+			        <img src="img/yasuo.png">
+			    </a>
+			</li>
+			<li id="Zac">
+			    <a href="#" id="openZac" data-champion="zac" data-champion="zac" title="Zac">
+			        <img src="img/zac.png">
+			    </a>
+			</li>
+			<li id="Zed">
+			    <a href="#" id="openZed" data-champion="zed" data-champion="zed" title="Zed">
+			        <img src="img/zed.png">
+			    </a>
+			</li>
+			<li id="Ziggs">
+			    <a href="#" id="openZiggs" data-champion="ziggs" data-champion="ziggs" title="Ziggs">
+			        <img src="img/ziggs.png">
+			    </a>
+			</li>
+			<li id="Zilean">
+			    <a href="#" id="openZilean" data-champion="zilean" data-champion="zilean" title="Zilean">
+			        <img src="img/zilean.png">
+			    </a>
+			</li>
+			<li id="Zyra">
+			    <a href="#" id="openZyra" data-champion="zyra" data-champion="zyra" title="Zyra">
+			        <img src="img/zyra.png">
+			    </a>
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="">
+			    <img src="image/newwhite.png">
+			</li>
+			<li id="League of Legends">
+			    <a href="#" id="openLoL" data-champion="other2" data-champion="other2" title="League of Legends - Official Website">
+			        <img src="img/other2.png">
+			    </a>
+			</li>
+			<li id="Mobafire">
+			    <a href="#" id="openMobafire" data-champion="mobafire" data-champion="mobafire" title="Mobafire - Official Website">
+			        <img src="img/mobafire.png">
+			    </a>
+			</li>
+		</ul>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+	</body>
 </html>
