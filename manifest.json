@@ -13,5 +13,5 @@
    "short_name": "MLG",
    "permissions": [ "tabs", "http://www.mobafire.com/*" ],
    "version": "2.2.0",
-   "manifest_version": 2
+   "manifest_version": 2,
 }
