@@ -1,36 +1,29 @@
 {
-	"browser_action": {
-		"default_icon": "img/lol.png",
-		"default_popup": "popup.html",
-		"default_title": ""
-	},
-	"description": "Champion build/guide searching made easy.",
-	"icons": {
-		"128": "img/other.png",
-		"48": "img/other1.png"
-	},
-	"name": "Mobafire LoL Guides",
-	"short_name": "MLG",
-	"permissions": [ 
-		"tabs", 
-		"http://www.mobafire.com/*",
-		"http://www.probuilds.net/*",
-		"http://www.lolnexus.com/*",
-		"http://www.lolking.net/*",
-		"http://www.championselect.net/*",
-	],
-	"version": "2.2.1",
-	"manifest_version": 2,
-	"contributors": [
-		{
-			"name": "DJScias",
-			"email": "",
-			"url": "https://github.com/DJScias"
-		},
-		{
-			"name": "SrPatinhas",
-			"email": "migascc69@gmail.com",
-			"url": "https://github.com/SrPatinhas"
-		}
-	]
+   "browser_action": {
+      "default_icon": "img/lol.png",
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "description": "Champion build/guide searching made easy.",
+   "icons": {
+      "128": "img/other.png",
+      "48": "img/other1.png"
+   },
+   "name": "Mobafire LoL Guides",
+   "short_name": "MLG",
+   "permissions": [ "tabs", "http://www.mobafire.com/*" ],
+   "version": "2.2.1",
+   "manifest_version": 2,
+   "contributors": [
+    {
+      "name": "DJScias",
+      "email": "",
+      "url": "https://github.com/DJScias"
+    },
+    {
+      "name": "SrPatinhas",
+      "email": "migascc69@gmail.com",
+      "url": "https://github.com/SrPatinhas"
+    }
+  ]
 }
