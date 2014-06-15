@@ -12,7 +12,7 @@
    "name": "Mobafire LoL Guides",
    "short_name": "MLG",
    "permissions": [ "tabs", "http://www.mobafire.com/*" ],
-   "version": "2.2.1",
+   "version": "3.0.0",
    "manifest_version": 2,
    "contributors": [
     {
