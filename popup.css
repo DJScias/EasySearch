@@ -1,39 +1,46 @@
-body
-{
+body{
 	min-width: 350px;
 	min-height: 750px;
 	background-image:url("../image/lolbg.png");
 	border:24px;
 	-moz-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
-    -webkit-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
+	-webkit-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
 	border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
 	margin: auto;
 }
-
-ul.menu
-{
-    position: relative;
-    
-    padding: 0px; 
-    margin: 0px;
-    
-	list-style-type: none;
-
-    float: left; 
-}
-
-ul.menu li 
-{
-	display: inline;
+ul.champions_menu{
+	position: relative;
 	padding: 0px; 
+	margin: 0px;
+	list-style-type: none;
+	float: left; 
 }
-
-.textBox
-{
-	margin-bottom: 10px;
+ul.champions_menu li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+ul.champions_menu li a{
+	text-decoration: none;
+	margin: 0;
+}
+ul.champions_menu li a img{
+	opacity: 0.8;
+	transition: all 0.2s;
+}
+ul.champions_menu li a img:hover{
+	opacity: 1;
+}
+.textBox{
+	margin-top: 10px;
 }
 
 /* menu css */
+#showFont, #showLive{
+	font-size: 11px;
+	color: #919191;
+	font-weight: 100;
+}
 #cssmenu {
   position: relative;
   height: 44px;
@@ -50,9 +57,8 @@ ul.menu li
   position: relative;
   display: block;
   background: #ffffff;
-  height: 32px;
+  height: 50px;
   width: 100%;
-  z-index: 500;
 }
 #cssmenu > ul > li {
   display: block;
