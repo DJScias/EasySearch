@@ -36,3 +36,7 @@ If you want to contact us : DJScias@gmail.com
 Copyright © 2014 - MLG and its contributors (http://goo.gl/DXv6T8)
 
 MLG is released under the GPL
+
+*** 
+#Preview
+http://i.imgur.com/c35hTgU.png
