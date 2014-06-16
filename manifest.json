@@ -1,36 +1,38 @@
 {
-	"browser_action": {
-		"default_icon": "public/img/lol.png",
-		"default_popup": "popup.html",
-		"default_title": ""
-	},
+	// Required
+	"manifest_version": 2,
+	"name": "Mobafire LoL Guides",
+	"short_name": "MLG",
+	"version": "3.0.0",
+
+	// Recommended
+	"default_locale": "en",
 	"description": "Champion build/guide searching made easy.",
 	"icons": {
 		"128": "public/img/other.png",
 		"48": "public/img/other1.png"
 	},
-	"name": "Mobafire LoL Guides",
-	"short_name": "MLG",
+	"browser_action": {
+		"default_icon": "public/img/lol.png",
+		"default_popup": "popup.html",
+		"default_title": "Mobafire LoL Guides"
+	},
 	"permissions": [ 
 		"tabs",
-		"http://*/*",
-		"https://*/*",
-		"<all_urls>",
 		"cookies",
-		"chrome-extension://*/*"
+		"<all_urls>"
 	],
-	"version": "3.0.0",
-	"manifest_version": 2
-	// "contributors": [
-	// 	{
-	// 		"name": "DJScias",
-	// 		"email": "",
-	// 		"url": "https://github.com/DJScias"
-	// 	},
-	// 	{
-	// 		"name": "SrPatinhas",
-	// 		"email": "migascc69@gmail.com",
-	// 		"url": "https://github.com/SrPatinhas"
-	// 	}
-	// ]
+	//"update_url": "http://path/to/updateInfo.xml",
+	"author": [
+		{
+			"name": "DJScias",
+			"email": "",
+			"url": "https://github.com/DJScias"
+		},
+		{
+			"name": "SrPatinhas",
+			"email": "migascc69@gmail.com",
+			"url": "https://github.com/SrPatinhas"
+		}
+	]
 }
