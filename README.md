@@ -39,4 +39,4 @@ MLG is released under the GPL
 
 *** 
 #Preview
-http://i.imgur.com/c35hTgU.png
+![image](http://i.imgur.com/c35hTgU.png)
