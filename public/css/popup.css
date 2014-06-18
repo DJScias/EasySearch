@@ -1,23 +1,23 @@
 body{
-  min-width: 410px;
-  min-height: 550px;
+	min-width: 410px;
+	min-height: 550px;
 	background-image:url("../image/lolbg.png");
 	border:24px;
 	-moz-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
 	-webkit-border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
 	border-image:url("../image/lolborder.png") 24 24 24 24 repeat;
-	margin: auto;
+	margin: 0;
 }
 ul.champions_menu{
 	position: relative;
-	padding: 0px; 
+	padding: 4px 0 0 4px; 
 	margin: 0px;
 	list-style-type: none;
 	float: left;
 	width: 100%;
-  overflow: auto;
-  height: 390px;
-  box-shadow: inset 2px 2px 8px #030303;
+	overflow: auto;
+	height: 360px;
+	box-shadow: inset 2px 2px 8px #030303;
 }
 ul.champions_menu li {
 	display: inline;
@@ -29,25 +29,80 @@ ul.champions_menu li a{
 	margin: 0;
 }
 ul.champions_menu li a img{
-  opacity: 0.7;
-  transition: all 0.1s;
-  -webkit-filter: sepia(0.5);
-  filter: sepia(0.5);
-
+	opacity: 0.7;
+	transition: all 0.1s;
+	-webkit-filter: sepia(0.5);
+	filter: sepia(0.5);
 }
 ul.champions_menu li a img:hover{
-  opacity: 1;
-  -webkit-filter: sepia(0);
-  filter: sepia(0);
+	opacity: 1;
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
 }
-ul.champions_menu li.bases{
-	float: right;
-	margin: 0 2px 0 3px;
+.bases_search{
+	padding: 10px 0px;
+	margin: 10px 0 0;
+	border-top: 1px solid rgba(10, 10, 10, 0.4);
 }
 .textBox{
 	margin-top: 0;
 }
+.bottom-bar{
+	position: absolute;
+	bottom: 20px;
+	width: 90%;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #464343;
+}
 
+	.open-settings, .open-about{
+		transition: all 0.2s;
+		cursor: pointer;
+		position: absolute;
+		right: 10px;
+	}
+	.open-about{
+		right: 40px;
+	}
+	.open-settings:hover, .open-about:hover{
+		color: #000;
+		-webkit-filter: drop-shadow(1px 1px 3px #fff);
+				filter: drop-shadow(1px 1px 3px #fff);
+	}
+.search_bases{
+	list-style: square;
+	color: #808080;
+	float: left;
+	width: 160px;
+}
+.search_bases li{
+
+}
+.search_bases li a{
+	color: #808080;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: sans-serif;
+	cursor: pointer;
+}
+.search_bases li a:hover{
+	color: #000;
+}
+.version_about{
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	font-family: monospace;
+}
+.title_about{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #535768;
+}
 /********************************************************************************************************/
 /*																										*/
 /*												Menu css												*/
@@ -94,7 +149,7 @@ ul.champions_menu li.bases{
 #cssmenu > ul > li > a {
   font-size: 13px;
   font-weight: bold;
-  padding: 15px 20px;
+  padding: 12px 20px;
   color: #7a8189;
   text-transform: uppercase;
   -webkit-transition: color 0.25s ease-out;
@@ -118,7 +173,7 @@ ul.champions_menu li.bases{
 }
 #cssmenu > ul > li.has-sub::after {
   right: 10px;
-  top: 20px;
+  top: 13px;
   border: 5px solid transparent;
   border-top-color: #7a8189;
 }
@@ -159,7 +214,7 @@ ul.champions_menu li.bases{
 #cssmenu ul ul {
   position: absolute;
   left: -9999px;
-  top: 70px;
+  top: 60px;
   opacity: 0;
   -webkit-transition: opacity .3s ease, top .25s ease;
   -moz-transition: opacity .3s ease, top .25s ease;
@@ -235,12 +290,240 @@ ul.champions_menu li.bases{
   transform: rotateY(180deg);
 }
 
+/********************************************************************************************************/
+/*																										*/
+/*												modal style												*/
+/*																										*/
+/********************************************************************************************************/
 
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+	}
+	
+	.reveal-modal {
+		visibility: hidden;
+		display: none;
+		top: 65px;
+		width: 73%;
+		background: #eee url('../image/modal-gloss.png') no-repeat -200px -80px;
+		position: absolute;
+		z-index: 101;
+		padding: 30px 40px 34px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+	/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/
+
+
+
+/********************************************************************************************************/
+/*																										*/
+/*										FullSearch-Dropdown style										*/
+/*																										*/
+/********************************************************************************************************/
+
+.fullSearch-label{
+	position: absolute;
+	margin: 10px;
+	font-size: 19px;
+	font-family: cursive;
+}
+.fullSearch-dropdown {
+	/* Size and position */
+	position: relative;
+	width: 200px;
+	margin: 10px auto;
+	padding: 5px 10px;
+
+	/* Styles */
+	background: #fff;
+	border: 1px solid rgba(0,0,0,0.15);
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	cursor: pointer;
+	outline: none;
+
+	/* Font settings */
+	font-weight: bold;
+	color: #808080;
+}
+
+.fullSearch-dropdown:after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top: -3px;
+	border-width: 6px 6px 0 6px;
+	border-style: solid;
+	border-color: #808080 transparent;
+}
+
+.fullSearch-dropdown .dropdown {
+	/* Size & position */
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	padding: 0px;
+
+	/* Styles */
+	background: #DBDBDB;
+	border-radius: inherit;
+	border: 1px solid rgba(0,0,0,0.17);
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	font-weight: normal;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	list-style: none;
+
+	/* Hiding */
+	opacity: 0;
+	pointer-events: none;
+}
+
+.fullSearch-dropdown .dropdown:after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 100%;
+	right: 15px;
+	border-width: 0 6px 6px 6px;
+	border-style: solid;
+	border-color: #DBDBDB transparent;    
+}
+
+.fullSearch-dropdown .dropdown:before {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 100%;
+	right: 13px;
+	border-width: 0 8px 8px 8px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.1) transparent;    
+}
+
+.fullSearch-dropdown .dropdown li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #404446;
+	border-bottom: 1px solid #e6e8ea;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.fullSearch-dropdown .dropdown li i {
+	float: right;
+	color: inherit;
+}
+
+.fullSearch-dropdown .dropdown li:first-of-type a {
+	/*border-radius: 7px 7px 0 0;*/
+	border-top: none;
+	box-shadow: none;
+}
+
+.fullSearch-dropdown .dropdown li:last-of-type a {
+	border: none;
+	/*border-radius: 0 0 7px 7px;*/
+}
+
+/* Hover state */
+
+.fullSearch-dropdown .dropdown li:hover a {
+	background: #f3f8f8;
+}
+
+/* Active state */
+
+.fullSearch-dropdown.active .dropdown {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* No CSS3 support */
+
+.no-opacity       .fullSearch-dropdown .dropdown,
+.no-pointerevents .fullSearch-dropdown .dropdown {
+	display: none;
+	opacity: 1; /* If opacity support but no pointer-events support */
+	pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .fullSearch-dropdown.active .dropdown,
+.no-pointerevents .fullSearch-dropdown.active .dropdown {
+	display: block;
+}
+/* noJS */
+
+.wrapper-dropdown-3:focus .dropdown {
+	opacity: 1;
+	pointer-events: auto;
+}
 /********************************************************************************************************/
 /*																										*/
 /*												Input style												*/
 /*																										*/
 /********************************************************************************************************/
+
 input{
 	width: 96%;
 	padding: 9px;

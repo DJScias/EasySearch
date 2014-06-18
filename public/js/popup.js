@@ -1,6 +1,7 @@
 $(function(){
 	//set the variables to the initial value
 	$(document).ready(function() {
+		$("body").css('margin', 1);
 		chrome.cookies.get({ 
 				"name": 'LoL_Font_Champions',
 				"url":"http://developer.chrome.com/extensions/cookies.html",
@@ -43,11 +44,44 @@ $(function(){
 				}
 			}
 		);
+
+		var manifestData = chrome.app.getDetails();
+
+		$.get('update.xml', function(xml){
+			$(xml).find('updatecheck').each(function(){
+				var $app = $(this); 
+				var version = $app.attr("version");
+				if (version === manifestData.version) {
+					console.info("%s versao atualizada",version);
+					$(".version_about").children('span').css('color', 'green').text(manifestData.version);
+				} else {
+					console.warn("Versao instalada %s",manifestData.version,", versao disponivel ",version);
+					$(".version_about").children('span').css('color', 'red').text(version);
+				}
+			});
+		});
 	});
 
 //array with the links to the search
-	var Champion_Font_array = new Array('http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides', 'http://www.championselect.net/champions/&champ&', 'http://www.probuilds.net/champions/&champ&', 'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2' );
-	var Live_Font_array = new Array('http://www.lolnexus.com/server/search?name=nickname&region=server', 'http://www.lolking.net/search?name=nickname&region=server');
+	var Champion_Font_array = new Array(
+								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',	//Mobafire
+								'http://www.championselect.net/champions/&champ&',							//ChampionSelect
+								'http://www.probuilds.net/champions/&champ&',								//Probuilds
+								'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2',	//Solomid
+								'http://www.lolpro.com/guides/&champ&',										//LolPro
+								'http://www.lolbuilder.net/&champ&',										//LolBuilder
+								'http://www.lolking.net/champions/&champ&',									//LolKing
+								'http://www.lolskill.net/champion/&champ&',									//LolSkill
+								'http://leagueoflegends.wikia.com/wiki/&champ&',							//Lol Wiki
+								'http://www.elophant.com/league-of-legends/champion/&champ&/builds'			//Elophant
+							);
+		var Live_Font_array = new Array( 
+								'http://www.lolking.net/search?name=nickname&region=server',
+								'http://www.lolking.net/now/server/nickname',
+								'http://www.lolnexus.com/server/search?name=nickname&region=server',
+								'http://server.op.gg/summoner/userName=nickname',
+								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server'
+							);
 
 //search the champions on extension
 	$(document).on('keyup', '#search_champion', function(e){
@@ -66,8 +100,16 @@ $(function(){
 		var live = Champion_Font_array[font];
 		//Replace "&champ&" on array with the choosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
-
-		chrome.tabs.create({url:link_final});
+		if (font === "0") {
+			$('#myModal').reveal({
+				animation: 'fade',						//fade, fadeAndPop, none
+				animationspeed: 300,					//how fast animtions are
+				closeonbackgroundclick: false,			//if you click background will modal close?
+				dismissmodalclass: 'close-reveal-modal'	//the class of a button or element that will close an open modal
+			});
+		} else{
+			chrome.tabs.create({url:link_final});
+		}
 	});
 
 //choose the font of search of the champion and set on a cookie to be remembered late
@@ -146,17 +188,85 @@ $(function(){
 			var Server = $("#showServer").attr('data-server');
 			var font = $("#showLive").attr('data-live');
 			var live = Live_Font_array[font];
+			if ((font === "1") || (font === "4")) {
+				Server = Server.toLowerCase();
+			};
 			//Replace "server" on array with the choosen server
 			var Server_base = live.replace(/server/g, Server);
-			//Replace spaces with "+"
-			var summoners = $("#search_summoners").val().replace(" ", "+");
+
+			if ((font === "1") || (font === "4")) {
+				//Replace spaces with "+"
+				var summoners = $("#search_summoners").val().replace(" ", "%20");
+			} else {
+				//Replace spaces with "+"
+				var summoners = $("#search_summoners").val().replace(" ", "+");
+			}
+
 			//Replace "nickname" on array with the choosen summoners name
 			var Server_final = Server_base.replace("nickname", summoners);
 
 			chrome.tabs.create({url:Server_final});
 		};
 	});
+	$(document).on('click', '.new_link', function(e){
+		e.preventDefault();
+		chrome.tabs.create({url:$(this).attr('data-href')});
+	});
 
 //start the event of the tooltip
 	$('.tooltip').tooltipster();
+
+	$(document).on('click', '.open-about', function(e){
+		$('#aboutModal').reveal({
+					animation: 'fade',						//fade, fadeAndPop, none
+					animationspeed: 300,					//how fast animtions are
+					closeonbackgroundclick: false,			//if you click background will modal close?
+					dismissmodalclass: 'close-reveal-modal'	//the class of a button or element that will close an open modal
+				});
+	});
 });
+
+// options to full search
+	function DropDown(el) {
+		this.dd = el;
+		this.placeholder = this.dd.children('span');
+		this.opts = this.dd.find('ul.dropdown > li');
+		this.val = '';
+		this.index = -1;
+		this.initEvents();
+	}
+	DropDown.prototype = {
+		initEvents : function() {
+			var obj = this;
+
+			obj.dd.on('click', function(event){
+				$(this).toggleClass('active');
+				return false;
+			});
+
+			obj.opts.on('click',function(){
+				var opt = $(this);
+				obj.val = opt.text();
+				obj.index = opt.index();
+				obj.placeholder.text(obj.val);
+			});
+		},
+		getValue : function() {
+			return this.val;
+		},
+		getIndex : function() {
+			return this.index;
+		}
+	}
+	$(function() {
+		var dd = new DropDown($('#dd_lane'));
+		var dd = new DropDown($('#dd_role'));
+		var dd = new DropDown($('#dd_map'));
+		$(document).click(function() {
+			// all dropdowns
+			$('.fullSearch-dropdown').removeClass('active');
+		});
+	});
+//mobafire
+																														  //champion-id 		  //lane  	 //role		 //map
+	var full_search = new Array("http://www.mobafire.com/league-of-legends/browse?sort_type=score_weighted&sort_order=desc&champion_id=&&CHAMP_ID&&lane=&LANE&&role=&ROLE&&map=&MAPS&&guide_type=Champion&threshold=guides&freshness=All&author=");

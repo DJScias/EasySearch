@@ -1,13 +1,13 @@
 {
 	// Required
 	"manifest_version": 2,
-	"name": "Mobafire LoL Guides",
-	"short_name": "MLG",
+	"name": "League of Legends Easy Search",
+	"short_name": "LolES",
 	"version": "3.0.0",
 
 	// Recommended
-	"default_locale": "en",
-	"description": "Champion build/guide searching made easy.",
+	"default_locale": "en", //# if we put other languages
+	"description": "Summoners and Champion search made easy.",
 	"icons": {
 		"128": "public/img/other.png",
 		"48": "public/img/other1.png"
@@ -15,7 +15,7 @@
 	"browser_action": {
 		"default_icon": "public/img/lol.png",
 		"default_popup": "popup.html",
-		"default_title": "Mobafire LoL Guides"
+		"default_title": "League of Legends Easy Search"
 	},
 	"permissions": [ 
 		"tabs",
