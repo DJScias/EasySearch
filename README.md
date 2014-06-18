@@ -1,4 +1,4 @@
-MLG
+LoLES
 ===
 
 Champion build/guide searching made easy, a google chrome plugin.
@@ -33,9 +33,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 If you want to contact us : DJScias@gmail.com
 
-Copyright © 2014 - MLG and its contributors (http://goo.gl/DXv6T8)
+Copyright © 2014 - LoLES and its contributors (http://goo.gl/DXv6T8)
 
-MLG is released under the GPL
+LoLES is released under the GPL
 
 *** 
 #Preview
