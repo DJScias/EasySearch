@@ -92,8 +92,26 @@ ul.champions_menu li a img:hover{
 .version_about{
 	position: absolute;
 	bottom: 10px;
-	right: 20px;
+	right: 160px;
 	font-family: monospace;
+}
+.us_about{
+	position: absolute;
+	bottom: 20px;
+	color: #6B6B6D;
+	text-align: center;
+	width: 80%;
+	font-size: 19px;
+	font-family: monospace;
+}
+.us_about a{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+.us_about a:hover{
+	color: #1D2FB4;
 }
 .title_about{
 	position: absolute;
@@ -102,6 +120,75 @@ ul.champions_menu li a img:hover{
 	font-size: 20px;
 	font-family: sans-serif;
 	color: #535768;
+}
+#search_name{
+	font-size: 22px;
+	color: #535151;
+	font-family: monospace;
+	font-weight: 800;
+	position: absolute;
+	top: 40px;
+	left: 90px;
+}
+.basic_search{
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	border: 1px solid #C5C5C5;
+	background: #FFF;
+	color: #464646;
+	font-size: 16px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: border 0.2s;
+	transition: background 0.2s;
+	transition: color 0.2s;
+}
+.basic_search:hover{
+	border: 1px solid #575757;
+	background: #F7F7F7;
+	color: #0C0C0C;
+}
+.advanced_search{
+	position: absolute;
+	bottom: 20px;
+	left: 156px;
+	border: 1px solid #C5C5C5;
+	background: #FFF;
+	color: #464646;
+	font-size: 16px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: border 0.2s;
+	transition: background 0.2s;
+	transition: color 0.2s;
+}
+.advanced_search:hover{
+	border: 1px solid #575757;
+	background: #F7F7F7;
+	color: #0C0C0C;
+}
+.cancel_search{
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+	border: 1px solid #B98181;
+	background: #F86363;
+	color: #FFF;
+	font-size: 16px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: border 0.2s;
+	transition: background 0.2s;
+}
+.cancel_search:hover{
+	border: 1px solid #090808;
+	background: #F03535;
+}
+.warming_modal{
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #747474;
 }
 /********************************************************************************************************/
 /*																										*/
@@ -114,39 +201,39 @@ ul.champions_menu li a img:hover{
 	color: #919191;
 	font-weight: 100;
 }
-#cssmenu {
+.cssmenu {
   height: 44px;
   width: auto;
 }
-#cssmenu ul {
+.cssmenu ul {
   list-style: none;
   padding: 0;
   margin: 0;
   line-height: 1;
 }
-#cssmenu > ul {
+.cssmenu > ul {
   position: relative;
   display: block;
   height: 34px;
   width: 100%;
   border-bottom: 1px solid rgba(100, 100, 100, 0.54);
 }
-#cssmenu > ul > li {
+.cssmenu > ul > li {
   display: block;
   position: relative;
   float: left;
   margin: 0;
   padding: 0;
 }
-#cssmenu > ul > #menu-button {
+.cssmenu > ul > #menu-button {
   display: none;
 }
-#cssmenu ul li a {
+.cssmenu ul li a {
   display: block;
   font-family: Helvetica, sans-serif;
   text-decoration: none;
 }
-#cssmenu > ul > li > a {
+.cssmenu > ul > li > a {
   font-size: 13px;
   font-weight: bold;
   padding: 12px 20px;
@@ -158,26 +245,26 @@ ul.champions_menu li a img:hover{
   -o-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
 }
-#cssmenu > ul > li.has-sub > a {
+.cssmenu > ul > li.has-sub > a {
   padding-right: 32px;
 }
-#cssmenu > ul > li:hover > a {
+.cssmenu > ul > li:hover > a {
   color: #000000;
 }
-#cssmenu li.has-sub::after {
+.cssmenu li.has-sub::after {
   display: block;
   content: '';
   position: absolute;
   width: 0;
   height: 0;
 }
-#cssmenu > ul > li.has-sub::after {
+.cssmenu > ul > li.has-sub::after {
   right: 10px;
   top: 13px;
   border: 5px solid transparent;
   border-top-color: #7a8189;
 }
-#cssmenu > ul > li:hover::after {
+.cssmenu > ul > li:hover::after {
   border-top-color: #000000;
 }
 #indicatorContainer {
@@ -211,7 +298,7 @@ ul.champions_menu li a img:hover{
   right: 100%;
   z-index: -2;
 }
-#cssmenu ul ul {
+.cssmenu ul ul {
   position: absolute;
   left: -9999px;
   top: 60px;
@@ -223,24 +310,24 @@ ul.champions_menu li a img:hover{
   transition: opacity .3s ease, top .25s ease;
   z-index: 1000;
 }
-#cssmenu ul ul ul {
+.cssmenu ul ul ul {
   top: 37px;
   padding-left: 5px;
 }
-#cssmenu ul ul li {
+.cssmenu ul ul li {
   position: relative;
 }
-#cssmenu > ul > li:hover > ul {
+.cssmenu > ul > li:hover > ul {
   left: auto;
   top: 34px;
   opacity: 1;
 }
-#cssmenu ul ul li:hover > ul {
+.cssmenu ul ul li:hover > ul {
   left: 170px;
   top: 0;
   opacity: 1;
 }
-#cssmenu ul ul li a {
+.cssmenu ul ul li a {
   width: 130px;
   border-bottom: 1px solid #eee;
   padding: 10px 20px;
@@ -253,12 +340,12 @@ ul.champions_menu li a img:hover{
   -o-transition: all .35s ease;
   transition: all .35s ease;
 }
-#cssmenu ul ul li:hover > a {
+.cssmenu ul ul li:hover > a {
   background: #f6f6f6;
   color: #000000;
 }
-#cssmenu ul ul li:last-child > a,
-#cssmenu ul ul li.last > a {
+.cssmenu ul ul li:last-child > a,
+.cssmenu ul ul li.last > a {
   border-bottom: 0;
 }
 .submenuArrow {
@@ -269,7 +356,7 @@ ul.champions_menu li a img:hover{
   position: absolute;
   top: -12px;
 }
-#cssmenu ul ul li.has-sub::after {
+.cssmenu ul ul li.has-sub::after {
   border: 4px solid transparent;
   border-left-color: #707070;
   right: 10px;
@@ -280,7 +367,7 @@ ul.champions_menu li a img:hover{
   transition: all .2s ease;
   -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
 }
-#cssmenu ul ul li.has-sub:hover::after {
+.cssmenu ul ul li.has-sub:hover::after {
   border-left-color: #fff;
   right: -5px;
   -webkit-transform: rotateY(180deg);
@@ -290,6 +377,195 @@ ul.champions_menu li a img:hover{
   transform: rotateY(180deg);
 }
 
+/********************************************************************************************************/
+/*																										*/
+/*												Menu modal												*/
+/*																										*/
+/********************************************************************************************************/
+
+#map_search_base, #role_search_base, #lane_search_base{
+	font-size: 11px;
+	color: #919191;
+	font-weight: 100;
+	float: right;
+	margin-right: 20px;
+}
+.menu_modal {
+  height: 44px;
+  width: auto;
+}
+.menu_modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+.menu_modal > ul {
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.54);
+}
+.menu_modal > ul > li {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.menu_modal ul li a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
+.menu_modal > ul > li > a {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 12px 10px;
+  color: #7a8189;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+.menu_modal > ul > li > a > span{
+	display: block;
+	width: 300px;
+}
+.menu_modal > ul > li.has-sub > a {
+  padding-right: 30px;
+}
+.menu_modal > ul > li:hover > a {
+  color: #000000;
+}
+.menu_modal li.has-sub::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.menu_modal > ul > li.has-sub::after {
+  right: 10px;
+  top: 13px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+.menu_modal > ul > li:hover::after {
+  border-top-color: #000000;
+}
+.indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+.pIndicator_modal {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+.cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+.menu_modal ul ul {
+  position: absolute;
+  right: -9999px;
+  top: 60px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+}
+.menu_modal ul ul ul {
+  top: 37px;
+  padding-left: 5px;
+}
+.menu_modal ul ul li {
+  position: relative;
+}
+.menu_modal > ul > li:hover > ul {
+  right: -3px;
+  top: 26px;
+  opacity: 1;
+}
+.menu_modal ul ul li:hover > ul {
+  right: 170px;
+  top: 0;
+  opacity: 1;
+}
+.menu_modal ul ul li a {
+  width: 170px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #707070;
+  background: #fff;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -ms-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+.menu_modal ul ul li:hover > a {
+  background: #f6f6f6;
+  color: #000000;
+}
+.menu_modal ul ul li:last-child > a,
+.menu_modal ul ul li.last > a {
+  border-bottom: 0;
+}
+.submenuArrow_modal {
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -12px;
+}
+.menu_modal ul ul li.has-sub::after {
+  border: 4px solid transparent;
+  border-left-color: #707070;
+  right: 10px;
+  top: 12px;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+.menu_modal ul ul li.has-sub:hover::after {
+  border-left-color: #fff;
+  right: -5px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 /********************************************************************************************************/
 /*																										*/
 /*												modal style												*/
@@ -315,6 +591,7 @@ ul.champions_menu li a img:hover{
 	.reveal-modal {
 		visibility: hidden;
 		display: none;
+		height: 400px;
 		top: 65px;
 		width: 73%;
 		background: #eee url('../image/modal-gloss.png') no-repeat -200px -80px;

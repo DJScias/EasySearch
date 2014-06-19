@@ -1,7 +1,38 @@
+/*
+ * League of Legends Easy Search - LoLES
+ *
+ * jQuery League of Legends Fast Search 2.0
+ *
+ * LoLES - https://github.com/DJScias/LoLES
+ * Copyright 2014, LoLES
+ *
+ * DJScias - https://github.com/DJScias
+ * SrPatinhas - https://github.com/SrPatinhas
+ *
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
 $(function(){
+
+
+//**************************************************************************************************//
+//																									//
+//							Functions to do on the beginning of extension							//
+//																									//
+//**************************************************************************************************//
+
 	//set the variables to the initial value
 	$(document).ready(function() {
 		$("body").css('margin', 1);
+
+
+//**************************************************************************************************//
+//																									//
+//							Fecth cookies that can be already exist									//
+//																									//
+//**************************************************************************************************//
+
 		chrome.cookies.get({ 
 				"name": 'LoL_Font_Champions',
 				"url":"http://developer.chrome.com/extensions/cookies.html",
@@ -45,6 +76,13 @@ $(function(){
 			}
 		);
 
+
+//**************************************************************************************************//
+//																									//
+//							Get Version of current app and check updates 							//
+//																									//
+//**************************************************************************************************//
+
 		var manifestData = chrome.app.getDetails();
 
 		$.get('update.xml', function(xml){
@@ -62,7 +100,15 @@ $(function(){
 		});
 	});
 
-//array with the links to the search
+
+//**************************************************************************************************//
+//																									//
+//										Array with links to search									//
+//																									//
+//**************************************************************************************************//
+
+	//array with the links to the search 
+	//basic search for champions
 	var Champion_Font_array = new Array(
 								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',	//Mobafire
 								'http://www.championselect.net/champions/&champ&',							//ChampionSelect
@@ -76,12 +122,32 @@ $(function(){
 								'http://www.elophant.com/league-of-legends/champion/&champ&/builds'			//Elophant
 							);
 		var Live_Font_array = new Array( 
-								'http://www.lolking.net/search?name=nickname&region=server',
-								'http://www.lolking.net/now/server/nickname',
-								'http://www.lolnexus.com/server/search?name=nickname&region=server',
-								'http://server.op.gg/summoner/userName=nickname',
-								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server'
+								'http://www.lolking.net/search?name=nickname&region=server',					//lolKing
+								'http://www.lolking.net/now/server/nickname',									//lolKing now
+								'http://www.lolnexus.com/server/search?name=nickname&region=server',			//LolNexus
+								'http://server.op.gg/summoner/userName=nickname',								//OP GG
+								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server'	//Elophant
 							);
+
+//mobafire - Full / Advanced Search
+//example of search link on advanced search
+//http://www.mobafire.com/league-of-legends/browse?sort_type=modify_ts&sort_order=desc&champion_id=114&lane=Top&role=AP+Carry&map=Summoner%27s+Rift&guide_type=&threshold=guides&freshness=All&author=
+
+	var full_search = new Array(
+								'http://www.mobafire.com/league-of-legends/browse?sort_type=modify_ts&sort_order=desc'+
+								'&champion_id=CHAMP_ID_f'+			//champion-id
+								'&lane=LANE_f'+						//lane
+								'&role=ROLE_f'+						//role
+								'&map=MAPS_f'+						//map
+								'&guide_type=Champion&threshold=guides&freshness=All&author='
+							);
+
+
+//**************************************************************************************************//
+//																									//
+//								Search Champion by name on extension								//
+//																									//
+//**************************************************************************************************//
 
 //search the champions on extension
 	$(document).on('keyup', '#search_champion', function(e){
@@ -92,6 +158,40 @@ $(function(){
 		});
 	});
 
+
+//**************************************************************************************************//
+//																									//
+//									Full Search Champion selected									//
+//																									//
+//**************************************************************************************************//
+
+//open the advanced search for mobafire in a new tab
+	$('.advanced_search').on('click', function(e){
+		var champ = $('#search_name').attr('data-id');
+		//Replace "link" on array with the choosen site
+		var live = full_search[0];
+
+		var lane = $('#lane_search_base').attr('data-search');
+		var role = $('#role_search_base').attr('data-search');
+		var map  = $('#map_search_base').attr('data-search');
+
+		//Replace "CHAMP_ID_f", "LANE_f", "ROLE_f", "MAPS_f" on array with the choosen options
+		var link_final = live.replace(/CHAMP_ID_f/g, champ);
+		link_final = link_final.replace(/LANE_f/g, lane);
+		link_final = link_final.replace(/ROLE_f/g, role);
+		link_final = link_final.replace(/MAPS_f/g, map);
+		console.log(link_final);
+
+		chrome.tabs.create({url:link_final});
+	});
+
+
+//**************************************************************************************************//
+//																									//
+//									Basic Search Champion selected									//
+//																									//
+//**************************************************************************************************//
+
 //open the champion in the choosen site
 	$('.champion-tab').on('click', function(e){
 		var champ = $(this).attr('data-champion');
@@ -101,15 +201,86 @@ $(function(){
 		//Replace "&champ&" on array with the choosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
 		if (font === "0") {
+			$('#search_img').attr('src', $(this).children('img').attr('src'));
+			$('#search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
+
 			$('#myModal').reveal({
-				animation: 'fade',						//fade, fadeAndPop, none
-				animationspeed: 300,					//how fast animtions are
+				animation: 'fadeAndPop',				//fade, fadeAndPop, none
+				animationspeed: 100,					//how fast animtions are
 				closeonbackgroundclick: false,			//if you click background will modal close?
-				dismissmodalclass: 'close-reveal-modal'	//the class of a button or element that will close an open modal
+				dismissmodalclass: 'close-modal'		//the class of a button or element that will close an open modal
 			});
 		} else{
 			chrome.tabs.create({url:link_final});
 		}
+	});
+
+
+//**************************************************************************************************//
+//																									//
+//								Open a Tab with the links from about modal							//
+//																									//
+//**************************************************************************************************//
+
+//open the champion in the choosen site
+	$('.font-tab').on('click', function(e){
+		var font = $(this).attr('data-link');
+		//Replace "link" on array with the choosen site
+		var live = Site_Font_array[font];
+		
+		chrome.tabs.create({url:live});
+	});
+
+
+//**************************************************************************************************//
+//																									//
+//								Modal Search definition of variables								//
+//																									//
+//**************************************************************************************************//
+
+
+//define variables for modal advanced search
+	$(document).on('click', '.showMap', function(e){
+		var search = $(this).attr('data-search');
+		$('#map_search_base').attr('data-search', search).text($(this).text());
+	});
+	$(document).on('click', '.showRole', function(e){
+		var search = $(this).attr('data-search');
+		$('#role_search_base').attr('data-search', search).text($(this).text());
+	});
+	$(document).on('click', '.showLane', function(e){
+		var search = $(this).attr('data-search');
+		$('#lane_search_base').attr('data-search', search).text($(this).text());
+	});
+
+
+//**************************************************************************************************//
+//																									//
+//						Server definition of variables and save it on cookies						//
+//																									//
+//**************************************************************************************************//
+
+
+//choose the font of search of the server of the summoner and set on a cookie to be remembered late
+	$(document).on('click', '.showServer', function(e){
+		//var Server_text = $(this).text();
+		var Server = $(this).attr('data-server');
+		$('#showServer').attr('data-server', Server).text(Server);
+
+		chrome.cookies.remove({
+			"name": "LoL_Font_Server",
+			"url":"http://developer.chrome.com/extensions/cookies.html"
+		},function (cookie){
+			console.log(JSON.stringify(cookie));
+		});
+
+		chrome.cookies.set({
+			"name": "LoL_Font_Server",
+			"url":"http://developer.chrome.com/extensions/cookies.html",
+			"value": Server
+		},function (cookie){
+			console.log(JSON.stringify(cookie));
+		});
 	});
 
 //choose the font of search of the champion and set on a cookie to be remembered late
@@ -158,27 +329,12 @@ $(function(){
 		});
 	});
 
-//choose the font of search of the server of the summoner and set on a cookie to be remembered late
-	$(document).on('click', '.showServer', function(e){
-		//var Server_text = $(this).text();
-		var Server = $(this).attr('data-server');
-		$('#showServer').attr('data-server', Server).text(Server);
 
-		chrome.cookies.remove({
-			"name": "LoL_Font_Server",
-			"url":"http://developer.chrome.com/extensions/cookies.html"
-		},function (cookie){
-			console.log(JSON.stringify(cookie));
-		});
-
-		chrome.cookies.set({
-			"name": "LoL_Font_Server",
-			"url":"http://developer.chrome.com/extensions/cookies.html",
-			"value": Server
-		},function (cookie){
-			console.log(JSON.stringify(cookie));
-		});
-	});
+//**************************************************************************************************//
+//																									//
+//										Search for the summoners 									//
+//																									//
+//**************************************************************************************************//
 
 //when the users search the summoners name and then click "enter" the extension opens
 // a tab in the selected site and with the name searched
@@ -213,60 +369,23 @@ $(function(){
 		chrome.tabs.create({url:$(this).attr('data-href')});
 	});
 
+
+//**************************************************************************************************//
+//																									//
+//								Basic functions for tooltip and about modal 						//
+//																									//
+//**************************************************************************************************//
+
 //start the event of the tooltip
 	$('.tooltip').tooltipster();
-
+	$('.tooltip_modal').tooltipster({
+		position: 'top'
+	});
 	$(document).on('click', '.open-about', function(e){
 		$('#aboutModal').reveal({
 					animation: 'fade',						//fade, fadeAndPop, none
 					animationspeed: 300,					//how fast animtions are
 					closeonbackgroundclick: false,			//if you click background will modal close?
-					dismissmodalclass: 'close-reveal-modal'	//the class of a button or element that will close an open modal
 				});
 	});
 });
-
-// options to full search
-	function DropDown(el) {
-		this.dd = el;
-		this.placeholder = this.dd.children('span');
-		this.opts = this.dd.find('ul.dropdown > li');
-		this.val = '';
-		this.index = -1;
-		this.initEvents();
-	}
-	DropDown.prototype = {
-		initEvents : function() {
-			var obj = this;
-
-			obj.dd.on('click', function(event){
-				$(this).toggleClass('active');
-				return false;
-			});
-
-			obj.opts.on('click',function(){
-				var opt = $(this);
-				obj.val = opt.text();
-				obj.index = opt.index();
-				obj.placeholder.text(obj.val);
-			});
-		},
-		getValue : function() {
-			return this.val;
-		},
-		getIndex : function() {
-			return this.index;
-		}
-	}
-	$(function() {
-		var dd = new DropDown($('#dd_lane'));
-		var dd = new DropDown($('#dd_role'));
-		var dd = new DropDown($('#dd_map'));
-		$(document).click(function() {
-			// all dropdowns
-			$('.fullSearch-dropdown').removeClass('active');
-		});
-	});
-//mobafire
-																														  //champion-id 		  //lane  	 //role		 //map
-	var full_search = new Array("http://www.mobafire.com/league-of-legends/browse?sort_type=score_weighted&sort_order=desc&champion_id=&&CHAMP_ID&&lane=&LANE&&role=&ROLE&&map=&MAPS&&guide_type=Champion&threshold=guides&freshness=All&author=");
