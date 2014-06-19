@@ -6,18 +6,9 @@ Champion build/guide searching made easy, a google chrome plugin.
 Description
 ===
 
-Champion guide searching made easy through the use of Mobafire.
+TO BE REWRITTEN FOR RELEASE OF 3.0.0
 
-How to use this extension:
-You click the icon in the top right corner and then click the face icon of your champion that you need a guide for, or hover over it to show you the name of that particular champion, it'll redirect you to the top 10 guides for that champion on Mobafire. There are also a LoL and Mobafire buttons in the bottom right corner which redirect to their homepages for quick browsing.
-
-New: You can now enter the name of a champion in the search box at the top, it will then filter all the champion's to show only your specified search.
-
-Yes, I am well aware a guide search for SoloMid already exists, but I know a lot of people who wanted something like that for Mobafire and I delivered. This is a hobby project and will be regularly updated since I myself play LoL each day (region: EUW, name: DJScias).
-
-Suggestions and feedback is appreciated and very welcomed, please enjoy the extension.
-
-New: Mobafire LoL Guides can also be found on reddit now at http://redd.it/1dh0s7 , every time an update releases the changelog will also be posted there.
+New: League of Legends Easy Search can also be found on reddit now at http://redd.it/1dh0s7 , every time an update releases the changelog will also be posted there.
 
 ***
 
@@ -31,7 +22,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 ***
 
-If you want to contact us : DJScias@gmail.com
+If you want to contact the project leader: DJScias@gmail.com
 
 Copyright © 2014 - LoLES and its contributors (http://goo.gl/DXv6T8)
 
