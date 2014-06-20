@@ -6,7 +6,6 @@
 	"version": "3.0.0",
 
 	// Recommended
-	"default_locale": "en", //# if we put other languages
 	"description": "Summoners and Champion search made easy.",
 	"icons": {
 		"128": "public/img/other.png",
