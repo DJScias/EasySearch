@@ -231,33 +231,6 @@ $(function(){
 
 //**************************************************************************************************//
 //																									//
-//								Open a Tab with the links from about modal							//
-//																									//
-//**************************************************************************************************//
-
-	var Site_Font_array = new Array(
-                                'http://www.leagueoflegends.com/',	                        //LoL Official Site
-								'http://www.mobafire.com/',	                                //Mobafire
-								'http://www.probuilds.net/',								//Probuilds
-                                'http://www.lolpro.com/',									//LolPro
-                                'http://www.championselect.net/',							//ChampionSelect
-								'http://www.solomid.net/',	                                //Solomid
-								'http://www.lolking.net/',									//LolKing
-								'http://www.lolskill.net/',									//LolNexus
-							);
-
-//Open the champion in the choosen site
-	$('.font-tab').on('click', function(e){
-		var font = $(this).attr('data-link');
-		//Replace "link" on array with the choosen site
-		var live = Site_Font_array[font];
-		
-		chrome.tabs.create({url:live});
-	});
-
-
-//**************************************************************************************************//
-//																									//
 //								Modal Search definition of variables								//
 //																									//
 //**************************************************************************************************//
