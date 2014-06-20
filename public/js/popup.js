@@ -29,7 +29,7 @@ $(function(){
 
 //**************************************************************************************************//
 //																									//
-//							Fecth cookies that can be already exist									//
+//							Fetch cookies that already exist        								//
 //																									//
 //**************************************************************************************************//
 
@@ -165,6 +165,20 @@ $(function(){
 //																									//
 //**************************************************************************************************//
 
+    $('.basic_search').on('click', function(e){
+        //Grab the champion's name from the span detailing it
+		var champ = $('#search_name').text();
+        //Format the champion name to be compatible with Mobafire
+        champ = champ.replace(/\./g, ""); // periods
+        champ = champ.replace(/'/g,""); // apostrophes
+        champ = champ.replace(/\s+/g, '-'); // spaces (replaced with hyphen (-) for mobafire)
+		//Replace "link" on array with the choosen site
+		var live = Champion_Font_array[0];
+		//Replace "&champ&" on array with the choosen champions name
+		var link_final = live.replace(/&champ&/g, champ);
+        chrome.tabs.create({url:link_final});
+	});
+
 //open the advanced search for mobafire in a new tab
 	$('.advanced_search').on('click', function(e){
 		var champ = $('#search_name').attr('data-id');
@@ -185,14 +199,13 @@ $(function(){
 		chrome.tabs.create({url:link_final});
 	});
 
-
 //**************************************************************************************************//
 //																									//
 //									Basic Search Champion selected									//
 //																									//
 //**************************************************************************************************//
 
-//open the champion in the choosen site
+//Open the champion in the choosen site
 	$('.champion-tab').on('click', function(e){
 		var champ = $(this).attr('data-champion');
 		var font = $("#showFont").attr('data-font');
@@ -205,10 +218,10 @@ $(function(){
 			$('#search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
 
 			$('#myModal').reveal({
-				animation: 'fadeAndPop',				//fade, fadeAndPop, none
-				animationspeed: 100,					//how fast animtions are
-				closeonbackgroundclick: false,			//if you click background will modal close?
-				dismissmodalclass: 'close-modal'		//the class of a button or element that will close an open modal
+				animation: 'fadeAndPop',				//Fade, fadeAndPop, none
+				animationspeed: 100,					//How fast animations are
+				closeonbackgroundclick: false,			//If you click background, will modal close?
+				dismissmodalclass: 'close-modal'		//The class of a button or element that will close an open modal
 			});
 		} else{
 			chrome.tabs.create({url:link_final});
@@ -222,7 +235,18 @@ $(function(){
 //																									//
 //**************************************************************************************************//
 
-//open the champion in the choosen site
+	var Site_Font_array = new Array(
+                                'http://www.leagueoflegends.com/',	                        //LoL Official Site
+								'http://www.mobafire.com/',	                                //Mobafire
+								'http://www.probuilds.net/',								//Probuilds
+                                'http://www.lolpro.com/',									//LolPro
+                                'http://www.championselect.net/',							//ChampionSelect
+								'http://www.solomid.net/',	                                //Solomid
+								'http://www.lolking.net/',									//LolKing
+								'http://www.lolskill.net/',									//LolNexus
+							);
+
+//Open the champion in the choosen site
 	$('.font-tab').on('click', function(e){
 		var font = $(this).attr('data-link');
 		//Replace "link" on array with the choosen site
@@ -239,7 +263,7 @@ $(function(){
 //**************************************************************************************************//
 
 
-//define variables for modal advanced search
+//Define variables for modal advanced search
 	$(document).on('click', '.showMap', function(e){
 		var search = $(this).attr('data-search');
 		$('#map_search_base').attr('data-search', search).text($(this).text());
@@ -261,7 +285,7 @@ $(function(){
 //**************************************************************************************************//
 
 
-//choose the font of search of the server of the summoner and set on a cookie to be remembered late
+//Choose the font of search of the server of the summoner and set on a cookie to be remembered later
 	$(document).on('click', '.showServer', function(e){
 		//var Server_text = $(this).text();
 		var Server = $(this).attr('data-server');
@@ -283,7 +307,7 @@ $(function(){
 		});
 	});
 
-//choose the font of search of the champion and set on a cookie to be remembered late
+//Choose the font of search of the champion and set on a cookie to be remembered later
 	$(document).on('click', '.showFont', function(e){
 		var font_text = $(this).text();
 		var font = $(this).attr('data-font');
@@ -306,7 +330,7 @@ $(function(){
 		});
 	});
 
-//choose the font of search of the summoner and set on a cookie to be remembered late
+//Choose the font of search of the summoner and set on a cookie to be remembered later
 	$(document).on('click', '.showLive', function(e){
 		var live_text = $(this).text();
 		var live = $(this).attr('data-live');
@@ -336,10 +360,10 @@ $(function(){
 //																									//
 //**************************************************************************************************//
 
-//when the users search the summoners name and then click "enter" the extension opens
-// a tab in the selected site and with the name searched
+//When the users search the summoners name and then click "enter" the extension opens
+// a tab in the selected site with the selected name
 	$(document).on('keyup', '#search_summoners', function(e){
-		var code = e.keyCode || e.which; // recommended to use e.which, it's normalized across browsers
+		var code = e.keyCode || e.which; // Recommended to use e.which, it's normalized across browsers
 		if(code == 13) { //Enter keycode
 			var Server = $("#showServer").attr('data-server');
 			var font = $("#showLive").attr('data-live');
@@ -376,16 +400,16 @@ $(function(){
 //																									//
 //**************************************************************************************************//
 
-//start the event of the tooltip
+//Start the event of the tooltip
 	$('.tooltip').tooltipster();
 	$('.tooltip_modal').tooltipster({
 		position: 'top'
 	});
 	$(document).on('click', '.open-about', function(e){
 		$('#aboutModal').reveal({
-					animation: 'fade',						//fade, fadeAndPop, none
-					animationspeed: 300,					//how fast animtions are
-					closeonbackgroundclick: false,			//if you click background will modal close?
+					animation: 'fade',						//Fade, fadeAndPop, none
+					animationspeed: 300,					//How fast animtions are
+					closeonbackgroundclick: false,			//If you click background, will modal close?
 				});
 	});
 });
