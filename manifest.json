@@ -22,7 +22,7 @@
 		"cookies",
 		"<all_urls>"
 	],
-	//"update_url": "http://path/to/updateInfo.xml",
+	"update_url": "http://scias.net/loles/update.xml",
 	"author": [
 		{
 			"name": "DJScias",
