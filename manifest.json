@@ -1,11 +1,8 @@
 {
-	// Required
 	"manifest_version": 2,
 	"name": "League of Legends Easy Search",
 	"short_name": "LolES",
-	"version": "3.0.0",
-
-	// Recommended
+	"version": "3.0.1",
 	"description": "Summoners and Champion search made easy.",
 	"icons": {
 		"128": "public/img/other.png",
@@ -21,7 +18,6 @@
 		"cookies",
 		"<all_urls>"
 	],
-	"update_url": "http://scias.net/loles/update.xml",
 	"author": [
 		{
 			"name": "DJScias",

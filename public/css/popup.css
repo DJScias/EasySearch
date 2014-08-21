@@ -60,7 +60,7 @@ ul.champions_menu li a img:hover{
 		transition: all 0.2s;
 		cursor: pointer;
 		position: absolute;
-		right: 40px;
+		top: 0px;
 	}
 	.open-about{
 		right: 10px;
