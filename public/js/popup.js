@@ -110,23 +110,25 @@ $(function(){
 	//array with the links to the search 
 	//basic search for champions
 	var Champion_Font_array = new Array(
-								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',	//Mobafire
 								'http://www.championselect.net/champions/&champ&',							//ChampionSelect
-								'http://www.probuilds.net/champions/&champ&',								//Probuilds
-								'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2',	//Solomid
-								'http://www.lolpro.com/guides/&champ&',										//LolPro
+								'http://www.elophant.com/league-of-legends/champion/&champ&/builds',		//Elophant
+								'http://leagueoflegends.wikia.com/wiki/&champ&',							//Lol Wiki
 								'http://www.lolbuilder.net/&champ&',										//LolBuilder
 								'http://www.lolking.net/champions/&champ&',									//LolKing
+								'http://www.lolpro.com/guides/&champ&',										//LolPro
 								'http://www.lolskill.net/champion/&champ&',									//LolSkill
-								'http://leagueoflegends.wikia.com/wiki/&champ&',							//Lol Wiki
-								'http://www.elophant.com/league-of-legends/champion/&champ&/builds'			//Elophant
+								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',	//Mobafire
+								'http://www.probuilds.net/champions/&champ&',								//Probuilds
+								'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2'	//Solomid
 							);
 		var Live_Font_array = new Array( 
+								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server',//Elophant
+								'http://www.lolsummoners.com/search?utf8=%E2%9C%93&region=server&name=nickname',//LoL Summoners
 								'http://www.lolking.net/search?name=nickname&region=server',					//lolKing
 								'http://www.lolking.net/now/server/nickname',									//lolKing now
 								'http://www.lolnexus.com/server/search?name=nickname&region=server',			//LolNexus
 								'http://server.op.gg/summoner/userName=nickname',								//OP GG
-								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server'	//Elophant
+								'http://quickfind.kassad.in/profile/server/nickname/'							//Quickfind
 							);
 
 //mobafire - Full / Advanced Search
@@ -213,7 +215,7 @@ $(function(){
 		var live = Champion_Font_array[font];
 		//Replace "&champ&" on array with the choosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
-		if (font === "0") {
+		if (font === "7") {
 			$('#search_img').attr('src', $(this).children('img').attr('src'));
 			$('#search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
 
