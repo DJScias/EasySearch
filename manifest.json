@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "League of Legends Easy Search",
 	"short_name": "LolES",
-	"version": "3.0.2",
+	"version": "3.1.0",
 	"description": "Summoners and Champion search made easy.",
 	"icons": {
 		"128": "public/img/other.png",
