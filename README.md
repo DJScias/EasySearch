@@ -6,7 +6,9 @@ Champion build/guide searching made easy, a google chrome plugin.
 Description
 ===
 
-TO BE REWRITTEN FOR RELEASE OF 3.0.0
+If you're looking to search information about a summoner's name, all you have to do is input the summoner's name in the first box and choose the preferred site and region. Afterwards you can just press enter while your cursor is still in the box.
+
+If on the other hand you're looking for information regarding champions: You can either enter the name of the champion you're looking for or search the champions by face icons. Feel free to also make use of the extended list of sites we put available towards you to check builds and such from, feel free to compare and even suggest more sites to us if you think they should have a place on that list.
 
 New: League of Legends Easy Search can also be found on reddit now at http://redd.it/1dh0s7 , every time an update releases the changelog will also be posted there.
 
