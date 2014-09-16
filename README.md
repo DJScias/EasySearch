@@ -1,16 +1,18 @@
-LoLES
+LoLES - Website API
 ===
 
-Champion build/guide searching made easy, a google chrome plugin.
+All files regarding the website API parts that LoLES uses for its functionality
 
-Description
+Current Website Files
 ===
 
-If you're looking to search information about a summoner's name, all you have to do is input the summoner's name in the first box and choose the preferred site and region. Afterwards you can just press enter while your cursor is still in the box.
+> mirror-api.php
 
-If on the other hand you're looking for information regarding champions: You can either enter the name of the champion you're looking for or search the champions by face icons. Feel free to also make use of the extended list of sites we put available towards you to check builds and such from, feel free to compare and even suggest more sites to us if you think they should have a place on that list.
+This file provides a mirror from the acs.leagueoflegends.com site output to your own website, this is because Riot's website does not allow the JQuery function of $.getJSON. Mirroring it to your own website is a workaround for this.
 
-New: League of Legends Easy Search can also be found on reddit now at http://redd.it/1dh0s7 , every time an update releases the changelog will also be posted there.
+Requirements:
+ - PHP
+ - jQuery
 
 ***
 
@@ -29,7 +31,3 @@ If you want to contact the project leader: DJScias@gmail.com
 Copyright © 2014 - LoLES and its contributors (http://goo.gl/DXv6T8)
 
 LoLES is released under the GPL
-
-*** 
-#Preview
-![image](http://i.imgur.com/c35hTgU.png)
