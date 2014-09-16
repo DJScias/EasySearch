@@ -90,10 +90,10 @@ $(function(){
 				var $app = $(this); 
 				var version = $app.attr("version");
 				if (version === manifestData.version) {
-					console.info("%s versao atualizada",version);
+					console.info("%s latest version",version);
 					$(".version_about").children('span').css('color', 'green').text(manifestData.version);
 				} else {
-					console.warn("Versao instalada %s",manifestData.version,", versao disponivel ",version);
+					console.warn("Installed version %s",manifestData.version,", latest version ",version);
 					$(".version_about").children('span').css('color', 'red').text(version);
 				}
 			});
@@ -110,25 +110,27 @@ $(function(){
 	//array with the links to the search 
 	//basic search for champions
 	var Champion_Font_array = new Array(
-								'http://www.championselect.net/champions/&champ&',							//ChampionSelect
-								'http://www.elophant.com/league-of-legends/champion/&champ&/builds',		//Elophant
-								'http://leagueoflegends.wikia.com/wiki/&champ&',							//Lol Wiki
-								'http://www.lolbuilder.net/&champ&',										//LolBuilder
-								'http://www.lolking.net/champions/&champ&',									//LolKing
-								'http://www.lolpro.com/guides/&champ&',										//LolPro
-								'http://www.lolskill.net/champion/&champ&',									//LolSkill
-								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',	//Mobafire
-								'http://www.probuilds.net/champions/&champ&',								//Probuilds
-								'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2'	//Solomid
+								'http://www.championselect.net/champions/&champ&',                          //ChampionSelect
+								'http://www.elophant.com/league-of-legends/champion/&champ&/builds',        //Elophant
+								'http://www.lolcounter.com/champions/&champ&',                              //Lol Counter
+								'http://leagueoflegends.wikia.com/wiki/&champ&',                            //Lol Wiki
+								'http://www.lolbuilder.net/&champ&',                                        //LolBuilder
+								'http://www.lolking.net/champions/&champ&',                                 //LolKing
+								'http://www.lolpro.com/guides/&champ&',                                     //LolPro
+								'http://www.lolskill.net/champion/&champ&',                                 //LolSkill
+								'http://www.mobafire.com/league-of-legends/toplist/top-10-&champ&-guides',  //Mobafire
+								'http://www.probuilds.net/champions/&champ&',                               //Probuilds
+								'http://www.solomid.net/guide?champ=&champ&&featured=0&submitted=0&sort=2'  //Solomid
 							);
 		var Live_Font_array = new Array( 
-								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server',//Elophant
-								'http://www.lolsummoners.com/search?utf8=%E2%9C%93&region=server&name=nickname',//LoL Summoners
-								'http://www.lolking.net/search?name=nickname&region=server',					//lolKing
-								'http://www.lolking.net/now/server/nickname',									//lolKing now
-								'http://www.lolnexus.com/server/search?name=nickname&region=server',			//LolNexus
-								'http://server.op.gg/summoner/userName=nickname',								//OP GG
-								'http://quickfind.kassad.in/profile/server/nickname/'							//Quickfind
+								'http://www.elophant.com/league-of-legends/search?query=nickname&region=server',    //Elophant
+								'http://www.lolsummoners.com/search?utf8=%E2%9C%93&region=server&name=nickname',    //LoL Summoners
+								'http://www.lolking.net/search?name=nickname&region=server',                        //lolKing
+								'http://www.lolking.net/now/server/nickname',                                       //lolKing Now
+								'http://www.lolnexus.com/server/search?name=nickname&region=server',                //LolNexus
+								'http://matchhistory.server.leagueoflegends.com/en/#match-history/region/accountid',//Match History
+								'http://server.op.gg/summoner/userName=nickname',                                   //OP GG
+								'http://quickfind.kassad.in/profile/server/nickname/'                               //Quickfind
 							);
 
 //mobafire - Full / Advanced Search
@@ -174,14 +176,14 @@ $(function(){
         champ = champ.replace(/\./g, ""); // periods
         champ = champ.replace(/'/g,""); // apostrophes
         champ = champ.replace(/\s+/g, '-'); // spaces (replaced with hyphen (-) for mobafire)
-		//Replace "link" on array with the choosen site
+		//Replace "link" on array with the chosen site
 		var live = Champion_Font_array[0];
-		//Replace "&champ&" on array with the choosen champions name
+		//Replace "&champ&" on array with the chosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
         chrome.tabs.create({url:link_final});
 	});
 
-//open the advanced search for mobafire in a new tab
+//Open the advanced search for mobafire in a new tab
 	$('.advanced_search').on('click', function(e){
 		var champ = $('#search_name').attr('data-id');
 		//Replace "link" on array with the choosen site
@@ -211,11 +213,11 @@ $(function(){
 	$('.champion-tab').on('click', function(e){
 		var champ = $(this).attr('data-champion');
 		var font = $("#showFont").attr('data-font');
-		//Replace "link" on array with the choosen site
+		//Replace "link" on array with the chosen site
 		var live = Champion_Font_array[font];
-		//Replace "&champ&" on array with the choosen champions name
+		//Replace "&champ&" on array with the chosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
-		if (font === "7") {
+		if (font === "8") {
 			$('#search_img').attr('src', $(this).children('img').attr('src'));
 			$('#search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
 
@@ -343,15 +345,18 @@ $(function(){
 			var Server = $("#showServer").attr('data-server');
 			var font = $("#showLive").attr('data-live');
 			var live = Live_Font_array[font];
-			if ((font === "1") || (font === "4")) {
+			if ((font === "0") || (font === "3")) {
 				Server = Server.toLowerCase();
 			};
 			//Replace "server" on array with the choosen server
 			var Server_base = live.replace(/server/g, Server);
 
-			if ((font === "1") || (font === "4")) {
+			if ((font === "0") || (font === "3")) {
 				//Replace spaces with "+"
 				var summoners = $("#search_summoners").val().replace(" ", "%20");
+			} else if (font === "5") {
+				//Strip spaces for Match History
+				var summoners = $("#search_summoners").val().replace(" ", "");
 			} else {
 				//Replace spaces with "+"
 				var summoners = $("#search_summoners").val().replace(" ", "+");
@@ -360,7 +365,26 @@ $(function(){
 			//Replace "nickname" on array with the choosen summoners name
 			var Server_final = Server_base.replace("nickname", summoners);
 
+			//Extras that need to be done to acquire JSON information for Match History
+			if (font === "5") {
+				//I have to pass my own site here, as the api from acs.leagueoflegends.com does not allow getJSON from other URLs
+				//My own site mirrors the acs.leagueoflegends.com site in this case, making getJSON possible
+				var site = 'http://www.scias.net/riotapi/index.php?r=' + Server + '&n=' + summoners;
+				$.getJSON(site, function(data){
+					//Grab the region and accountId from the JSON object array and stores them into variables
+					var region = data.platformId;
+					var accountId = data.accountId;
+
+					//Prepare the final URL http://matchhistory.server.leagueoflegends.com/en/#match-history/region/accountid
+					var History_prepare = Server_base.replace("region", region);
+					var History_final = History_prepare.replace("accountid", accountId);
+
+					chrome.tabs.create({url:History_final});
+				}
+				);
+			} else {
 			chrome.tabs.create({url:Server_final});
+			}
 		};
 	});
 	$(document).on('click', '.new_link', function(e){
