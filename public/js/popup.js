@@ -369,7 +369,7 @@ $(function(){
 			if (font === "5") {
 				//I have to pass my own site here, as the api from acs.leagueoflegends.com does not allow getJSON from other URLs
 				//My own site mirrors the acs.leagueoflegends.com site in this case, making getJSON possible
-				var site = 'http://www.scias.net/riotapi/index.php?r=' + Server + '&n=' + summoners;
+				var site = 'http://www.scias.net/riotapi/mirror-api.php?r=' + Server + '&n=' + summoners;
 				$.getJSON(site, function(data){
 					//Grab the region and accountId from the JSON object array and stores them into variables
 					var region = data.platformId;
