@@ -4,7 +4,7 @@
 // Mirrors the acs.leagueoflegends.com website for JSON requests
 // Created for Scias.net by DJScias
 // Example url
-// http://www.scias.net/riotapi/index.php?r=<region>&n=<username>
+// http://www.scias.net/riotapi/mirror-api.php?r=<region>&n=<username>
 // <region> = na/euw/...
 // <username> = username without spaces
 // ----------------------------------------------------------------------------------------------
