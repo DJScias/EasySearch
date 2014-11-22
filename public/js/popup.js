@@ -177,7 +177,7 @@ $(function(){
         champ = champ.replace(/'/g,""); // apostrophes
         champ = champ.replace(/\s+/g, '-'); // spaces (replaced with hyphen (-) for mobafire)
 		//Replace "link" on array with the chosen site
-		var live = Champion_Font_array[0];
+		var live = Champion_Font_array[8];
 		//Replace "&champ&" on array with the chosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
         chrome.tabs.create({url:link_final});
