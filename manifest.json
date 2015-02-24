@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "Heroes of the Storm Easy Search",
+	"short_name": "HotSES",
+	"version": "0.1.0",
+	"description": "Hero search made easy.",
+	"icons": {
+		"128": "public/img/other.png",
+		"48": "public/img/other1.png"
+	},
+	"browser_action": {
+		"default_icon": "public/img/hots.png",
+		"default_popup": "popup.html",
+		"default_title": "Heroes of the Storm Easy Search"
+	},
+	"permissions": [ 
+		"tabs",
+		"cookies",
+		"<all_urls>"
+	],
+	"author": [
+		{
+			"name": "DJScias",
+			"email": "DJScias@gmail.com",
+			"url": "https://github.com/DJScias"
+		},
+		{
+			"name": "SrPatinhas",
+			"email": "migascc69@gmail.com",
+			"url": "https://github.com/SrPatinhas"
+		}
+	]
+}
