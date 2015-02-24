@@ -1,224 +1,249 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<link rel="stylesheet" type="text/css" href="public/css/font-awesome.css"/>
-		<link rel="stylesheet" type="text/css" href="public/css/popup.css"/>
-		<link rel="stylesheet" type="text/css" href="public/css/tooltipster.css"/>
-		<link rel="stylesheet" type="text/css" href="public/css/tooltipster-light.css"/>
-	</head>
-	<body>
-		<div class='cssmenu'>
-			<div class="textBox">
-				<input type="text" id="search_hero" placeholder="The name of a Hero">
-			</div>
-			<ul>
-				<li class='has-sub last'><a href='#'><span>Heroes: <small id="showFont" data-font="0">HeroesFire</small></span></a>
-					<ul>
-						<li class="showFont" data-font="0"><a href='#'><span>HeroesFire</span></a></li>
-                        <li class="showFont" data-font="1"><a href='#'><span>IGN Wiki</span></a></li>
-						<li class="last showFont" data-font="2"><a href='#'><span>Stormable</span></a></li>		
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<ul class="heroes_menu">
-			<li id="Abathur">
-			    <a href="#" data-hero="abathur" hero-id="6" class="tooltip hero-tab" data-title="Abathur" title="Abathur">
-			        <img src="public/img/heroes/abathur.png">
-			    </a>
-			</li>
-			<li id="Anub'arak">
-			    <a href="#" data-hero="anubarak" hero-id="1000" class="tooltip hero-tab" data-title="Anub'arak" title="Anub'arak">
-			        <img src="public/img/heroes/anubarak.png">
-			    </a>
-			</li>
-			<li id="Arthas">
-			    <a href="#" data-hero="arthas" hero-id="23" class="tooltip hero-tab" data-title="Arthas" title="Arthas">
-			        <img src="public/img/heroes/arthas.png">
-			    </a>
-			</li>
-			<li id="Azmodan">
-			    <a href="#" data-hero="azmodan" hero-id="1001" class="tooltip hero-tab" data-title="Azmodan" title="Azmodan">
-			        <img src="public/img/heroes/azmodan.png">
-			    </a>
-			</li>
-			<li id="Brightwing">
-			    <a href="#" data-hero="brightwing" hero-id="392" class="tooltip hero-tab" data-title="Brightwing" title="Brightwing">
-			        <img src="public/img/heroes/brightwing.png">
-			    </a>
-			</li>
-			<li id="Chen">
-			    <a href="#" data-hero="chen" hero-id="963" class="tooltip hero-tab" data-title="Chen" title="Chen">
-			        <img src="public/img/heroes/chen.png">
-			    </a>
-			</li>
+        <link rel="stylesheet" type="text/css" href="public/css/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="public/css/popup.css"/>
+        <link rel="stylesheet" type="text/css" href="public/css/tooltipster.css"/>
+        <link rel="stylesheet" type="text/css" href="public/css/tooltipster-light.css"/>
+    </head>
+    <body>
+        <div class='cssmenu'>
+            <div class="textBox">
+                <input type="text" id="search_hero" placeholder="The name of a Hero">
+            </div>
+            <ul>
+                <li class='has-sub last'><a href='#'><span>Heroes: <small id="showFont" data-font="0">HeroesFire</small></span></a>
+                    <ul>
+                        <li class="showFont" data-font="0"><a href='#'><span>HeroesFire</span></a></li>
+                        <li class="showFont" data-font="1"><a href='#'><span>IGN Wiki (incomplete)</span></a></li>
+                        <li class="last showFont" data-font="2"><a href='#'><span>Stormable (incomplete)</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="heroes_menu">
+            <li id="Abathur">
+                <a href="#" data-hero="abathur" hero-id="6" class="tooltip hero-tab" data-title="Abathur" title="Abathur">
+                    <img src="public/img/heroes/abathur.png">
+                </a>
+            </li>
+            <li id="Anub'arak">
+                <a href="#" data-hero="anubarak" hero-id="1000" class="tooltip hero-tab" data-title="Anub'arak" title="Anub'arak">
+                    <img src="public/img/heroes/anubarak.png">
+                </a>
+            </li>
+            <li id="Arthas">
+                <a href="#" data-hero="arthas" hero-id="23" class="tooltip hero-tab" data-title="Arthas" title="Arthas">
+                    <img src="public/img/heroes/arthas.png">
+                </a>
+            </li>
+            <li id="Azmodan">
+                <a href="#" data-hero="azmodan" hero-id="1001" class="tooltip hero-tab" data-title="Azmodan" title="Azmodan">
+                    <img src="public/img/heroes/azmodan.png">
+                </a>
+            </li>
+            <li id="Brightwing">
+                <a href="#" data-hero="brightwing" hero-id="392" class="tooltip hero-tab" data-title="Brightwing" title="Brightwing">
+                    <img src="public/img/heroes/brightwing.png">
+                </a>
+            </li>
+            <li id="Chen">
+                <a href="#" data-hero="chen" hero-id="963" class="tooltip hero-tab" data-title="Chen" title="Chen">
+                    <img src="public/img/heroes/chen.png">
+                </a>
+            </li>
+            <li id="Diablo">
+                <a href="#" data-hero="diablo" hero-id="20" class="tooltip hero-tab" data-title="Diablo" title="Diablo">
+                    <img src="public/img/heroes/diablo.png">
+                </a>
+            </li>
             <li id="Elite Tauren Chieftain">
-			    <a href="#" data-hero="elite-tauren-chieftain" hero-id="19" class="tooltip hero-tab" data-title="Elite_Tauren_Chieftain" title="Elite Tauren Chieftain | E.T.C.">
-			        <img src="public/img/heroes/elite-tauren-chieftain.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="elite-tauren-chieftain" hero-id="19" class="tooltip hero-tab" data-title="Elite_Tauren_Chieftain" title="Elite Tauren Chieftain | E.T.C.">
+                    <img src="public/img/heroes/elite-tauren-chieftain.png">
+                </a>
+            </li>
             <li id="Falstad">
-			    <a href="#" data-hero="falstad" hero-id="10" class="tooltip hero-tab" data-title="Falstad" title="Falstad">
-			        <img src="public/img/heroes/falstad.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="falstad" hero-id="10" class="tooltip hero-tab" data-title="Falstad" title="Falstad">
+                    <img src="public/img/heroes/falstad.png">
+                </a>
+            </li>
+            <li id="Gazlowe">
+                <a href="#" data-hero="gazlowe" hero-id="3" class="tooltip hero-tab" data-title="Gazlowe" title="Gazlowe">
+                    <img src="public/img/heroes/gazlowe.png">
+                </a>
+            </li>
             <li id="Illidan">
-			    <a href="#" data-hero="illidan" hero-id="9" class="tooltip hero-tab" data-title="Illidan" title="Illidan">
-			        <img src="public/img/heroes/illidan.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="illidan" hero-id="9" class="tooltip hero-tab" data-title="Illidan" title="Illidan">
+                    <img src="public/img/heroes/illidan.png">
+                </a>
+            </li>
+            <li id="Jaina">
+                <a href="#" data-hero="jaina" hero-id="1101" class="tooltip hero-tab" data-title="Jaina" title="Jaina">
+                    <img src="public/img/heroes/jaina.png">
+                </a>
+            </li>
             <li id="Kerrigan">
-			    <a href="#" data-hero="kerrigan" hero-id="11" class="tooltip hero-tab" data-title="Kerrigan" title="Kerrigan">
-			        <img src="public/img/heroes/kerrigan.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="kerrigan" hero-id="11" class="tooltip hero-tab" data-title="Kerrigan" title="Kerrigan">
+                    <img src="public/img/heroes/kerrigan.png">
+                </a>
+            </li>
             <li id="Li Li">
-			    <a href="#" data-hero="li-li" hero-id="672" class="tooltip hero-tab" data-title="Li_Li" title="Li Li">
-			        <img src="public/img/heroes/li-li.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="li-li" hero-id="672" class="tooltip hero-tab" data-title="Li_Li" title="Li Li">
+                    <img src="public/img/heroes/li-li.png">
+                </a>
+            </li>
             <li id="Malfurion">
-			    <a href="#" data-hero="malfurion" hero-id="15" class="tooltip hero-tab" data-title="Malfurion" title="Malfurion">
-			        <img src="public/img/heroes/malfurion.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="malfurion" hero-id="15" class="tooltip hero-tab" data-title="Malfurion" title="Malfurion">
+                    <img src="public/img/heroes/malfurion.png">
+                </a>
+            </li>
             <li id="Muradin">
-			    <a href="#" data-hero="muradin" hero-id="21" class="tooltip hero-tab" data-title="Muradin" title="Muradin">
-			        <img src="public/img/heroes/muradin.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="muradin" hero-id="21" class="tooltip hero-tab" data-title="Muradin" title="Muradin">
+                    <img src="public/img/heroes/muradin.png">
+                </a>
+            </li>
             <li id="Murky">
-			    <a href="#" data-hero="murky" hero-id="708" class="tooltip hero-tab" data-title="Murky" title="Murky">
-			        <img src="public/img/heroes/murky.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="murky" hero-id="708" class="tooltip hero-tab" data-title="Murky" title="Murky">
+                    <img src="public/img/heroes/murky.png">
+                </a>
+            </li>
             <li id="Nazeebo">
-			    <a href="#" data-hero="nazeebo" hero-id="2" class="tooltip hero-tab" data-title="Nazeebo" title="Nazeebo">
-			        <img src="public/img/heroes/nazeebo.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="nazeebo" hero-id="2" class="tooltip hero-tab" data-title="Nazeebo" title="Nazeebo">
+                    <img src="public/img/heroes/nazeebo.png">
+                </a>
+            </li>
             <li id="Nova">
-			    <a href="#" data-hero="nova" hero-id="13" class="tooltip hero-tab" data-title="Nova" title="Nova">
-			        <img src="public/img/heroes/nova.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="nova" hero-id="13" class="tooltip hero-tab" data-title="Nova" title="Nova">
+                    <img src="public/img/heroes/nova.png">
+                </a>
+            </li>
             <li id="Raynor">
-			    <a href="#" data-hero="raynor" hero-id="1" class="tooltip hero-tab" data-title="Raynor" title="Raynor">
-			        <img src="public/img/heroes/raynor.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="raynor" hero-id="1" class="tooltip hero-tab" data-title="Raynor" title="Raynor">
+                    <img src="public/img/heroes/raynor.png">
+                </a>
+            </li>
             <li id="Rehgar">
-			    <a href="#" data-hero="rehgar" hero-id="879" class="tooltip hero-tab" data-title="Rehgar" title="Rehgar">
-			        <img src="public/img/heroes/rehgar.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="rehgar" hero-id="879" class="tooltip hero-tab" data-title="Rehgar" title="Rehgar">
+                    <img src="public/img/heroes/rehgar.png">
+                </a>
+            </li>
             <li id="Sergeant Hammer">
-			    <a href="#" data-hero="sgt-hammer" hero-id="16" class="tooltip hero-tab" data-title="Sgt_Hammer" title="Sergeant Hammer">
-			        <img src="public/img/heroes/sergeant-hammer.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="sgt-hammer" hero-id="16" class="tooltip hero-tab" data-title="Sgt_Hammer" title="Sergeant Hammer">
+                    <img src="public/img/heroes/sergeant-hammer.png">
+                </a>
+            </li>
             <li id="Sonya">
-			    <a href="#" data-hero="barbarian" hero-id="12" class="tooltip hero-tab" data-title="Barbarian" title="Sonya (Barbarian)">
-			        <img src="public/img/heroes/sonya.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="barbarian" hero-id="12" class="tooltip hero-tab" data-title="Barbarian" title="Sonya (Barbarian)">
+                    <img src="public/img/heroes/sonya.png">
+                </a>
+            </li>
             <li id="Stitches">
-			    <a href="#" data-hero="stitches" hero-id="22" class="tooltip hero-tab" data-title="Stitches" title="Stitches">
-			        <img src="public/img/heroes/stitches.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="stitches" hero-id="22" class="tooltip hero-tab" data-title="Stitches" title="Stitches">
+                    <img src="public/img/heroes/stitches.png">
+                </a>
+            </li>
             <li id="Tassadar">
-			    <a href="#" data-hero="tassadar" hero-id="7" class="tooltip hero-tab" data-title="Tassadar" title="Tassadar">
-			        <img src="public/img/heroes/tassadar.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="tassadar" hero-id="7" class="tooltip hero-tab" data-title="Tassadar" title="Tassadar">
+                    <img src="public/img/heroes/tassadar.png">
+                </a>
+            </li>
+            <li id="The Lost Vikings">
+                <a href="#" data-hero="the-lost-vikings" hero-id="1209" class="tooltip hero-tab" data-title="The_Lost_Vikings" title="The Lost Vikings">
+                    <img src="public/img/heroes/the-lost-vikings.png">
+                </a>
+            </li>
+            <li id="Thrall">
+                <a href="#" data-hero="thrall" hero-id="1143" class="tooltip hero-tab" data-title="Thrall" title="Thrall">
+                    <img src="public/img/heroes/thrall.png">
+                </a>
+            </li>
             <li id="Tychus">
-			    <a href="#" data-hero="tychus" hero-id="8" class="tooltip hero-tab" data-title="Tychus" title="Tychus">
-			        <img src="public/img/heroes/tychus.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="tychus" hero-id="8" class="tooltip hero-tab" data-title="Tychus" title="Tychus">
+                    <img src="public/img/heroes/tychus.png">
+                </a>
+            </li>
             <li id="Tyrael">
-			    <a href="#" data-hero="tyrael" hero-id="18" class="tooltip hero-tab" data-title="Tyrael" title="Tyrael">
-			        <img src="public/img/heroes/tyrael.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="tyrael" hero-id="18" class="tooltip hero-tab" data-title="Tyrael" title="Tyrael">
+                    <img src="public/img/heroes/tyrael.png">
+                </a>
+            </li>
             <li id="Tyrande">
-			    <a href="#" data-hero="tyrande" hero-id="4" class="tooltip hero-tab" data-title="Tyrande" title="Tyrande">
-			        <img src="public/img/heroes/tyrande.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="tyrande" hero-id="4" class="tooltip hero-tab" data-title="Tyrande" title="Tyrande">
+                    <img src="public/img/heroes/tyrande.png">
+                </a>
+            </li>
             <li id="Uther">
-			    <a href="#" data-hero="uther" hero-id="5" class="tooltip hero-tab" data-title="Uther" title="Uther">
-			        <img src="public/img/heroes/uther.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="uther" hero-id="5" class="tooltip hero-tab" data-title="Uther" title="Uther">
+                    <img src="public/img/heroes/uther.png">
+                </a>
+            </li>
             <li id="Valla">
-			    <a href="#" data-hero="demon-hunter" hero-id="14" class="tooltip hero-tab" data-title="Demon_Hunter" title="Valla (Demon Hunter)">
-			        <img src="public/img/heroes/valla.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="demon-hunter" hero-id="14" class="tooltip hero-tab" data-title="Demon_Hunter" title="Valla (Demon Hunter)">
+                    <img src="public/img/heroes/valla.png">
+                </a>
+            </li>
             <li id="Zagara">
-			    <a href="#" data-hero="zagara" hero-id="791" class="tooltip hero-tab" data-title="Zagara" title="Zagara">
-			        <img src="public/img/heroes/zagara.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="zagara" hero-id="791" class="tooltip hero-tab" data-title="Zagara" title="Zagara">
+                    <img src="public/img/heroes/zagara.png">
+                </a>
+            </li>
             <li id="Zeratul">
-			    <a href="#" data-hero="zeratul" hero-id="17" class="tooltip hero-tab" data-title="Zeratul" title="Zeratul">
-			        <img src="public/img/heroes/zeratul.png">
-			    </a>
-			</li>
+                <a href="#" data-hero="zeratul" hero-id="17" class="tooltip hero-tab" data-title="Zeratul" title="Zeratul">
+                    <img src="public/img/heroes/zeratul.png">
+                </a>
+            </li>
 <!-- End of heroes -->
-			<div>
-				<ul class="bases_search">
-					<li id="Heroes of the Storm" class="bases">
-					    <a href="#" class="tooltip new_link" data-href="http://battle.net/heroes/" title="Heroes of the Storm - Official Website">
-					        <img src="public/img/websites/official.png">
-					    </a>
-					</li>
-					<li id="HeroesFire" class="bases">
-					    <a href="#" class="tooltip new_link" data-href="http://www.heroesfire.com/" title="HeroesFire - Official Website">
-					        <img src="public/img/websites/hf.png">
-					    </a>
-					</li>
-					<li id="Stormable" class="bases">
-					    <a href="#" class="tooltip new_link" data-href="http://stormable.com/" title="Stormable - Official Website">
-					        <img src="public/img/websites/storm.png">
-					    </a>
-					</li>
-					<li id="IGN Wiki" class="bases">
-					    <a href="#" class="tooltip new_link" data-href="http://www.ign.com/wikis/heroes-of-the-storm" title="IGN Wiki - Official Website">
-					        <img src="public/img/websites/ign.png">
-					    </a>
-					</li>
-				</ul>
-			</div>
-		</ul>
-		<div class="bottom-bar">
-			<label>Heroes of the Storm Easy Search</label>
-			<i class="fa fa-info-circle open-about"></i>
-			<!--<i class="fa fa-cog open-settings"></i>-->
-		</div>
+            <div>
+                <ul class="bases_search">
+                    <li id="Heroes of the Storm" class="bases">
+                        <a href="#" class="tooltip new_link" data-href="http://battle.net/heroes/" title="Heroes of the Storm - Official Website">
+                            <img src="public/img/websites/official.png">
+                        </a>
+                    </li>
+                    <li id="HeroesFire" class="bases">
+                        <a href="#" class="tooltip new_link" data-href="http://www.heroesfire.com/" title="HeroesFire - Official Website">
+                            <img src="public/img/websites/hf.png">
+                        </a>
+                    </li>
+                    <li id="Stormable" class="bases">
+                        <a href="#" class="tooltip new_link" data-href="http://stormable.com/" title="Stormable - Official Website">
+                            <img src="public/img/websites/storm.png">
+                        </a>
+                    </li>
+                    <li id="IGN Wiki" class="bases">
+                        <a href="#" class="tooltip new_link" data-href="http://www.ign.com/wikis/heroes-of-the-storm" title="IGN Wiki - Official Website">
+                            <img src="public/img/websites/ign.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+        <div class="bottom-bar">
+            <label>Heroes of the Storm Easy Search</label>
+            <i class="fa fa-info-circle open-about"></i>
+            <!--<i class="fa fa-cog open-settings"></i>-->
+        </div>
         <div id="aboutModal" class="reveal-modal">
-			<a class="close-modal close-reveal-modal">&#215;</a>
-			<label class="title_about"> Links used:</label>
-			<ul class="search_bases">
-				<li><a class="new_link" data-href='http://www.heroesfire.com/'>HeroesFire</a></li>
-				<li><a class="new_link" data-href='http://www.ign.com/wikis/heroes-of-the-storm/'>IGN Wiki</a></li>
-				<li><a class="new_link" data-href='http://stormable.com/'>Stormable</a></li>	
-			</ul>
-			<p class="us_about">
- 				Made with <span style="color:#e74c3c;">&#10084;</span> by <br>
- 				<a class="new_link" data-href="https://github.com/DJScias" title="GitHub - DJScias">DJScias</a>
-			</p>
-			<label class="version_about">Version <span></span></label>
-		</div>
-		<script type="text/javascript" src="public/js/jquery.min.js"></script>
-    	<script type="text/javascript" src="public/js/jquery.tooltipster.js"></script>
-		<script type="text/javascript" src="public/js/popup.js"></script>
-		<script type="text/javascript" src="public/js/menu.js"></script>
-		<script type="text/javascript" src="public/js/jquery.reveal.js"></script>
-	</body>
+            <a class="close-modal close-reveal-modal">&#215;</a>
+            <label class="title_about"> Links used:</label>
+            <ul class="search_bases">
+                <li><a class="new_link" data-href='http://www.heroesfire.com/'>HeroesFire</a></li>
+                <li><a class="new_link" data-href='http://www.ign.com/wikis/heroes-of-the-storm/'>IGN Wiki</a><br>(incomplete heroes list)</li>
+                <li><a class="new_link" data-href='http://stormable.com/'>Stormable</a><br>(incomplete heroes list)</li>
+            </ul>
+            <p class="us_about">
+                Made with <span style="color:#e74c3c;">&#10084;</span> by <br>
+                <a class="new_link" data-href="https://github.com/DJScias" title="GitHub - DJScias">DJScias</a>
+            </p>
+            <label class="version_about">Version <span></span></label>
+        </div>
+        <script type="text/javascript" src="public/js/jquery.min.js"></script>
+        <script type="text/javascript" src="public/js/jquery.tooltipster.js"></script>
+        <script type="text/javascript" src="public/js/popup.js"></script>
+        <script type="text/javascript" src="public/js/menu.js"></script>
+        <script type="text/javascript" src="public/js/jquery.reveal.js"></script>
+    </body>
 </html>
