@@ -175,10 +175,6 @@
     "message": " Links used:",
     "description":"Used links on information page."
   },
-  "usedLinks": {
-    "message": " Links used:",
-    "description":"Used text on information page."
-  },
   "about_madeWith": {
     "message": "Made with ",
     "description":"Made with text on information page."
