@@ -107,7 +107,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				}
 				else {
 					// the same remark as above applies : empty strings (like title="") are considered content and will be shown. Do not define any attribute at all if you want to initialize the plugin without content at start.
-					var t = self.$el.attr('title');
+					var t = self.$el.attr('i18n_title');
 					if(typeof t === 'undefined') t = null;
 					
 					self._content_set(t);
@@ -118,7 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				
 				self.$el
 					// strip the title off of the element to prevent the default tooltips from popping up
-					.removeAttr('title')
+					.removeAttr('i18n_title')
 					// to be able to find all instances on the page later (upon window events in particular)
 					.addClass('tooltipstered');
 
@@ -1072,7 +1072,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				
 				self.$el
 					.removeClass('tooltipstered')
-					.attr('title', stringifiedContent)
+					.attr('i18n_title', stringifiedContent)
 					.removeData(self.namespace)
 					.removeData('tooltipster-ns')
 					.off('.'+ self.namespace);
