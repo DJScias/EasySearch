@@ -40,24 +40,25 @@
 						<li class="last showServer" data-server="OCE"><a href="#" i18n="server_OCE"></a></li>
 					</ul>
 				</li>
-			</ul><br>
+			</ul>
 			<div class="textBox">
 				<input type="text" id="search_champion" i18n_placeholder="champion_placeholder">
 			</div>
 			<ul>
-				<li class='has-sub last'><a href='#'><span i18n="champions"></span><small id="showFont" data-font="8">Mobafire</small></a>
+				<li class='has-sub last'><a href='#'><span i18n="champions"></span><small id="showFont" data-font="9">Mobafire</small></a>
 					<ul>
 						<li class="showFont" data-font="0"><a href='#'><span>ChampionSelect</span></a></li>
-						<li class="showFont" data-font="1"><a href='#'><span>Elophant</span></a></li>
-						<li class="showFont" data-font="2"><a href='#'><span>Lol Counter</span></a></li>
-						<li class="showFont" data-font="3"><a href='#'><span>Lol Wiki</span></a></li>
-						<li class="showFont" data-font="4"><a href='#'><span>LolBuilder</span></a></li>
-						<li class="showFont" data-font="5"><a href='#'><span>LolKing</span></a></li>
-						<li class="showFont" data-font="6"><a href='#'><span>LolPro</span></a></li>
-						<li class="showFont" data-font="7"><a href='#'><span>LolSkill</span></a></li>
-						<li class="showFont" data-font="8"><a href='#'><span>Mobafire</span></a></li>
-						<li class="showFont" data-font="9"><a href='#'><span>Probuilds</span></a></li>
-						<li class="last showFont" data-font="10"><a href='#'><span>Solomid</span></a></li>
+						<li class="showFont" data-font="1"><a href='#'><span>CounterStats</span></a></li>
+						<li class="showFont" data-font="2"><a href='#'><span>Elophant</span></a></li>
+						<li class="showFont" data-font="3"><a href='#'><span>Lol Counter</span></a></li>
+						<li class="showFont" data-font="4"><a href='#'><span>Lol Wiki</span></a></li>
+						<li class="showFont" data-font="5"><a href='#'><span>LolBuilder</span></a></li>
+						<li class="showFont" data-font="6"><a href='#'><span>LolKing</span></a></li>
+						<li class="showFont" data-font="7"><a href='#'><span>LolPro</span></a></li>
+						<li class="showFont" data-font="8"><a href='#'><span>LolSkill</span></a></li>
+						<li class="showFont" data-font="9"><a href='#'><span>Mobafire</span></a></li>
+						<li class="showFont" data-font="10"><a href='#'><span>Probuilds</span></a></li>
+						<li class="last showFont" data-font="11"><a href='#'><span>Solomid</span></a></li>
 					</ul>
 				</li>
 			</ul>
@@ -734,10 +735,10 @@
 			<i class="fa fa-info-circle open-about"></i>
 			<!--<i class="fa fa-cog open-settings"></i>-->
 		</div>
-		<div id="myModal" class="reveal-modal">
+		<div id="advancedSearchModal" class="reveal-modal">
 			<a class="close-modal close-reveal-modal">&#215;</a>
-			<img src="" id="search_img">
-			<span id="search_name" data-id=""></span>
+			<img src="" class="search_img">
+			<span class="search_name" data-id=""></span>
 			<hr>
 			<small class="warming_modal" i18n="mobafire_only"></small>
 			<div class='menu_modal'>
@@ -782,6 +783,39 @@
 			</div>
 			<button class="basic_search tooltip_modal" data-position="top" i18n_title="basic_search_title" i18n="basic_search"></button>
 			<button class="advanced_search tooltip_modal" i18n_title="advanced_search_title" i18n="advanced_search"></button>
+			<button class="cancel_search close-modal" i18n="cancel"></button>
+		</div>
+		<div id="counterModal" class="reveal-modal">
+			<a class="close-modal close-reveal-modal">&#215;</a>
+			<img src="" class="search_img">
+			<span class="search_name" data-id=""></span>
+			<hr>
+			<small class="warming_modal" i18n="counter_only"></small>
+			<div class='menu_modal'>
+				<ul>
+					<li class='has-sub last'><a href='#'><span><span i18n="choice_map"></span><small data-search="" id="map_search_base" i18n="option_any"></small></span></a>
+						<ul class="dropdown">
+							<li><a href="#" class="showMap" data-search="" i18n="option_any"></a></li>
+							<li><a href="#" class="showMap" data-search="Summoner%27s+Rift" i18n="option_SR"></a></li>
+							<li><a href="#" class="showMap" data-search="Twisted+Treeline" i18n="option_TT"></a></li>
+							<li><a href="#" class="showMap" data-search="Crystal+Scar" i18n="option_CS"></a></li>
+							<li><a href="#" class="showMap" data-search="Howling+Abyss" i18n="option_HA"></a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li class='has-sub last'><a href='#'><span><span i18n="choice_lane"></span><small data-search="top" id="lane_search_base" i18n="option_Top"></small></span></a>
+						<ul class="dropdown">
+							<li><a href="#" class="showLane" data-search="top" i18n="option_Top"></a></li>
+							<li><a href="#" class="showLane" data-search="middle" i18n="option_Middle"></a></li>
+							<li><a href="#" class="showLane" data-search="bottom" i18n="option_Bottom"></a></li>
+							<li><a href="#" class="showLane" data-search="jungle" i18n="option_Jungle"></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<button class="basic_search tooltip_modal" data-position="top" i18n_title="Search with basic params" i18n="basic_search"></button>
+			<button class="advanced_search tooltip_modal" i18n_title="Search with Full params" i18n="advanced_search"></button>
 			<button class="cancel_search close-modal" i18n="cancel"></button>
 		</div>
 		<div id="aboutModal" class="reveal-modal">

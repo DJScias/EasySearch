@@ -111,6 +111,7 @@ $(function(){
 	//basic search for champions
 	var Champion_Font_array = new Array(
 								'http://www.championselect.net/champions/&champ&',                          //ChampionSelect
+								'http://www.counterstats.net/league-of-legends/&champ&',                     //CounterStats
 								'http://www.elophant.com/league-of-legends/champion/&champ&/builds',        //Elophant
 								'http://www.lolcounter.com/champions/&champ&',                              //Lol Counter
 								'http://leagueoflegends.wikia.com/wiki/&champ&',                            //Lol Wiki
@@ -137,13 +138,20 @@ $(function(){
 //example of search link on advanced search
 //http://www.mobafire.com/league-of-legends/browse?sort_type=modify_ts&sort_order=desc&champion_id=114&lane=Top&role=AP+Carry&map=Summoner%27s+Rift&guide_type=&threshold=guides&freshness=All&author=
 
+//CounterStats example
+//http://www.counterstats.net/league-of-legends/ahri/vs-xerath/middle
+
 	var full_search = new Array(
 								'http://www.mobafire.com/league-of-legends/browse?sort_type=modify_ts&sort_order=desc'+
 								'&champion_id=CHAMP_ID_f'+			//champion-id
 								'&lane=LANE_f'+						//lane
 								'&role=ROLE_f'+						//role
 								'&map=MAPS_f'+						//map
-								'&guide_type=Champion&threshold=guides&freshness=All&author='
+								'&guide_type=Champion&threshold=guides&freshness=All&author=',
+                                'http://www.counterstats.net/league-of-legends/'+
+                                'CHAMP_NAME_f/'+                    //champion name
+                                'vs-COUNTER_f/'+                    //counter champion
+                                'LANE_f'                            //lane
 							);
 
 
@@ -171,33 +179,52 @@ $(function(){
 
     $('.basic_search').on('click', function(e){
         //Grab the champion's name from the span detailing it
-		var champ = $('#search_name').text();
+		var champ = $('.search_name').text();
         //Format the champion name to be compatible with Mobafire
         champ = champ.replace(/\./g, ""); // periods
         champ = champ.replace(/'/g,""); // apostrophes
         champ = champ.replace(/\s+/g, '-'); // spaces (replaced with hyphen (-) for mobafire)
 		//Replace "link" on array with the chosen site
-		var live = Champion_Font_array[8];
+		var live = Champion_Font_array[9];
 		//Replace "&champ&" on array with the chosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
         chrome.tabs.create({url:link_final});
 	});
 
 //Open the advanced search for mobafire in a new tab
-	$('.advanced_search').on('click', function(e){
-		var champ = $('#search_name').attr('data-id');
-		//Replace "link" on array with the choosen site
+	$('.advancedSearchModal').on('click', function(e){
+		var champ = $('.search_name').attr('data-id');
+		//Replace "link" on array with the chosen site
 		var live = full_search[0];
 
 		var lane = $('#lane_search_base').attr('data-search');
 		var role = $('#role_search_base').attr('data-search');
 		var map  = $('#map_search_base').attr('data-search');
 
-		//Replace "CHAMP_ID_f", "LANE_f", "ROLE_f", "MAPS_f" on array with the choosen options
+		//Replace "CHAMP_ID_f", "LANE_f", "ROLE_f", "MAPS_f" on array with the chosen options
 		var link_final = live.replace(/CHAMP_ID_f/g, champ);
 		link_final = link_final.replace(/LANE_f/g, lane);
 		link_final = link_final.replace(/ROLE_f/g, role);
 		link_final = link_final.replace(/MAPS_f/g, map);
+		console.log(link_final);
+
+		chrome.tabs.create({url:link_final});
+	});
+    
+//Open the CounterStats search in a new tab
+	$('.counterModal').on('click', function(e){
+		var champ = $('.search_name').text();
+		//Replace "link" on array with the chosen site
+		var live = full_search[1];
+
+		var lane = $('#lane_search_base').attr('data-search');
+		var role = $('#role_search_base').attr('data-search');
+		var map  = $('#map_search_base').attr('data-search');
+
+		//Replace "CHAMP_ID_f", "LANE_f", "ROLE_f", "MAPS_f" on array with the chosen options
+		var link_final = live.replace(/CHAMP_NAME_f/g, champ);
+		link_final = link_final.replace(/COUNTER_f/g, counter);
+		link_final = link_final.replace(/LANE_f/g, lane);
 		console.log(link_final);
 
 		chrome.tabs.create({url:link_final});
@@ -209,7 +236,7 @@ $(function(){
 //																									//
 //**************************************************************************************************//
 
-//Open the champion in the choosen site
+//Open the champion in the chosen site
 	$('.champion-tab').on('click', function(e){
 		var champ = $(this).attr('data-champion');
 		var font = $("#showFont").attr('data-font');
@@ -217,11 +244,21 @@ $(function(){
 		var live = Champion_Font_array[font];
 		//Replace "&champ&" on array with the chosen champions name
 		var link_final = live.replace(/&champ&/g, champ);
-		if (font === "8") {
-			$('#search_img').attr('src', $(this).children('img').attr('src'));
-			$('#search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
+		if (font === "1") {
+            
+            $('.champions_menu').delegate('img', 'click', function() {
+            var $this = $(this);
+            // Clear formatting
+            $('.champions_menu img').css('border', "solid 0px cyan");  
 
-			$('#myModal').reveal({
+            // Highlight with coloured border
+            $this.css('border', "solid 2px cyan");
+            });
+        } else if (font === "9") {
+			$('.search_img').attr('src', $(this).children('img').attr('src'));
+			$('.search_name').html($(this).attr('data-title')).attr('data-id', $(this).attr('champion-id'));
+
+			$('#advancedSearchModal').reveal({
 				animation: 'fadeAndPop',				//Fade, fadeAndPop, none
 				animationspeed: 100,					//How fast animations are
 				closeonbackgroundclick: false,			//If you click background, will modal close?

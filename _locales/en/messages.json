@@ -171,6 +171,10 @@
     "message": "Cancel",
     "description":"Cancel button text for mobafire."
   },
+  "counter_only": {
+    "message": "*This only works with CounterStats.",
+    "description":"Warning about advanced search only working in CounterStats."
+  },
   "usedLinks": {
     "message": " Links used:",
     "description":"Used links on information page."
