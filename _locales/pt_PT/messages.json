@@ -1,194 +1,146 @@
 {
   "appName": {
-    "message": "League of Legends Easy Search",
-    "description": "O nome da aplicação, mostrado na loja."
+    "message": "League of Legends Easy Search"
   },
   "appDesc": {
-    "message": "Summoners and Champion search made easy.",
-    "description":"A descrição da aplicação, mostrado na loja."
+    "message": "Summoners and Champion search made easy."
   },
   "app_title": {
-    "message": "League of Legends Easy Search",
-    "description":"O nome da aplicação, mostrado no fundo da janela."
+    "message": "League of Legends Easy Search"
   },
   "summoner_placeholder": {
-    "message": "Nome do Summoner depois tecla 'Enter'",
-    "description":"Placeholder for inputbox summoner name."
+    "message": "Nome do Summoner depois tecla 'Enter'"
   },
   "summoners": {
-    "message": "Summoners: ",
-    "description":"Summoner searching site option text."
+    "message": "Summoners: "
   },
   "server": {
-    "message": "Servidor: ",
-    "description":"Server choice option text."
+    "message": "Servidor: "
   },
   "server_NA": {
-    "message": "America do Norte",
-    "description":"North America option for server."
+    "message": "America do Norte"
   },
   "server_EUW": {
-    "message": "Europa do Ocidente",
-    "description":"Europe West option for server."
+    "message": "Europa do Ocidente"
   },
   "server_EUNE": {
-    "message": "Europa do Nordica & Leste",
-    "description":"Europe Northic & East option for server."
+    "message": "Europa do Nordica & Leste"
   },
   "server_BR": {
-    "message": "Brasil",
-    "description":"Brazil option for server."
+    "message": "Brasil"
   },
   "server_TR": {
-    "message": "Turquia",
-    "description":"Turkey option for server."
+    "message": "Turquia"
   },
   "server_RU": {
-    "message": "Russia",
-    "description":"Russia option for server."
+    "message": "Russia"
   },
   "server_LAN": {
-    "message": "Norte America Latina",
-    "description":"Latin America North option for server."
+    "message": "Norte America Latina"
   },
   "server_LAS": {
-    "message": "Sul America Latina",
-    "description":"Latin America South option for server."
+    "message": "Sul America Latina"
   },
   "server_OCE": {
-    "message": "Oceania",
-    "description":"Oceania option for server."
+    "message": "Oceania"
   },
   "champion_placeholder": {
-    "message": "O nome do Champion",
-    "description":"Placeholder for inputbox champion name."
+    "message": "O nome do Champion"
   },
   "champions": {
-    "message": "Champions: ",
-    "description":"Champion searching site option text."
+    "message": "Champions: "
   },
   "mobafire_only": {
-    "message": "*Isto apenas funciona com mobafire.",
-    "description":"Warning about advanced search only working in mobafire."
+    "message": "*Isto apenas funciona com mobafire."
   },
   "option_any": {
-    "message": "Todas",
-    "description":"The option 'any' for mobafire advanced search."
+    "message": "Todas"
   },
   "option_Other": {
-    "message": "Outras",
-    "description":"The option 'other' for mobafire advanced search."
+    "message": "Outras"
   },
   "choice_map": {
-    "message": "Mapa: ",
-    "description":"The choice 'map' for mobafire advanced search."
+    "message": "Mapa: "
   },
   "option_SR": {
-    "message": "Summoner´s Rift",
-    "description":"The map option 'Summoner´s Rift' for mobafire advanced search."
+    "message": "Summoner´s Rift"
   },
   "option_TT": {
-    "message": "Twisted Treeline",
-    "description":"The map option 'Twisted Treeline' for mobafire advanced search."
+    "message": "Twisted Treeline"
   },
   "option_CS": {
-    "message": "Crystal Scar",
-    "description":"The map option 'Crystal Scar' for mobafire advanced search."
+    "message": "Crystal Scar"
   },
   "option_HA": {
-    "message": "Howling Abyss",
-    "description":"The map option 'Howling Abyss' for mobafire advanced search."
+    "message": "Howling Abyss"
   },
   "choice_role": {
-    "message": "Role: ",
-    "description":"The choice 'role' for mobafire advanced search."
+    "message": "Role: "
   },
   "option_APCarry": {
-    "message": "AP Carry",
-    "description":"The role option 'AP Carry' for mobafire advanced search."
+    "message": "AP Carry"
   },
   "option_ADCarry": {
-    "message": "AD Carry",
-    "description":"The role option 'AD Carry' for mobafire advanced search."
+    "message": "AD Carry"
   },
   "option_Tank": {
-    "message": "Tank",
-    "description":"The role option 'Tank' for mobafire advanced search."
+    "message": "Tank"
   },
   "option_Support": {
-    "message": "Support",
-    "description":"The role option 'Support' for mobafire advanced search."
+    "message": "Support"
   },
   "option_Assassin": {
-    "message": "Assassin",
-    "description":"The role option 'Assassin' for mobafire advanced search."
+    "message": "Assassin"
   },
   "option_APOfftank": {
-    "message": "AP Offtank",
-    "description":"The role option 'AP Offtank' for mobafire advanced search."
+    "message": "AP Offtank"
   },
   "option_ADOfftank": {
-    "message": "AD Offtank",
-    "description":"The role option 'AD Offtank' for mobafire advanced search."
+    "message": "AD Offtank"
   },
   "choice_lane": {
-    "message": "Lane: ",
-    "description":"The choice 'lane' for mobafire advanced search."
+    "message": "Lane: "
   },
   "option_Top": {
-    "message": "Top",
-    "description":"The lane option 'Top' for mobafire advanced search."
+    "message": "Top"
   },
   "option_Middle": {
-    "message": "Middle",
-    "description":"The lane option 'Middle' for mobafire advanced search."
+    "message": "Middle"
   },
   "option_Bottom": {
-    "message": "Bottom",
-    "description":"The lane option 'Bottom' for mobafire advanced search."
+    "message": "Bottom"
   },
   "option_Jungle": {
-    "message": "Jungle",
-    "description":"The lane option 'Jungle' for mobafire advanced search."
+    "message": "Jungle"
   },
   "basic_search": {
-    "message": "Pesquisa básica",
-    "description":"Basic search button text for mobafire."
+    "message": "Pesquisa básica"
   },
   "basic_search_title": {
-    "message": "Pesquisar com parametros básicos",
-    "description":"Basic search button title for mobafire."
+    "message": "Pesquisar com parametros básicos"
   },
   "advanced_Search": {
-    "message": "Pesquisa Avançada",
-    "description":"Advanced search button text for mobafire."
+    "message": "Pesquisa Avançada"
   },
   "advanced_Search_title": {
-    "message": "Pesquisar com todos os parametros",
-    "description":"Advanced search button title for mobafire."
+    "message": "Pesquisar com todos os parametros"
   },
   "cancel": {
-    "message": "Cancelar",
-    "description":"Cancel button text for mobafire."
+    "message": "Cancelar"
   },
   "usedLinks": {
-    "message": " Links usados:",
-    "description":"Used links on information page."
+    "message": " Links usados:"
   },
   "about_madeWith": {
-    "message": "Feito com ",
-    "description":"Made with text on information page."
+    "message": "Feito com "
   },
   "about_by": {
-    "message": " por ",
-    "description":"By text on information page."
+    "message": " por "
   },
   "about_and": {
-    "message": " e ",
-    "description":"And text on information page."
+    "message": " e "
   },
   "version": {
-    "message": "Versão ",
-    "description":"Version text on information page."
+    "message": "Versão "
   }
 }
