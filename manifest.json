@@ -1,33 +1,29 @@
 {
-	"manifest_version": 2,
-	"name": "Heroes of the Storm Easy Search",
-	"short_name": "HotSES",
-	"version": "0.1.0",
-	"description": "Hero search made easy.",
-	"icons": {
-		"128": "public/img/other.png",
-		"48": "public/img/other1.png"
-	},
-	"browser_action": {
-		"default_icon": "public/img/hots.png",
-		"default_popup": "popup.html",
-		"default_title": "Heroes of the Storm Easy Search"
-	},
-	"permissions": [ 
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "short_name": "HotSES",
+    "default_locale": "en",
+    "version": "0.2.0",
+    "description": "__MSG_appDesc__",
+    "icons": {
+        "128": "public/img/other.png",
+        "48": "public/img/other1.png"
+    },
+    "browser_action": {
+        "default_icon": "public/img/hots.png",
+        "default_popup": "popup.html",
+        "default_title": "__MSG_appDesc__"
+    },
+    "permissions": [
 		"tabs",
 		"cookies",
 		"<all_urls>"
 	],
-	"author": [
-		{
-			"name": "DJScias",
-			"email": "DJScias@gmail.com",
-			"url": "https://github.com/DJScias"
-		},
-		{
-			"name": "SrPatinhas",
-			"email": "migascc69@gmail.com",
-			"url": "https://github.com/SrPatinhas"
+    "author": [
+        {
+            "name": "DJScias",
+            "email": "DJScias@gmail.com",
+            "url": "https://github.com/DJScias"
 		}
 	]
 }

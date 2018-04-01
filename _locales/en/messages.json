@@ -1,0 +1,424 @@
+{
+    "appName": {
+        "message": "Heroes of the Storm Easy Search",
+        "description": "The title of the application, displayed in the web store"
+    },
+    "appDesc": {
+        "message": "Hero search made easy.",
+        "description": "The description of the application, displayed in the web store"
+    },
+    "app_title": {
+        "message": "Heroes of the Storm Easy Search",
+        "description": "The title of the application, displayed at the bottom of the popup"
+    },
+    "search_players_placeholder": {
+        "message": "BattleTag (Name#1234) then press 'Enter'",
+        "description": "The placeholder for inputbox search_players"
+    },
+    "players": {
+        "message": "Players:",
+        "description": "Player searching site option text"
+    },
+    "heroes": {
+        "message": "Heroes:",
+        "description": "Heroes searching site option text"
+    },
+    "region": {
+        "message": "Region:",
+        "description": "Player searching region option text"
+    },
+    "class": {
+        "message": "Class:",
+        "description": "Heroes searching class option text"
+    },
+    "all_class": {
+        "message": "All",
+        "description": "All class option for hero searching"
+    },
+    "assassin_class": {
+        "message": "Assassin",
+        "description": "Assassin class option for hero searching"
+    },
+    "warrior_class": {
+        "message": "Warrior",
+        "description": "Warrior class option for hero searching"
+    },
+    "support_class": {
+        "message": "Support",
+        "description": "Support class option for hero searching"
+    },
+    "specialist_class": {
+        "message": "Specialist",
+        "description": "Specialist class option for hero searching"
+    },
+    "multi_class": {
+        "message": "Multi-Class",
+        "description": "Multi-Class class option for hero searching"
+    },
+    "universe": {
+        "message": "Universe",
+        "description": "Heroes searching universe option text"
+    },
+    "all_universe": {
+        "message": "All",
+        "description": "All universe option for hero searching"
+    },
+    "warcraft_universe": {
+        "message": "Warcraft",
+        "description": "All universe option for hero searching"
+    },
+    "starcraft_universe": {
+        "message": "Starcraft",
+        "description": "All universe option for hero searching"
+    },
+    "diablo_universe": {
+        "message": "Diablo",
+        "description": "All universe option for hero searching"
+    },
+    "retro_universe": {
+        "message": "Retro",
+        "description": "All universe option for hero searching"
+    },
+    "overwatch_universe": {
+        "message": "Overwatch",
+        "description": "All universe option for hero searching"
+    },
+    "search_hero_placeholder": {
+        "message": "The name of a Hero",
+        "description": "The placeholder for inputbox search_hero"
+    },
+    "about_title": {
+        "message": "About",
+        "description": "Title of the about page"
+    },
+    "about_madeWith": {
+        "message": "Made with",
+        "description": "Made with text on information page"
+    },
+    "about_by": {
+        "message": "by",
+        "description": "By text on information page"
+    },
+    "latest_version": {
+        "message": "Latest version!",
+        "description": "Hover on version when latest"
+    },
+    "new_version": {
+        "message": "Latest version: $newVersion$",
+        "description": "Hover on version when newer available",
+        "placeholders": {
+            "newVersion": {
+                "content": "$1",
+                "example": "The newest version available"
+            }
+        }
+    },
+    "version": {
+        "message": "Version",
+        "description": "Version text on information page"
+    },
+    "Abathur": {
+        "message": "Abathur",
+        "description": "Abathur's name tooltip and search"
+    },
+    "Alarak": {
+        "message": "Alarak",
+        "description": "Alarak's name tooltip and search"
+    },
+    "Ana": {
+        "message": "Ana",
+        "description": "Ana's name tooltip and search"
+    },
+    "Anubarak": {
+        "message": "Anub'arak",
+        "description": "Anub'arak's name tooltip and search"
+    },
+    "Artanis": {
+        "message": "Artanis",
+        "description": "Artanis's name tooltip and search"
+    },
+    "Arthas": {
+        "message": "Arthas",
+        "description": "Arthas's name tooltip and search"
+    },
+    "Auriel": {
+        "message": "Auriel",
+        "description": "Auriel's name tooltip and search"
+    },
+    "Azmodan": {
+        "message": "Azmodan",
+        "description": "Azmodan's name tooltip and search"
+    },
+    "Brightwing": {
+        "message": "Brightwing",
+        "description": "Brightwing's name tooltip and search"
+    },
+    "Cassia": {
+        "message": "Cassia",
+        "description": "Cassia's name tooltip and search"
+    },
+    "Chen": {
+        "message": "Chen",
+        "description": "Chen's name tooltip and search"
+    },
+    "Cho": {
+        "message": "Cho",
+        "description": "Cho's name tooltip and search"
+    },
+    "Chromie": {
+        "message": "Chromie",
+        "description": "Chromie's name tooltip and search"
+    },
+    "Dehaka": {
+        "message": "Dehaka",
+        "description": "Dehaka's name tooltip and search"
+    },
+    "Diablo": {
+        "message": "Diablo",
+        "description": "Diablo's name tooltip and search"
+    },
+    "DVa": {
+        "message": "D.Va",
+        "description": "D.Va's name tooltip and search"
+    },
+    "ETC": {
+        "message": "E.T.C.",
+        "description": "E.T.C.'s name tooltip and search"
+    },
+    "Falstad": {
+        "message": "Falstad",
+        "description": "Falstad's name tooltip and search"
+    },
+    "Gall": {
+        "message": "Gall",
+        "description": "Gall's name tooltip and search"
+    },
+    "Garrosh": {
+        "message": "Garrosh",
+        "description": "Garrosh's name tooltip and search"
+    },
+    "Gazlowe": {
+        "message": "Gazlowe",
+        "description": "Gazlowe's name tooltip and search"
+    },
+    "Genji": {
+        "message": "Genji",
+        "description": "Genji's name tooltip and search"
+    },
+    "Greymane": {
+        "message": "Greymane",
+        "description": "Greymane's name tooltip and search"
+    },
+    "Guldan": {
+        "message": "Gul'dan",
+        "description": "Gul'dan's name tooltip and search"
+    },
+    "Illidan": {
+        "message": "Illidan",
+        "description": "Illidan's name tooltip and search"
+    },
+    "Jaina": {
+        "message": "Jaina",
+        "description": "Jaina's name tooltip and search"
+    },
+    "Johanna": {
+        "message": "Johanna",
+        "description": "Johanna's name tooltip and search"
+    },
+    "Junkrat": {
+        "message": "Junkrat",
+        "description": "Junkrat's name tooltip and search"
+    },
+    "Kaelthas": {
+        "message": "Kael'thas",
+        "description": "Kael'thas's name tooltip and search"
+    },
+    "KelThuzad": {
+        "message": "Kel'Thuzad",
+        "description": "Kel'Thuzad's name tooltip and search"
+    },
+    "Kerrigan": {
+        "message": "Kerrigan",
+        "description": "Kerrigan's name tooltip and search"
+    },
+    "Kharazim": {
+        "message": "Kharazim",
+        "description": "Kharazim's name tooltip and search"
+    },
+    "Leoric": {
+        "message": "Leoric",
+        "description": "Leoric's name tooltip and search"
+    },
+    "LiLi": {
+        "message": "Li Li",
+        "description": "Li Li's name tooltip and search"
+    },
+    "LiMing": {
+        "message": "Li-Ming",
+        "description": "Li-Ming's name tooltip and search"
+    },
+    "LtMorales": {
+        "message": "Lt. Morales",
+        "description": "Lt. Morales's name tooltip and search"
+    },
+    "Lucio": {
+        "message": "Lúcio",
+        "description": "Lúcio's name tooltip and search"
+    },
+    "Lunara": {
+        "message": "Lunara",
+        "description": "Lunara's name tooltip and search"
+    },
+    "Malfurion": {
+        "message": "Malfurion",
+        "description": "Malfurion's name tooltip and search"
+    },
+    "Malthael": {
+        "message": "Malthael",
+        "description": "Malthael's name tooltip and search"
+    },
+    "Medivh": {
+        "message": "Medivh",
+        "description": "Medivh's name tooltip and search"
+    },
+    "Muradin": {
+        "message": "Muradin",
+        "description": "Muradin's name tooltip and search"
+    },
+    "Murky": {
+        "message": "Murky",
+        "description": "Murky's name tooltip and search"
+    },
+    "Nazeebo": {
+        "message": "Nazeebo",
+        "description": "Nazeebo's name tooltip and search"
+    },
+    "Nova": {
+        "message": "Nova",
+        "description": "Nova's name tooltip and search"
+    },
+    "Probius": {
+        "message": "Probius",
+        "description": "Probius's name tooltip and search"
+    },
+    "Ragnaros": {
+        "message": "Ragnaros",
+        "description": "Ragnaros's name tooltip and search"
+    },
+    "Raynor": {
+        "message": "Raynor",
+        "description": "Raynor's name tooltip and search"
+    },
+    "Rehgar": {
+        "message": "Rehgar",
+        "description": "Rehgar's name tooltip and search"
+    },
+    "Rexxar": {
+        "message": "Rexxar",
+        "description": "Rexxar's name tooltip and search"
+    },
+    "Samuro": {
+        "message": "Samuro",
+        "description": "Samuro's name tooltip and search"
+    },
+    "SgtHammer": {
+        "message": "Sgt. Hammer",
+        "description": "Sgt. Hammer's name tooltip and search"
+    },
+    "Sonya": {
+        "message": "Sonya",
+        "description": "Sonya's name tooltip and search"
+    },
+    "Stitches": {
+        "message": "Stitches",
+        "description": "Stitches's name tooltip and search"
+    },
+    "Stukov": {
+        "message": "Stukov",
+        "description": "Stukov's name tooltip and search"
+    },
+    "Sylvanas": {
+        "message": "Sylvanas",
+        "description": "Sylvanas's name tooltip and search"
+    },
+    "Tassadar": {
+        "message": "Tassadar",
+        "description": "Tassadar's name tooltip and search"
+    },
+    "TheButcher": {
+        "message": "The Butcher",
+        "description": "The Butcher's name tooltip and search"
+    },
+    "TheLostVikings": {
+        "message": "The Lost Vikings",
+        "description": "The Lost Vikings's name tooltip and search"
+    },
+    "Thrall": {
+        "message": "Thrall",
+        "description": "Thrall's name tooltip and search"
+    },
+    "Tracer": {
+        "message": "Tracer",
+        "description": "Tracer's name tooltip and search"
+    },
+    "Tychus": {
+        "message": "Tychus",
+        "description": "Tychus's name tooltip and search"
+    },
+    "Tyrael": {
+        "message": "Tyrael",
+        "description": "Tyrael's name tooltip and search"
+    },
+    "Tyrande": {
+        "message": "Tyrande",
+        "description": "Tyrande's name tooltip and search"
+    },
+    "Uther": {
+        "message": "Uther",
+        "description": "Uther's name tooltip and search"
+    },
+    "Valeera": {
+        "message": "Valeera",
+        "description": "Valeera's name tooltip and search"
+    },
+    "Valla": {
+        "message": "Valla",
+        "description": "Valla's name tooltip and search"
+    },
+    "Varian": {
+        "message": "Varian",
+        "description": "Varian's name tooltip and search"
+    },
+    "Xul": {
+        "message": "Xul",
+        "description": "Xul's name tooltip and search"
+    },
+    "Zagara": {
+        "message": "Zagara",
+        "description": "Zagara's name tooltip and search"
+    },
+    "Zarya": {
+        "message": "Zarya",
+        "description": "Zarya's name tooltip and search"
+    },
+    "Zeratul": {
+        "message": "Zeratul",
+        "description": "Zeratul's name tooltip and search"
+    },
+    "Zuljin": {
+        "message": "Zul'jin",
+        "description": "Zul'jin's name tooltip and search"
+    },
+	"Alexstrasza": {
+        "message": "Alexstrasza",
+        "description": "Alexstrasza's name tooltip and search"
+    },
+	"Hanzo": {
+        "message": "Hanzo",
+        "description": "Hanzo's name tooltip and search"
+    },
+	"Blaze": {
+        "message": "Blaze",
+        "description": "Blaze's name tooltip and search"
+    }
+}
