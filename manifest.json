@@ -3,7 +3,7 @@
     "name": "__MSG_appName__",
     "short_name": "HotSES",
     "default_locale": "en",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "__MSG_appDesc__",
     "icons": {
         "128": "public/img/other.png",
@@ -16,8 +16,7 @@
     },
     "permissions": [
 		"tabs",
-		"cookies",
-		"<all_urls>"
+    "storage"
 	],
     "author": [
         {

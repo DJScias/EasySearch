@@ -35,11 +35,11 @@
         "message": "Tout",
         "description": "All option for hero searching"
     },
-	"universe": {
+    "universe": {
         "message": "Univers",
         "description": "Universe option for hero searching"
     },
-	"all_universe": {
+    "all_universe": {
         "message": "Tout",
         "description": "All option for hero searching"
     },
@@ -389,16 +389,32 @@
         "message": "Zul'jin",
         "description": "Zul'jin's name tooltip and search"
     },
-	"Alexstrasza": {
+    "Alexstrasza": {
         "message": "Alexstrasza",
         "description": "Alexstrasza's name tooltip and search"
     },
-	"Hanzo": {
+    "Hanzo": {
         "message": "Hanzo",
         "description": "Hanzo's name tooltip and search"
     },
-	"Kramer": {
+    "Blaze": {
         "message": "Kramer",
         "description": "Kramer's name tooltip and search"
+    },
+    "Maiev": {
+        "message": "Maiev",
+        "description": "Maiev's name tooltip and search"
+    },
+    "Fenix": {
+        "message": "Fénix",
+        "description": "Fenix's name tooltip and search"
+    },
+    "Deckard": {
+        "message": "Deckard",
+        "description": "Deckard's name tooltip and search"
+    },
+    "Yrel": {
+        "message": "Yrel",
+        "description": "Yrel's name tooltip and search"
     }
 }

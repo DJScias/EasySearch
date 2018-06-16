@@ -409,16 +409,32 @@
         "message": "Zul'jin",
         "description": "Zul'jin's name tooltip and search"
     },
-	"Alexstrasza": {
+    "Alexstrasza": {
         "message": "Alexstrasza",
         "description": "Alexstrasza's name tooltip and search"
     },
-	"Hanzo": {
+    "Hanzo": {
         "message": "Hanzo",
         "description": "Hanzo's name tooltip and search"
     },
-	"Blaze": {
+    "Blaze": {
         "message": "Blaze",
         "description": "Blaze's name tooltip and search"
+    },
+    "Maiev": {
+        "message": "Maiev",
+        "description": "Maiev's name tooltip and search"
+    },
+    "Fenix": {
+        "message": "Fenix",
+        "description": "Fenix's name tooltip and search"
+    },
+    "Deckard": {
+        "message": "Deckard",
+        "description": "Deckard's name tooltip and search"
+    },
+    "Yrel": {
+        "message": "Yrel",
+        "description": "Yrel's name tooltip and search"
     }
 }

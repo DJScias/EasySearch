@@ -10,7 +10,7 @@ body {
 
 ul.heroes_menu {
   position: relative;
-  padding: 8px 0 0 5px;
+  padding: 8px 0 2px 5px;
   margin: 0px;
   list-style-type: none;
   float: left;
@@ -254,7 +254,7 @@ ul.heroes_menu li a img:hover {
 
 /********************************************************************************************************/
 
-#showFont, #showClass, #showPlayers, #showRegion, #showUniverse {
+#showSite, #showClass, #showPlayers, #showRegion, #showUniverse {
   font-size: 12px;
   color: #8a5ac9;
   font-weight: 100;
@@ -403,7 +403,7 @@ ul.classes {
   left: 30px;
   top: 34px;
   opacity: 1;
-  
+
   /*
   left: auto;
   margin-left: 30%;
