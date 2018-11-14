@@ -412,5 +412,17 @@
     "Whitemane": {
         "message": "Weisssträhne",
         "description": "Whitemane's name tooltip and search"
+    },
+    "Malganis": {
+        "message": "Mal'ganis",
+        "description": "Mal'ganis' name tooltip and search"
+    },
+    "Mephisto": {
+        "message": "Mephisto",
+        "description": "Mephisto's name tooltip and search"
+    },
+    "Orphea": {
+        "message": "Orphea",
+        "description": "Orphea's name tooltip and search"
     }
 }

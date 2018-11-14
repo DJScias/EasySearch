@@ -75,8 +75,8 @@
         "message": "Diablo",
         "description": "All universe option for hero searching"
     },
-    "retro_universe": {
-        "message": "Retro",
+    "nexus_universe": {
+        "message": "Nexus",
         "description": "All universe option for hero searching"
     },
     "overwatch_universe": {
@@ -440,5 +440,17 @@
     "Whitemane": {
         "message": "Whitemane",
         "description": "Whitemane's name tooltip and search"
+    },
+    "Malganis": {
+        "message": "Mal'ganis",
+        "description": "Mal'ganis' name tooltip and search"
+    },
+    "Mephisto": {
+        "message": "Mephisto",
+        "description": "Mephisto's name tooltip and search"
+    },
+    "Orphea": {
+        "message": "Orphea",
+        "description": "Orphea's name tooltip and search"
     }
 }
