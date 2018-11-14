@@ -3,7 +3,7 @@
     "name": "__MSG_appName__",
     "short_name": "HotSES",
     "default_locale": "en",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "__MSG_appDesc__",
     "icons": {
         "128": "public/img/other.png",
@@ -15,9 +15,12 @@
         "default_title": "__MSG_appDesc__"
     },
     "permissions": [
-		"tabs",
-    "storage"
-	],
+    		"tabs",
+        "storage",
+        "http://scias.net/",
+        "https://scias.net/",
+        "http://www.heroesprofile.com/API/Profile/"
+  	],
     "author": [
         {
             "name": "DJScias",

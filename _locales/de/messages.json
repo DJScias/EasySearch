@@ -408,5 +408,9 @@
     "Yrel": {
         "message": "Yrel",
         "description": "Yrel's name tooltip and search"
+    },
+    "Whitemane": {
+        "message": "Weisssträhne",
+        "description": "Whitemane's name tooltip and search"
     }
 }

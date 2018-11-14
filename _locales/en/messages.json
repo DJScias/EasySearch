@@ -436,5 +436,9 @@
     "Yrel": {
         "message": "Yrel",
         "description": "Yrel's name tooltip and search"
+    },
+    "Whitemane": {
+        "message": "Whitemane",
+        "description": "Whitemane's name tooltip and search"
     }
 }
