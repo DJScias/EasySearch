@@ -1,6 +1,6 @@
 body {
   min-width: 365px;
-  min-height: 550px;
+  min-height: 575px;
   background-image: url("../image/hotsbg.png");
   border-image: url("../image/hotsborder.png") 30 stretch;
   border-width: 10px;
@@ -54,8 +54,8 @@ ul.heroes_menu li a img:hover {
 }
 
 .img-ui {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   vertical-align: middle;
 }
 
@@ -239,6 +239,13 @@ ul.heroes_menu li a img:hover {
   color: #747474;
 }
 
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
 
 /********************************************************************************************************/
 
@@ -263,6 +270,7 @@ ul.heroes_menu li a img:hover {
 .cssmenu {
   height: 44px;
   width: auto;
+  position: relative;
 }
 
 .cssmenu ul {
@@ -325,6 +333,7 @@ ul.heroes_menu li a img:hover {
   position: absolute;
   width: 0;
   height: 0;
+  margin-top: 3px;
 }
 
 .cssmenu>ul>li.has-sub::after {
@@ -373,7 +382,7 @@ ul.heroes_menu li a img:hover {
 }
 
 ul.classes {
-  width: 140px!important;
+  width: 165px!important;
 }
 
 .cssmenu ul ul {
@@ -431,6 +440,10 @@ ul.classes {
   -o-transition: all .35s ease;
   transition: all .35s ease;
   line-height: 12px;
+}
+
+a.rightMenu {
+  text-align: right !important;
 }
 
 .cssmenu ul ul li:hover>a {
@@ -1017,28 +1030,23 @@ input:hover, input:focus {
 /* Let's get this party started */
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
+	background-color: #F5F5F5;
 }
 
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/* background-color: #F5F5F5; */
 }
 
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
+  background-color: rgba(138,90,201,.5);
+  border: 2px solid rgba(138,90,201,.2);
   border-radius: 10px;
-  background: rgba(107, 107, 107, 0.8);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(107, 107, 107, 0.3);
 }

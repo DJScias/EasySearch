@@ -35,25 +35,29 @@
         "message": "All",
         "description": "All option for hero searching"
     },
-    "assassin_class": {
-        "message": "Assassine",
-        "description": "Assassin option for hero searching"
+    "tank_class": {
+        "message": "Tank",
+        "description": "Tank class option for hero searching"
     },
-    "warrior_class": {
-        "message": "Krieger",
-        "description": "Warrior option for hero searching"
+    "bruiser_class": {
+        "message": "Frontbrecher",
+        "description": "Bruiser class option for hero searching"
     },
     "support_class": {
-        "message": "Unterstützung",
-        "description": "Support option for hero searching"
+        "message": "Unterstützer",
+        "description": "Support class option for hero searching"
     },
-    "specialist_class": {
-        "message": "Spezialist",
-        "description": "Specialist option for hero searching"
+    "healer_class": {
+        "message": "Heiler",
+        "description": "Assassin class option for hero searching"
     },
-    "multi_class": {
-        "message": "Multi-Rolle",
-        "description": "Multi-Class option for hero searching"
+    "ranged_assassin_class": {
+        "message": "Fernkampfassassine",
+        "description": "Ranged Assassin class option for hero searching"
+    },
+    "melee_assassin_class": {
+        "message": "Nahkampfassassine",
+        "description": "Melee Assassin class option for hero searching"
     },
     "search_hero_placeholder": {
         "message": "Der Name eines Helden",
@@ -424,5 +428,29 @@
     "Orphea": {
         "message": "Orphea",
         "description": "Orphea's name tooltip and search"
+    },
+    "Imperius": {
+        "message": "Imperius",
+        "description": "Imperius' name tooltip and search"
+    },
+    "Anduin": {
+        "message": "Anduin",
+        "description": "Anduin's name tooltip and search"
+    },
+    "Qhira": {
+        "message": "Qhira",
+        "description": "Qhira's name tooltip and search"
+    },
+    "Deathwing": {
+        "message": "Todesschwinge",
+        "description": "Deathwing's name tooltip and search"
+    },
+    "Mei": {
+        "message": "Mei",
+        "description": "Mei's name tooltip and search"
+    },
+    "Hogger": {
+        "message": "Hogger",
+        "description": "Hogger's name tooltip and search"
     }
 }

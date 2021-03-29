@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="public/css/popup.min.css" />
-  <link rel="stylesheet" type="text/css" href="public/css/tooltipster.min.css" />
-  <link rel="stylesheet" type="text/css" href="public/css/tooltipster-light.min.css" />
+  
+  <link rel="stylesheet" href="public/css/all.min.css" />
+  <link rel="stylesheet" href="public/css/popup.min.css" />
+  <link rel="stylesheet" href="public/css/tooltipster.min.css" />
+  <link rel="stylesheet" href="public/css/tooltipster-light.min.css" />
 </head>
 
 <body>
@@ -16,14 +18,13 @@
       <input type="text" id="search_players" i18n_placeholder="search_players_placeholder">
     </div>
     <ul>
-      <li class='has-sub last select-width'>
+      <li class='has-sub last select-width float-left'>
       <a href='#'><span i18n="players"></span> <small id="showPlayers" data-info="0">HoTSLogs</small></a>
         <ul>
-          <li class="showPlayers" data-info="0"><a href="#">HoTSLogs</a></li>
-          <li class="last showPlayers" data-info="1"><a href="#">Heroes Profile</a></li>
+          <li class="last showPlayers" data-info="0"><a href="#">HoTSLogs</a></li>
         </ul>
       </li>
-      <li class='has-sub last select-width'>
+      <li class='has-sub last select-width float-right'>
         <a href='#'><span i18n="region"></span> <small id="showRegion" data-region="1">US</small></a>
         <ul>
           <li class="showRegion" data-region="1"><a href="#">US</a></li>
@@ -37,506 +38,504 @@
       <input type="text" id="search_hero" i18n_placeholder="search_hero_placeholder">
     </div>
     <ul>
-      <li class='has-sub last select-width'>
+      <li class='has-sub last select-width float-left'>
         <a href='#'><span i18n="heroes"></span> <small id="showSite" data-site="0">Gamepedia Wiki</small></a>
         <ul>
           <li class="showSite" data-site="0"><a href='#'><span>Gamepedia Wiki</span></a></li>
-          <li class="showSite" data-site="7"><a href='#'><span>HeroesCounters</span></a></li>
+          <li class="showSite" data-site="5"><a href='#'><span>HeroesCounters</span></a></li>
           <li class="showSite" data-site="1"><a href='#'><span>HeroesFire</span></a></li>
-          <li class="showSite" data-site="8"><a href='#'><span>HeroesHearth</span></a></li>
-          <li class="showSite" data-site="5"><a href='#'><span>HotSbuilds (Multiple)</span></a></li>
-          <li class="showSite" data-site="6"><a href='#'><span>HotSCounters</span></a></li>
-          <li class="showSite" data-site="4"><a href='#'><span>HotSlogs</span></a></li>
+          <li class="showSite" data-site="6"><a href='#'><span>HeroesHearth</span></a></li>
+          <li class="showSite" data-site="4"><a href='#'><span>HotSbuilds (Multiple)</span></a></li>
+          <li class="showSite" data-site="3"><a href='#'><span>HotSlogs</span></a></li>
           <li class="showSite" data-site="2"><a href='#'><span>Icy Veins</span></a></li>
-          <li class="showSite" data-site="9"><a href='#'><span>Psionic Storm</span></a></li>
-          <li class="last showSite" data-site="3"><a href='#'><span>StormSpy</span></a></li>
+          <li class="last showSite" data-site="7"><a href='#'><span>Psionic Storm</span></a></li>
         </ul>
       </li>
     </ul>
     <br>
     <ul class="last-ul">
-
-      <li class='has-sub last select-width-class'>
+      <li class='has-sub last select-width-class float-left'>
         <a href='#'><span i18n="class"></span> <small id="showClass" data-class="0"><span i18n="all_class"></span></small></a>
-        <ul class="classes">
-          <li class="showClass" data-class="0"><a href='#'><span i18n="all_class"></span></a></li>
-          <li class="showClass" data-class="1"><a href='#'><span i18n="assassin_class"></span><img class="img-ui" src="public/img/ui/assassin.png"></a></li>
-          <li class="showClass" data-class="2"><a href='#'><span i18n="warrior_class"></span><img class="img-ui" src="public/img/ui/warrior.png"></span></a></li>
-          <li class="showClass" data-class="3"><a href='#'><span i18n="support_class"></span><img class="img-ui" src="public/img/ui/support.png"></span></a></li>
-          <li class="showClass" data-class="4"><a href='#'><span i18n="specialist_class"></span><img class="img-ui" src="public/img/ui/specialist.png"></span></a></li>
-          <li class="last showClass" data-class="5"><a href='#'><span i18n="multi_class"></span><img class="img-ui" src="public/img/ui/multiclass.png"></a></li>
+        <ul>
+          <li class="showClass" data-class="0" i18n_title="all_class"><a href='#'></span><img class="img-ui" src="public/img/ui/all.png"></a></li>
+          <li class="showClass" data-class="1" i18n_title="tank_class"><a href='#'><img class="img-ui" src="public/img/ui/tank.png"></a></li>
+          <li class="showClass" data-class="2" i18n_title="bruiser_class"><a href='#'><img class="img-ui" src="public/img/ui/bruiser.png"></a></li>
+          <li class="showClass" data-class="3" i18n_title="support_class"><a href='#'><img class="img-ui" src="public/img/ui/support.png"></a></li>
+          <li class="showClass" data-class="4" i18n_title="healer_class"><a href='#'><img class="img-ui" src="public/img/ui/healer.png"></a></li>
+          <li class="showClass" data-class="5" i18n_title="ranged_assassin_class"><a href='#'><img class="img-ui" src="public/img/ui/ranged_assassin.png"></a></li>
+          <li class="last showClass" data-class="6" i18n_title="melee_assassin_class"><a href='#'><img class="img-ui" src="public/img/ui/melee_assassin.png"></a></li>
         </ul>
       </li>
 
-      <li class='has-sub last select-width'>
+      <li class='has-sub last select-width float-right'>
         <a href='#'><span i18n="universe"></span> <small id="showUniverse" data-universe="0"><span i18n="all_universe"></span></small></a>
         <ul>
-          <li class="showUniverse" data-universe="0"><a href='#'><span i18n="all_universe"></span></a></li>
-          <li class="showUniverse" data-universe="1"><a href='#'><span i18n="warcraft_universe"></span></a></li>
-          <li class="showUniverse" data-universe="2"><a href='#'><span i18n="starcraft_universe"></span></a></li>
-          <li class="showUniverse" data-universe="3"><a href='#'><span i18n="diablo_universe"></span></a></li>
-          <li class="showUniverse" data-universe="4"><a href='#'><span i18n="nexus_universe"></span></a></li>
-          <li class="last showUniverse" data-universe="5"><a href='#'><span i18n="overwatch_universe"></span></a></li>
+          <li class="showUniverse" data-universe="0" i18n_title="all_class"><a href='#'><img class="img-ui" src="public/img/ui/all.png"></a></li>
+          <li class="showUniverse" data-universe="1" i18n_title="warcraft_universe"><a href='#'><img class="img-ui" src="public/img/ui/warcraft.png"></a></li>
+          <li class="showUniverse" data-universe="2" i18n_title="starcraft_universe"><a href='#'><img class="img-ui" src="public/img/ui/starcraft.png"></a></li>
+          <li class="showUniverse" data-universe="3" i18n_title="diablo_universe"><a href='#'><img class="img-ui" src="public/img/ui/diablo.png"></a></li>
+          <li class="showUniverse" data-universe="4" i18n_title="nexus_universe"><a href='#'><img class="img-ui" src="public/img/ui/nexus.png"></a></li>
+          <li class="last showUniverse" data-universe="5" i18n_title="overwatch_universe"><a href='#'><img class="img-ui" src="public/img/ui/overwatch.png"></a></li>
         </ul>
       </li>
     </ul>
   </div>
   <ul class="heroes_menu">
     <li class="hero" id="Abathur">
-      <a href="#" class="tooltip hero-tab" i18n_title="Abathur" data-title="Abathur" data-lower="abathur" data-class="4" data-id="1" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Abathur" data-title="Abathur" data-class="3" data-universe="2">
         <img class="img-hero" src="public/img/heroes/abathur.png">
         </a>
     </li>
     <li class="hero" id="Alarak">
-      <a href="#" class="tooltip hero-tab" i18n_title="Alarak" data-title="Alarak" data-lower="alarak" data-class="1" data-id="2" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Alarak" data-title="Alarak" data-class="6" data-universe="2">
         <img class="img-hero" src="public/img/heroes/alarak.png">
         </a>
     </li>
     <li class="hero" id="Alexstrasza">
-      <a href="#" class="tooltip hero-tab" i18n_title="Alexstrasza" data-title="Alexstrasza" data-lower="alexstrasza" data-class="3" data-id="74" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Alexstrasza" data-title="Alexstrasza" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/alexstrasza.png">
         </a>
     </li>
     <li class="hero" id="Ana">
-      <a href="#" class="tooltip hero-tab" i18n_title="Ana" data-title="Ana" data-lower="ana" data-class="3" data-id="72" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Ana" data-title="Ana" data-class="4" data-universe="5">
         <img class="img-hero" src="public/img/heroes/ana.png">
         </a>
     </li>
+    <li class="hero" id="Anduin">
+      <a href="#" class="tooltip hero-tab" i18n_title="Anduin" data-title="Anduin" data-class="4" data-universe="1">
+        <img class="img-hero" src="public/img/heroes/anduin.png">
+        </a>
+    </li>
     <li class="hero" id="Anub'arak">
-      <a href="#" class="tooltip hero-tab" i18n_title="Anubarak" data-title="Anub'arak" data-lower="anubarak" data-class="2" data-id="3" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Anubarak" data-title="Anub'arak" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/anubarak.png">
         </a>
     </li>
     <li class="hero" id="Artanis">
-      <a href="#" class="tooltip hero-tab" i18n_title="Artanis" data-title="Artanis" data-lower="artanis" data-class="2" data-id="4" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Artanis" data-title="Artanis" data-class="2" data-universe="2">
         <img class="img-hero" src="public/img/heroes/artanis.png">
         </a>
     </li>
     <li class="hero" id="Arthas">
-      <a href="#" class="tooltip hero-tab" i18n_title="Arthas" data-title="Arthas" data-lower="arthas" data-class="2" data-id="5" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Arthas" data-title="Arthas" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/arthas.png">
         </a>
     </li>
     <li class="hero" id="Auriel">
-      <a href="#" class="tooltip hero-tab" i18n_title="Auriel" data-title="Auriel" data-lower="auriel" data-class="3" data-id="6" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Auriel" data-title="Auriel" data-class="4" data-universe="3">
         <img class="img-hero" src="public/img/heroes/auriel.png">
         </a>
     </li>
     <li class="hero" id="Azmodan">
-      <a href="#" class="tooltip hero-tab" i18n_title="Azmodan" data-title="Azmodan" data-lower="azmodan" data-class="4" data-id="7" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Azmodan" data-title="Azmodan" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/azmodan.png">
         </a>
     </li>
     <li class="hero" id="Blaze">
-      <a href="#" class="tooltip hero-tab" i18n_title="Blaze" data-title="Blaze" data-lower="blaze" data-class="2" data-id="76" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Blaze" data-title="Blaze" data-class="1" data-universe="2">
         <img class="img-hero" src="public/img/heroes/blaze.png">
         </a>
     </li>
     <li class="hero" id="Brightwing">
-      <a href="#" class="tooltip hero-tab" i18n_title="Brightwing" data-title="Brightwing" data-lower="brightwing" data-class="3" data-id="8" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Brightwing" data-title="Brightwing" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/brightwing.png">
         </a>
     </li>
     <li class="hero" id="Cassia">
-      <a href="#" class="tooltip hero-tab" i18n_title="Cassia" data-title="Cassia" data-lower="cassia" data-class="1" data-id="9" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Cassia" data-title="Cassia" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/cassia.png">
         </a>
     </li>
     <li class="hero" id="Chen">
-      <a href="#" class="tooltip hero-tab" i18n_title="Chen" data-title="Chen" data-lower="chen" data-class="2" data-id="10" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Chen" data-title="Chen" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/chen.png">
         </a>
     </li>
     <li class="hero" id="Cho">
-      <a href="#" class="tooltip hero-tab" i18n_title="Cho" data-title="Cho" data-lower="cho" data-class="2" data-id="11" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Cho" data-title="Cho" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/cho.png">
         </a>
     </li>
     <li class="hero" id="Chromie">
-      <a href="#" class="tooltip hero-tab" i18n_title="Chromie" data-title="Chromie" data-lower="chromie" data-class="1" data-id="12" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Chromie" data-title="Chromie" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/chromie.png">
         </a>
     </li>
+    <li class="hero" id="D.Va">
+      <a href="#" class="tooltip hero-tab" i18n_title="DVa" data-title="D.Va" data-class="2" data-icy="dva" data-universe="5">
+        <img class="img-hero" src="public/img/heroes/d.va.png">
+        </a>
+    </li>
+    <li class="hero" id="Deathwing">
+      <a href="#" class="tooltip hero-tab" i18n_title="Deathwing" data-title="Deathwing" data-class="2" data-universe="1">
+        <img class="img-hero" src="public/img/heroes/deathwing.png">
+        </a>
+    </li>
     <li class="hero" id="Deckard">
-      <a href="#" class="tooltip hero-tab" i18n_title="Deckard" data-title="Deckard" data-lower="deckard" data-class="3" data-id="79" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Deckard" data-title="Deckard" data-class="4" data-universe="3">
         <img class="img-hero" src="public/img/heroes/deckard.png">
         </a>
     </li>
     <li class="hero" id="Dehaka">
-      <a href="#" class="tooltip hero-tab" i18n_title="Dehaka" data-title="Dehaka" data-lower="dehaka" data-class="2" data-id="13" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Dehaka" data-title="Dehaka" data-class="2" data-universe="2">
         <img class="img-hero" src="public/img/heroes/dehaka.png">
         </a>
     </li>
     <li class="hero" id="Diablo">
-      <a href="#" class="tooltip hero-tab" i18n_title="Diablo" data-title="Diablo" data-lower="diablo" data-class="2" data-id="14" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Diablo" data-title="Diablo" data-class="1" data-universe="3">
         <img class="img-hero" src="public/img/heroes/diablo.png">
         </a>
     </li>
-    <li class="hero" id="D.Va">
-      <a href="#" class="tooltip hero-tab" i18n_title="DVa" data-title="D.Va" data-lower="d.va" data-class="2" data-icy="dva" data-id="15" data-universe="5">
-        <img class="img-hero" src="public/img/heroes/d.va.png">
-        </a>
-    </li>
     <li class="hero" id="E.T.C.">
-      <a href="#" class="tooltip hero-tab" i18n_title="ETC" data-title="E.T.C." data-lower="e.t.c." data-class="2" data-icy="e-t-c" data-id="16" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="ETC" data-title="E.T.C." data-class="1" data-icy="e-t-c" data-universe="1">
         <img class="img-hero" src="public/img/heroes/e.t.c.png">
         </a>
     </li>
     <li class="hero" id="Falstad">
-      <a href="#" class="tooltip hero-tab" i18n_title="Falstad" data-title="Falstad" data-lower="falstad" data-class="1" data-id="17" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Falstad" data-title="Falstad" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/falstad.png">
         </a>
     </li>
     <li class="hero" id="Fenix">
-      <a href="#" class="tooltip hero-tab" i18n_title="Fenix" data-title="Fenix" data-lower="fenix" data-class="1" data-id="78" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Fenix" data-title="Fenix" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/fenix.png">
         </a>
     </li>
     <li class="hero" id="Gall">
-      <a href="#" class="tooltip hero-tab" i18n_title="Gall" data-title="Gall" data-lower="gall" data-class="1" data-id="18" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Gall" data-title="Gall" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/gall.png">
         </a>
     </li>
     <li class="hero" id="Garrosh">
-      <a href="#" class="tooltip hero-tab" i18n_title="Garrosh" data-title="Garrosh" data-lower="garrosh" data-class="2" data-id="19" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Garrosh" data-title="Garrosh" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/garrosh.png">
         </a>
     </li>
     <li class="hero" id="Gazlowe">
-      <a href="#" class="tooltip hero-tab" i18n_title="Gazlowe" data-title="Gazlowe" data-lower="gazlowe" data-class="4" data-id="20" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Gazlowe" data-title="Gazlowe" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/gazlowe.png">
         </a>
     </li>
     <li class="hero" id="Genji">
-      <a href="#" class="tooltip hero-tab" i18n_title="Genji" data-title="Genji" data-lower="genji" data-class="1" data-id="21" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Genji" data-title="Genji" data-class="5" data-universe="5">
         <img class="img-hero" src="public/img/heroes/genji.png">
         </a>
     </li>
     <li class="hero" id="Greymane">
-      <a href="#" class="tooltip hero-tab" i18n_title="Greymane" data-title="Greymane" data-lower="greymane" data-class="1" data-id="22" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Greymane" data-title="Greymane" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/greymane.png">
         </a>
     </li>
     <li class="hero" id="Gul'dan">
-      <a href="#" class="tooltip hero-tab" i18n_title="Guldan" data-title="Gul'dan" data-lower="guldan" data-class="1" data-id="23" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Guldan" data-title="Gul'dan" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/gul'dan.png">
         </a>
     </li>
     <li class="hero" id="Hanzo">
-      <a href="#" class="tooltip hero-tab" i18n_title="Hanzo" data-title="Hanzo" data-lower="hanzo" data-class="1" data-id="75" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Hanzo" data-title="Hanzo" data-class="5" data-universe="5">
         <img class="img-hero" src="public/img/heroes/hanzo.png">
         </a>
     </li>
+    <li class="hero" id="Hogger">
+      <a href="#" class="tooltip hero-tab" i18n_title="Hogger" data-title="Hogger" data-class="2" data-universe="1">
+        <img class="img-hero" src="public/img/heroes/hogger.png">
+        </a>
+    </li>
     <li class="hero" id="Illidan">
-      <a href="#" class="tooltip hero-tab" i18n_title="Illidan" data-title="Illidan" data-lower="illidan" data-class="1" data-id="24" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Illidan" data-title="Illidan" data-class="6" data-universe="1">
         <img class="img-hero" src="public/img/heroes/illidan.png">
         </a>
     </li>
+    <li class="hero" id="Imperius">
+      <a href="#" class="tooltip hero-tab" i18n_title="Imperius" data-title="Imperius" data-class="2" data-universe="3">
+        <img class="img-hero" src="public/img/heroes/imperius.png">
+        </a>
+    </li>
     <li class="hero" id="Jaina">
-      <a href="#" class="tooltip hero-tab" i18n_title="Jaina" data-title="Jaina" data-lower="jaina" data-class="1" data-id="25" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Jaina" data-title="Jaina" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/jaina.png">
         </a>
     </li>
     <li class="hero" id="Johanna">
-      <a href="#" class="tooltip hero-tab" i18n_title="Johanna" data-title="Johanna" data-lower="johanna" data-class="2" data-id="26" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Johanna" data-title="Johanna" data-class="1" data-universe="3">
         <img class="img-hero" src="public/img/heroes/johanna.png">
         </a>
     </li>
     <li class="hero" id="Junkrat">
-      <a href="#" class="tooltip hero-tab" i18n_title="Junkrat" data-title="Junkrat" data-lower="junkrat" data-class="1" data-id="73" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Junkrat" data-title="Junkrat" data-class="5" data-universe="5">
         <img class="img-hero" src="public/img/heroes/junkrat.png">
         </a>
     </li>
     <li class="hero" id="Kael'thas">
-      <a href="#" class="tooltip hero-tab" i18n_title="Kaelthas" data-title="Kael'thas" data-lower="kaelthas" data-class="1" data-id="27" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Kaelthas" data-title="Kael'thas" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/kael'thas.png">
         </a>
     </li>
     <li class="hero" id="Kel'Thuzad">
-      <a href="#" class="tooltip hero-tab" i18n_title="KelThuzad" data-title="Kel'Thuzad" data-lower="kelthuzad" data-class="1" data-icy="kel-thuzad" data-id="71" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="KelThuzad" data-title="Kel'Thuzad" data-class="5" data-icy="kel-thuzad" data-universe="1">
         <img class="img-hero" src="public/img/heroes/kel'thuzad.png">
         </a>
     </li>
     <li class="hero" id="Kerrigan">
-      <a href="#" class="tooltip hero-tab" i18n_title="Kerrigan" data-title="Kerrigan" data-lower="kerrigan" data-class="1" data-id="28" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Kerrigan" data-title="Kerrigan" data-class="6" data-universe="2">
         <img class="img-hero" src="public/img/heroes/kerrigan.png">
         </a>
     </li>
     <li class="hero" id="Kharazim">
-      <a href="#" class="tooltip hero-tab" i18n_title="Kharazim" data-title="Kharazim" data-lower="kharazim" data-class="3" data-id="29" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Kharazim" data-title="Kharazim" data-class="4" data-universe="3">
         <img class="img-hero" src="public/img/heroes/kharazim.png">
         </a>
     </li>
     <li class="hero" id="Leoric">
-      <a href="#" class="tooltip hero-tab" i18n_title="Leoric" data-title="Leoric" data-lower="leoric" data-class="2" data-id="30" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Leoric" data-title="Leoric" data-class="2" data-universe="3">
         <img class="img-hero" src="public/img/heroes/leoric.png">
         </a>
     </li>
     <li class="hero" id="Li Li">
-      <a href="#" class="tooltip hero-tab" i18n_title="LiLi" data-title="Li Li" data-lower="li-li" data-class="3" data-id="31" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="LiLi" data-title="Li Li" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/li_li.png">
         </a>
     </li>
     <li class="hero" id="Li-Ming">
-      <a href="#" class="tooltip hero-tab" i18n_title="LiMing" data-title="Li-Ming" data-lower="li-ming" data-class="1" data-id="32" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="LiMing" data-title="Li-Ming" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/li-ming.png">
         </a>
     </li>
     <li class="hero" id="Lt. Morales">
-      <a href="#" class="tooltip hero-tab" i18n_title="LtMorales" data-title="Lt. Morales" data-lower="lt-morales" data-class="3" data-id="33" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="LtMorales" data-title="Lt. Morales" data-class="4" data-universe="2">
         <img class="img-hero" src="public/img/heroes/lt._morales.png">
         </a>
     </li>
     <li class="hero" id="Lúcio">
-      <a href="#" class="tooltip hero-tab" i18n_title="Lucio" data-title="Lúcio" data-lower="lucio" data-class="3" data-id="34" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Lucio" data-title="Lúcio" data-class="4" data-universe="5">
         <img class="img-hero" src="public/img/heroes/lucio.png">
         </a>
     </li>
     <li class="hero" id="Lunara">
-      <a href="#" class="tooltip hero-tab" i18n_title="Lunara" data-title="Lunara" data-lower="lunara" data-class="1" data-id="35" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Lunara" data-title="Lunara" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/lunara.png">
         </a>
     </li>
     <li class="hero" id="Maiev">
-      <a href="#" class="tooltip hero-tab" i18n_title="Maiev" data-title="Maiev" data-lower="maiev" data-class="1" data-id="77" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Maiev" data-title="Maiev" data-class="6" data-universe="1">
         <img class="img-hero" src="public/img/heroes/maiev.png">
         </a>
     </li>
     <li class="hero" id="Malfurion">
-      <a href="#" class="tooltip hero-tab" i18n_title="Malfurion" data-title="Malfurion" data-lower="malfurion" data-class="3" data-id="36" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Malfurion" data-title="Malfurion" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/malfurion.png">
         </a>
     </li>
     <li class="hero" id="Mal'Ganis">
-      <a href="#" class="tooltip hero-tab" i18n_title="Malganis" data-title="Mal'Ganis" data-lower="malganis" data-class="2" data-id="83" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Malganis" data-title="Mal'Ganis" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/malganis.png">
         </a>
     </li>
     <li class="hero" id="Malthael">
-      <a href="#" class="tooltip hero-tab" i18n_title="Malthael" data-title="Malthael" data-lower="malthael" data-class="1" data-id="37" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Malthael" data-title="Malthael" data-class="2" data-universe="3">
         <img class="img-hero" src="public/img/heroes/malthael.png">
         </a>
     </li>
     <li class="hero" id="Medivh">
-      <a href="#" class="tooltip hero-tab" i18n_title="Medivh" data-title="Medivh" data-lower="medivh" data-class="4" data-id="38" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Medivh" data-title="Medivh" data-class="3" data-universe="1">
         <img class="img-hero" src="public/img/heroes/medivh.png">
         </a>
     </li>
+    <li class="hero" id="Mei">
+      <a href="#" class="tooltip hero-tab" i18n_title="Mei" data-title="Mei" data-class="1" data-universe="5">
+        <img class="img-hero" src="public/img/heroes/mei.png">
+        </a>
+    </li>
     <li class="hero" id="Mephisto">
-      <a href="#" class="tooltip hero-tab" i18n_title="Mephisto" data-title="Mephisto" data-lower="mephisto" data-class="1" data-id="82" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Mephisto" data-title="Mephisto" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/mephisto.png">
         </a>
     </li>
     <li class="hero" id="Muradin">
-      <a href="#" class="tooltip hero-tab" i18n_title="Muradin" data-title="Muradin" data-lower="muradin" data-class="2" data-id="39" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Muradin" data-title="Muradin" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/muradin.png">
         </a>
     </li>
     <li class="hero" id="Murky">
-      <a href="#" class="tooltip hero-tab" i18n_title="Murky" data-title="Murky" data-lower="murky" data-class="4" data-id="40" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Murky" data-title="Murky" data-class="6" data-universe="1">
         <img class="img-hero" src="public/img/heroes/murky.png">
         </a>
     </li>
     <li class="hero" id="Nazeebo">
-      <a href="#" class="tooltip hero-tab" i18n_title="Nazeebo" data-title="Nazeebo" data-lower="nazeebo" data-class="4" data-id="41" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Nazeebo" data-title="Nazeebo" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/nazeebo.png">
         </a>
     </li>
     <li class="hero" id="Nova">
-      <a href="#" class="tooltip hero-tab" i18n_title="Nova" data-title="Nova" data-lower="nova" data-class="1" data-id="42" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Nova" data-title="Nova" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/nova.png">
         </a>
     </li>
     <li class="hero" id="Orphea">
-      <a href="#" class="tooltip hero-tab" i18n_title="Orphea" data-title="Orphea" data-lower="orphea" data-class="1" data-id="84" data-universe="4">
+      <a href="#" class="tooltip hero-tab" i18n_title="Orphea" data-title="Orphea" data-class="5" data-universe="4">
         <img class="img-hero" src="public/img/heroes/orphea.png">
         </a>
     </li>
     <li class="hero" id="Probius">
-      <a href="#" class="tooltip hero-tab" i18n_title="Probius" data-title="Probius" data-lower="probius" data-class="4" data-id="43" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Probius" data-title="Probius" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/probius.png">
         </a>
     </li>
+    <li class="hero" id="Qhira">
+      <a href="#" class="tooltip hero-tab" i18n_title="Qhira" data-title="Qhira" data-class="6" data-universe="4">
+        <img class="img-hero" src="public/img/heroes/qhira.png">
+        </a>
+    </li>
     <li class="hero" id="Ragnaros">
-      <a href="#" class="tooltip hero-tab" i18n_title="Ragnaros" data-title="Ragnaros" data-lower="ragnaros" data-class="1" data-id="44" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Ragnaros" data-title="Ragnaros" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/ragnaros.png">
         </a>
     </li>
     <li class="hero" id="Raynor">
-      <a href="#" class="tooltip hero-tab" i18n_title="Raynor" data-title="Raynor" data-lower="raynor" data-class="1" data-id="45" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Raynor" data-title="Raynor" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/raynor.png">
         </a>
     </li>
     <li class="hero" id="Rehgar">
-      <a href="#" class="tooltip hero-tab" i18n_title="Rehgar" data-title="Rehgar" data-lower="rehgar" data-class="3" data-id="46" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Rehgar" data-title="Rehgar" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/rehgar.png">
         </a>
     </li>
     <li class="hero" id="Rexxar">
-      <a href="#" class="tooltip hero-tab" i18n_title="Rexxar" data-title="Rexxar" data-lower="rexxar" data-class="2" data-id="47" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Rexxar" data-title="Rexxar" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/rexxar.png">
         </a>
     </li>
     <li class="hero" id="Samuro">
-      <a href="#" class="tooltip hero-tab" i18n_title="Samuro" data-title="Samuro" data-lower="samuro" data-class="1" data-id="48" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Samuro" data-title="Samuro" data-class="6" data-universe="1">
         <img class="img-hero" src="public/img/heroes/samuro.png">
         </a>
     </li>
     <li class="hero" id="Sgt. Hammer">
-      <a href="#" class="tooltip hero-tab" i18n_title="SgtHammer" data-title="Sgt. Hammer" data-lower="sgt-hammer" data-class="4" data-id="49" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="SgtHammer" data-title="Sgt. Hammer" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/sgt._hammer.png">
         </a>
     </li>
     <li class="hero" id="Sonya">
-      <a href="#" class="tooltip hero-tab" i18n_title="Sonya" data-title="Sonya" data-lower="sonya" data-class="2" data-id="50" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Sonya" data-title="Sonya" data-class="2" data-universe="3">
         <img class="img-hero" src="public/img/heroes/sonya.png">
         </a>
     </li>
     <li class="hero" id="Stitches">
-      <a href="#" class="tooltip hero-tab" i18n_title="Stitches" data-title="Stitches" data-lower="stitches" data-class="2" data-id="51" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Stitches" data-title="Stitches" data-class="1" data-universe="1">
         <img class="img-hero" src="public/img/heroes/stitches.png">
         </a>
     </li>
     <li class="hero" id="Stukov">
-      <a href="#" class="tooltip hero-tab" i18n_title="Stukov" data-title="Stukov" data-lower="stukov" data-class="3" data-id="52" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Stukov" data-title="Stukov" data-class="4" data-universe="2">
         <img class="img-hero" src="public/img/heroes/stukov.png">
         </a>
     </li>
     <li class="hero" id="Sylvanas">
-      <a href="#" class="tooltip hero-tab" i18n_title="Sylvanas" data-title="Sylvanas" data-lower="sylvanas" data-class="4" data-id="53" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Sylvanas" data-title="Sylvanas" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/sylvanas.png">
         </a>
     </li>
     <li class="hero" id="Tassadar">
-      <a href="#" class="tooltip hero-tab" i18n_title="Tassadar" data-title="Tassadar" data-lower="tassadar" data-class="3" data-id="54" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Tassadar" data-title="Tassadar" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/tassadar.png">
         </a>
     </li>
     <li class="hero" id="The Butcher">
-      <a href="#" class="tooltip hero-tab" i18n_title="TheButcher" data-title="The Butcher" data-lower="the-butcher" data-class="1" data-id="55" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="TheButcher" data-title="The Butcher" data-class="6" data-universe="3">
         <img class="img-hero" src="public/img/heroes/the_butcher.png">
         </a>
     </li>
     <li class="hero" id="The Lost Vikings">
-      <a href="#" class="tooltip hero-tab" i18n_title="TheLostVikings" data-title="The Lost Vikings" data-lower="the-lost-vikings" data-class="4" data-id="56" data-universe="4">
+      <a href="#" class="tooltip hero-tab" i18n_title="TheLostVikings" data-title="The Lost Vikings" data-class="3" data-universe="4">
         <img class="img-hero" src="public/img/heroes/the_lost_vikings.png">
         </a>
     </li>
     <li class="hero" id="Thrall">
-      <a href="#" class="tooltip hero-tab" i18n_title="Thrall" data-title="Thrall" data-lower="thrall" data-class="1" data-id="57" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Thrall" data-title="Thrall" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/thrall.png">
         </a>
     </li>
     <li class="hero" id="Tracer">
-      <a href="#" class="tooltip hero-tab" i18n_title="Tracer" data-title="Tracer" data-lower="tracer" data-class="1" data-id="58" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Tracer" data-title="Tracer" data-class="5" data-universe="5">
         <img class="img-hero" src="public/img/heroes/tracer.png">
         </a>
     </li>
     <li class="hero" id="Tychus">
-      <a href="#" class="tooltip hero-tab" i18n_title="Tychus" data-title="Tychus" data-lower="tychus" data-class="1" data-id="59" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Tychus" data-title="Tychus" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/tychus.png">
         </a>
     </li>
     <li class="hero" id="Tyrael">
-      <a href="#" class="tooltip hero-tab" i18n_title="Tyrael" data-title="Tyrael" data-lower="tyrael" data-class="2" data-id="60" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Tyrael" data-title="Tyrael" data-class="1" data-universe="3">
         <img class="img-hero" src="public/img/heroes/tyrael.png">
         </a>
     </li>
     <li class="hero" id="Tyrande">
-      <a href="#" class="tooltip hero-tab" i18n_title="Tyrande" data-title="Tyrande" data-lower="tyrande" data-class="3" data-id="61" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Tyrande" data-title="Tyrande" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/tyrande.png">
         </a>
     </li>
     <li class="hero" id="Uther">
-      <a href="#" class="tooltip hero-tab" i18n_title="Uther" data-title="Uther" data-lower="uther" data-class="3" data-id="62" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Uther" data-title="Uther" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/uther.png">
         </a>
     </li>
     <li class="hero" id="Valeera">
-      <a href="#" class="tooltip hero-tab" i18n_title="Valeera" data-title="Valeera" data-lower="valeera" data-class="1" data-id="63" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Valeera" data-title="Valeera" data-class="6" data-universe="1">
         <img class="img-hero" src="public/img/heroes/valeera.png">
         </a>
     </li>
     <li class="hero" id="Valla">
-      <a href="#" class="tooltip hero-tab" i18n_title="Valla" data-title="Valla" data-lower="valla" data-class="1" data-id="64" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Valla" data-title="Valla" data-class="5" data-universe="3">
         <img class="img-hero" src="public/img/heroes/valla.png">
         </a>
     </li>
     <li class="hero" id="Varian">
-      <a href="#" class="tooltip hero-tab" i18n_title="Varian" data-title="Varian" data-lower="varian" data-class="5" data-multiclass1="1" data-multiclass2="2" data-id="65" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Varian" data-title="Varian" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/varian.png">
         </a>
     </li>
     <li class="hero" id="Whitemane">
-      <a href="#" class="tooltip hero-tab" i18n_title="Whitemane" data-title="Whitemane" data-lower="whitemane" data-class="3" data-id="81" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Whitemane" data-title="Whitemane" data-class="4" data-universe="1">
         <img class="img-hero" src="public/img/heroes/whitemane.png">
         </a>
     </li>
     <li class="hero" id="Xul">
-      <a href="#" class="tooltip hero-tab" i18n_title="Xul" data-title="Xul" data-lower="xul" data-class="4" data-id="66" data-universe="3">
+      <a href="#" class="tooltip hero-tab" i18n_title="Xul" data-title="Xul" data-class="2" data-universe="3">
         <img class="img-hero" src="public/img/heroes/xul.png">
         </a>
     </li>
     <li class="hero" id="Yrel">
-      <a href="#" class="tooltip hero-tab" i18n_title="Yrel" data-title="Yrel" data-lower="yrel" data-class="2" data-id="67" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Yrel" data-title="Yrel" data-class="2" data-universe="1">
         <img class="img-hero" src="public/img/heroes/yrel.png">
         </a>
     </li>
     <li class="hero" id="Zagara">
-      <a href="#" class="tooltip hero-tab" i18n_title="Zagara" data-title="Zagara" data-lower="zagara" data-class="4" data-id="67" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Zagara" data-title="Zagara" data-class="5" data-universe="2">
         <img class="img-hero" src="public/img/heroes/zagara.png">
         </a>
     </li>
     <li class="hero" id="Zarya">
-      <a href="#" class="tooltip hero-tab" i18n_title="Zarya" data-title="Zarya" data-lower="zarya" data-class="2" data-id="68" data-universe="5">
+      <a href="#" class="tooltip hero-tab" i18n_title="Zarya" data-title="Zarya" data-class="3" data-universe="5">
         <img class="img-hero" src="public/img/heroes/zarya.png">
         </a>
     </li>
     <li class="hero" id="Zeratul">
-      <a href="#" class="tooltip hero-tab" i18n_title="Zeratul" data-title="Zeratul" data-lower="zeratul" data-class="1" data-id="69" data-universe="2">
+      <a href="#" class="tooltip hero-tab" i18n_title="Zeratul" data-title="Zeratul" data-class="6" data-universe="2">
         <img class="img-hero" src="public/img/heroes/zeratul.png">
         </a>
     </li>
     <li class="hero" id="Zul'jin">
-      <a href="#" class="tooltip hero-tab" i18n_title="Zuljin" data-title="Zul'jin" data-lower="zuljin" data-class="1" data-id="70" data-universe="1">
+      <a href="#" class="tooltip hero-tab" i18n_title="Zuljin" data-title="Zul'jin" data-class="5" data-universe="1">
         <img class="img-hero" src="public/img/heroes/zul'jin.png">
         </a>
     </li>
     <!-- End of heroes -->
-    <!-- <div>
-        <ul class="bases_search">
-          <li id="Gamepedia Wiki" class="bases">
-            <a href="#" class="tooltip new_link" data-href="https://heroesofthestorm.gamepedia.com/" title="Gamepedia Wiki - Official Website">
-                  <img class="img-site" src="public/img/websites/gamepedia.png">
-                  </a>
-          </li>
-          <li id="Heroes of the Storm" class="bases">
-            <a href="#" class="tooltip new_link" data-href="http://battle.net/heroes/" title="Heroes of the Storm - Official Website">
-                  <img class="img-site" src="public/img/websites/official.png">
-                  </a>
-          </li>
-          <li id="HeroesFire" class="bases">
-            <a href="#" class="tooltip new_link" data-href="http://www.heroesfire.com/" title="HeroesFire - Official Website">
-                  <img class="img-site" src="public/img/websites/hf.png">
-                  </a>
-          </li>
-          <li id="Icy Veins" class="bases">
-            <a href="#" class="tooltip new_link" data-href="https://www.icy-veins.com/heroes/" title="Icy Veins - Official Website">
-                  <img class="img-site" src="public/img/websites/iv.png">
-                  </a>
-          </li>
-          <li id="StormSpy" class="bases">
-            <a href="#" class="tooltip new_link" data-href="https://stormspy.net/" title="StormSpy - Official Website">
-                  <img class="img-site" src="public/img/websites/stormspy.png">
-                  </a>
-          </li>
-        </ul>
-      </div> -->
   </ul>
   <div class="bottom-bar">
     <label i18n="app_title"></label>
     <i class="fa fa-info-circle open-about"></i>
-    <!--<i class="fa fa-cog open-settings"></i>-->
   </div>
   <div id="aboutModal" class="reveal-modal">
     <a class="close-modal close-reveal-modal">&#215;</a>
@@ -547,12 +546,12 @@
     </p>
     <label class="version_about"><span i18n="version"></span> <b></b></label>
   </div>
-  <script type="text/javascript" src="public/js/jquery.min.js"></script>
-  <script type="text/javascript" src="public/js/translate.min.js"></script>
-  <script type="text/javascript" src="public/js/jquery.tooltipster.min.js"></script>
-  <script type="text/javascript" src="public/js/popup.js"></script>
-  <script type="text/javascript" src="public/js/menu.min.js"></script>
-  <script type="text/javascript" src="public/js/jquery.reveal.min.js"></script>
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/translate.min.js" defer></script>
+  <script src="public/js/jquery.tooltipster.min.js" defer></script>
+  <script src="public/js/popup.js" defer></script>
+  <script src="public/js/menu.min.js" defer></script>
+  <script src="public/js/jquery.reveal.min.js" defer></script>
 </body>
 
 </html>

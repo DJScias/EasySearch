@@ -8,6 +8,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Nothing for now
 
+## [0.5.0] - 2021-03-28
+### Added
+- Imperius hero added.
+- Anduin hero added.
+- Qhiro hero added.
+- Deathwing hero added.
+- Mei hero added.
+- Hogger hero added.
+- New HoTS classes:
+  - Tank
+  - Bruiser
+  - Support
+  - Healer
+  - Ranged Assassin
+  - Melee Assassin
+
+### Changed
+- Reworked dropdown list code.
+- Class & Universe use images, hover gives name.
+- Simplified Class filtering.
+- Simplified Hero to Site linking.
+
+### Removed
+- Inactive hero sites (StormSpy, HotSCounters).
+- HeroesProfile Player Searching (API went paid).
+- Old HoTS classes:
+  - Assassin
+  - Warrior
+  - Support
+  - Specialist
+  - Multi-Class
+
 ## [0.4.1] - 2018-14-11
 ### Added
 - Mal'Ganis hero added.

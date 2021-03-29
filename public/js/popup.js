@@ -1,10 +1,10 @@
 /*
  * Heroes of the Storm Easy Search - HotSES
  *
- * jQuery Heroes of the Storm Easy Search 0.3.0
+ * jQuery Heroes of the Storm Easy Search 0.5.0
  *
  * HotSES - https://github.com/DJScias/EasySearch/tree/HoTSES
- * Copyright 2014-2018, HotSES
+ * Copyright 2014-2021, HotSES
  *
  * DJScias - https://github.com/DJScias
  *
@@ -58,35 +58,18 @@ function sortLists(givenUniverse, givenHeroClass) {
     $('.hero').each(function () {
         let heroClass = $('a', this).data('class');
         let heroUniverse = $('a', this).data('universe');
-        let multiClass = false;
-        if (heroClass == 5)
-            multiClass = true;
-
-        if (multiClass) {
-            let classOne = $('a', this).data('multiclass1');
-            let classTwo = $('a', this).data('multiclass2');
-            if (chosenUniverse[0] > 0) { // if an universe is also given, filter on that too!
-                (chosenUniverse[0] == heroUniverse && (chosenClass[0] == heroClass || chosenClass[0] == classOne || chosenClass[0] == classTwo)) ? $(this).show(500): $(this).hide(500);
-                return;
-            }
-            if (chosenClass[0] > 0) {
-                (chosenClass[0] == heroClass || chosenClass[0] == classOne || chosenClass[0] == classTwo) ? $(this).show(500): $(this).hide(500);
-                return;
-            }
-
-        } else if (!multiClass) { // if not multi-class
-            if (chosenClass[0] > 0 && chosenUniverse[0] > 0) { // if class AND universe is chosen
-                (chosenClass[0] == heroClass && chosenUniverse[0] == heroUniverse) ? $(this).show(500): $(this).hide(500);
-                return;
-            }
-            if (chosenClass[0] > 0) { // if a class is chosen
-                (chosenClass[0] == heroClass) ? $(this).show(500): $(this).hide(500);
-                return;
-            }
-            if (chosenUniverse[0] > 0) { // if a universe is chosen
-                (chosenUniverse[0] == heroUniverse) ? $(this).show(500): $(this).hide(500);
-                return;
-            }
+              
+        if (chosenClass[0] > 0 && chosenUniverse[0] > 0) { // if class AND universe is chosen
+            (chosenClass[0] == heroClass && chosenUniverse[0] == heroUniverse) ? $(this).show(500): $(this).hide(500);
+            return;
+        }
+        if (chosenClass[0] > 0) { // if a class is chosen
+            (chosenClass[0] == heroClass) ? $(this).show(500): $(this).hide(500);
+            return;
+        }
+        if (chosenUniverse[0] > 0) { // if a universe is chosen
+            (chosenUniverse[0] == heroUniverse) ? $(this).show(500): $(this).hide(500);
+            return;
         }
         $(this).show(500);
         return;
@@ -145,13 +128,11 @@ function playerSiteCheck() {
 -----------------*/
 
 var Player_api_array = [
-    'https://api.hotslogs.com/Public/Players/&region&/&battletag&',
-    'http://www.heroesprofile.com/API/Profile/?battletag=&battletag&&region=&region&'
+    'https://www.hotslogs.com/api/Players/&region&/&battletag&'
 ];
 
 var Player_info_array = [
-    'https://www.hotslogs.com/Player/Profile?PlayerID=&playerId&', // HOTSLogs
-    'http://www.heroesprofile.com/Profile/?blizz_id=&playerId&&battletag=&battletag&&region=&region&' // Heroes Profile
+    'https://www.hotslogs.com/Player/Profile?PlayerID=&playerId&' // HOTSLogs
 ];
 
 $('#search_players').keypress(function (e) {
@@ -162,16 +143,14 @@ $('#search_players').keypress(function (e) {
 /* Array with build sites
 -----------------*/
 var Hero_Font_array = [
-    'https://heroesofthestorm.gamepedia.com/&hero&', //Gamepedia Wiki
+    'https://heroesofthestorm.fandom.com/wiki/&hero&', //Gamepedia Wiki
     'https://www.heroesfire.com/hots/wiki/heroes/&hero&', //HeroesFire
     'https://www.icy-veins.com/heroes/&hero&-build-guide', //Icy Veins
-    'https://stormspy.net/builds?hero=&hero&', //StormSpy
-    'https://www.hotslogs.com/Sitewide/HeroDetails?Hero=&hero&', //HotSlogs
+    'https://www.hotslogs.com/Sitewide/TalentDetails?Hero=&hero&', //HotSlogs
     'http://www.hotsbuilds.info/&hero&', //HotSbuilds
-    'http://hotscounters.com/#/hero/&hero&', // HotSCounters
     'https://www.heroescounters.com/hero/&hero&', // Heroescounters
     'https://heroeshearth.com/hero/&hero&/', // HeroesHearth
-    'https://psionic-storm.com/en/heros/&hero&/', // Psionic Storm
+    'https://psionic-storm.com/en/heroes/&hero&/', // Psionic Storm
 ];
 
 /* When DOM is ready
@@ -231,7 +210,7 @@ $(function () {
 
     $('.showClass').on('click', function () {
         let classId = $(this).data('class');
-        let className = $(this).text();
+        let className = $(this).attr('title');
         $('#showClass').attr('data-class', classId).text(className);
         let storage = [classId, className];
 
@@ -244,7 +223,7 @@ $(function () {
 
     $('.showUniverse').on('click', function () {
         let universeId = $(this).data('universe');
-        let universeName = $(this).text();
+        let universeName = $(this).attr('title');
         $('#showUniverse').attr('data-universe', universeId).text(universeName);
         let storage = [universeId, universeName];
 
@@ -343,58 +322,27 @@ $(function () {
 
     $('.hero-tab').on('click', function () {
         let site = $("#showSite").attr('data-site');
-        let hero = "";
-        let strip_most = false;
-        let strip_all = false;
-        let choose_lower = false;
-        let choose_id = false;
+        let hero = $(this).data('title');
+        let strip = false;
+        
         switch (site) {
-        case "1":
-            choose_lower = true;
-            strip_most = true;
+          case "1":
+          case "5":
+          case "7":
+            strip = true;
             break;
-        case "2":
-            choose_lower = true;
-            break;
-        case "3":
-            choose_id = true;
-            break;
-        case "4":
-            break;
-        case "5":
-            break;
-        case "6":
-            choose_lower = true;
-            strip_all = true;
-            break;
-        case "7":
-            choose_lower = true;
-            strip_all = true;
-            break;
-        case "8":
-        case "9":
-            choose_lower = true;
-            strip_most = true;
+          case "2":
+            if ($(this).data('icy')) {
+                hero = $(this).data('icy');
+            } else {
+              strip = true;
+              hero = hero.toLowerCase();
+            }
             break;
         }
-
-        if (choose_lower) {
-            hero = $(this).data('lower'); // Lower is used by HeroesFire and Icy-Veins
-            // Special characters changed to nothing (not including dash)
-            if (strip_most || strip_all) {
-                hero = hero.replace(/\./g, "");
-                hero = hero.replace(/\'/g, "");
-                if (strip_all) // get rid of dash too
-                    hero = hero.replace(/\-/g, "");
-            }
-            // Icy is inconsistent, if we find a data-icy, we use that
-            if (site === "2" && $(this).data('icy')) {
-                hero = $(this).data('icy');
-            }
-        } else if (choose_id) {
-            hero = $(this).data('id');
-        } else { //Gamepedia Wiki
-            hero = $(this).data('title');
+        
+        if (strip) {
+            hero = hero.replace(/\./g, "").replace(/\'/g, "").replace(/\-/g, "");
         }
 
         //Replace "link" on array with the chosen site
