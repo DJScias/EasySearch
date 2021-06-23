@@ -256,12 +256,11 @@ $(function () {
     -----------------*/
     $('#search_hero').on('keyup', function () {
         let searchText = $(this).val().toLowerCase();
-        // Replace lu with lú for Lúcio typing
-        searchText = searchText.replace(/\lu/g, "lú");
 
         $('.hero').each(function () {
             let heroName = $('a', this).attr('i18n_title');
-            let i18nName = chrome.i18n.getMessage(heroName).toLowerCase();
+            let i18nName = chrome.i18n.getMessage(heroName).toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+            // Diacritic replace makes sure accented characters don't cause trouble
 
             (i18nName.indexOf(searchText) >= 0) ? $(this).show(500): $(this).hide(500);
         });
